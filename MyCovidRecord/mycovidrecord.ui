@@ -19,7 +19,7 @@
    <string>MyCovidRecord</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: #12365A;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -98,7 +98,9 @@ font-weight: bold;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border:1px solid;
-border-radius: 30px</string>
+border-radius: 30px;
+background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1, stop:0 rgba(198, 112, 0, 255), stop:0.428571 rgba(208, 0, 24, 255));
+</string>
          </property>
          <property name="text">
           <string>Client Login</string>
@@ -115,7 +117,8 @@ border-radius: 30px</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border:1px solid;
-border-radius: 30px</string>
+border-radius: 30px;
+background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1, stop:0 rgba(198, 112, 0, 255), stop:0.428571 rgba(208, 0, 24, 255));</string>
          </property>
          <property name="text">
           <string>Administraton login</string>
@@ -132,7 +135,8 @@ border-radius: 30px</string>
          </property>
          <property name="styleSheet">
           <string notr="true">border:1px solid;
-border-radius: 30px</string>
+border-radius: 30px;
+background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1, stop:0 rgba(198, 112, 0, 255), stop:0.428571 rgba(208, 0, 24, 255));</string>
          </property>
          <property name="text">
           <string>Create new account</string>
