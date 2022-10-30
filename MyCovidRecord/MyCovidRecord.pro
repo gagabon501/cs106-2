@@ -10,13 +10,16 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mycovidrecord.cpp
+    mycovidrecord.cpp \
+    registration.cpp
 
 HEADERS += \
-    mycovidrecord.h
+    mycovidrecord.h \
+    registration.h
 
 FORMS += \
-    mycovidrecord.ui
+    mycovidrecord.ui \
+    registration.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
