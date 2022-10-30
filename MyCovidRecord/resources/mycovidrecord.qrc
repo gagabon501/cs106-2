@@ -1,6 +1,11 @@
 <RCC>
     <qresource prefix="/images">
-        <file>images/5810431-14 1.png</file>
+        <file>images/bgform.png</file>
         <file>images/5810431-02 1.png</file>
+        <file>images/5810431-15.svg</file>
+        <file>images/5810431-14.svg</file>
+        <file>images/5810431-08.svg</file>
+        <file>images/5810431-12.svg</file>
+        <file>images/5810431-07.svg</file>
     </qresource>
 </RCC>
