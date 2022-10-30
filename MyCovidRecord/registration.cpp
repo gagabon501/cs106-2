@@ -12,3 +12,9 @@ Registration::~Registration()
 {
     delete ui;
 }
+
+void Registration::on_pushButton_Save_clicked()
+{
+   hide();
+}
+
