@@ -15,6 +15,6 @@ Registration::~Registration()
 
 void Registration::on_pushButton_Save_clicked()
 {
-   hide();
+   QApplication::quit();
 }
 

@@ -103,8 +103,18 @@ border-radius: 20px;</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
+        <bold>false</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;
+</string>
       </property>
      </widget>
     </item>
@@ -125,8 +135,23 @@ border-radius: 20px;</string>
      <widget class="QLineEdit" name="lineEdit_password">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;
+</string>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
@@ -147,8 +172,20 @@ border-radius: 20px;</string>
      <widget class="QLineEdit" name="lineEdit_ReTypePassword">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;
+</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
@@ -169,8 +206,17 @@ border-radius: 20px;</string>
      <widget class="QLineEdit" name="lineEdit_lastname">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;
+</string>
       </property>
      </widget>
     </item>
@@ -191,8 +237,17 @@ border-radius: 20px;</string>
      <widget class="QLineEdit" name="lineEdit_firstname">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;
+</string>
       </property>
      </widget>
     </item>
@@ -213,8 +268,17 @@ border-radius: 20px;</string>
      <widget class="QLineEdit" name="lineEdit_dob">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;
+</string>
       </property>
      </widget>
     </item>
@@ -248,8 +312,16 @@ border-radius: 20px;</string>
      <widget class="QLineEdit" name="lineEdit_nhi">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;</string>
       </property>
      </widget>
     </item>
@@ -257,8 +329,17 @@ border-radius: 20px;</string>
      <widget class="QLineEdit" name="lineEdit_phone">
       <property name="font">
        <font>
-        <pointsize>15</pointsize>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0.5px solid;
+border-radius: 15px;
+height: 30px;
+padding-left: 10px;
+padding-right: 10px;
+</string>
       </property>
      </widget>
     </item>
