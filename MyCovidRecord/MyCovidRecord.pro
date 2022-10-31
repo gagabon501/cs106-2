@@ -2,6 +2,8 @@ QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+TARGET = ../MyCovidRecord/MyCovidRecord
+
 CONFIG += c++17
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -11,11 +13,14 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mycovidrecord.cpp \
-    registration.cpp
+    registration.cpp \
+    dbmanager.cpp
+
 
 HEADERS += \
     mycovidrecord.h \
-    registration.h
+    registration.h \
+    dbmanager.h
 
 FORMS += \
     mycovidrecord.ui \
