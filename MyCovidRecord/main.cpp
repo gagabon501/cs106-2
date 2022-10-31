@@ -16,15 +16,9 @@ int main(int argc, char *argv[])
 
     if (db.isOpen())
     {
-        db.createTable(); // Creates a table if it doens't exist. Otherwise, it will use existing table.
-//        db.addPerson("A");
-//        db.addPerson("B");
-//        db.addPerson("C");
-//        db.printAllPersons();
-//        db.removePerson("C");
-//        db.printAllPersons();
-//        db.removeAllPersons();
-        qDebug() << "End";
+        db.createTable(); // Creates tables used by the application if it doens't exist. Otherwise, it will use existing table.
+        db.addPerson("gagabon501@yahoo.com","password","Gabon","Gilberto","123-4567","Male","1234556",4,"Unvaccinated");
+
     }
     else
     {

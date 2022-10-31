@@ -72,15 +72,25 @@ bool DbManager::createTable()
     return success;
 }
 
-bool DbManager::addPerson(const QString& name)
+bool DbManager::addPerson(const QString& email,const QString& password, const QString& lastname, const QString& firstname,
+                          const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status)
 {
     bool success = false;
 
-    if (!name.isEmpty())
+    if (!email.isEmpty())
     {
         QSqlQuery queryAdd;
-        queryAdd.prepare("INSERT INTO people (name) VALUES (:name)");
-        queryAdd.bindValue(":name", name);
+        queryAdd.prepare("INSERT INTO user (email,password,lastname,firstname,phone,gender,nhi,level,vaccine_status) VALUES (:email,:password,:lastname,:firstname,:phone,:gender,:nhi,:level,:vaccine_status)");
+
+        queryAdd.bindValue(":email", email);
+        queryAdd.bindValue(":password", password);
+        queryAdd.bindValue(":lastname", lastname);
+        queryAdd.bindValue(":firstname", firstname);
+        queryAdd.bindValue(":phone", phone);
+        queryAdd.bindValue(":gender", gender);
+        queryAdd.bindValue(":nhi", nhi);
+        queryAdd.bindValue(":level", level);
+        queryAdd.bindValue(":vaccine_status", vaccine_status);
 
 
         if(queryAdd.exec())
@@ -94,7 +104,7 @@ bool DbManager::addPerson(const QString& name)
     }
     else
     {
-        qDebug() << "add person failed: name cannot be empty";
+        qDebug() << "add person failed: email cannot be empty";
     }
 
     return success;

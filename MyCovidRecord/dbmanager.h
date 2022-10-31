@@ -46,7 +46,8 @@ public:
      * @param name - name of person to add
      * @return true - person added successfully, false - person not added
      */
-    bool addPerson(const QString& name);
+    bool addPerson(const QString& email,const QString& password, const QString& lastname, const QString& firstname,
+                   const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status);
 
     /**
      * @brief Remove person data from db
