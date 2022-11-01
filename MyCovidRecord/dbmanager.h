@@ -46,8 +46,8 @@ public:
      * @param name - name of person to add
      * @return true - person added successfully, false - person not added
      */
-    bool addPerson(const QString& email,const QString& password, const QString& lastname, const QString& firstname,
-                   const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status);
+//    bool DbManager::userRegister
+    bool userRegister(const QString& email,const QString& password, const QString& lastname, const QString& firstname, const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status, const QString& dob);
 
     /**
      * @brief Remove person data from db
@@ -73,6 +73,7 @@ public:
      * @return true - all persons removed successfully, false - not removed
      */
     bool removeAllPersons();
+    bool dbClose();
 
 private:
     QSqlDatabase m_db;

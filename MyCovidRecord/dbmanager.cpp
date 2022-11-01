@@ -37,7 +37,7 @@ bool DbManager::createTable()
     bool success = false;
 
     QSqlQuery query;
-    query.prepare("CREATE TABLE user(email TEXT PRIMARY KEY, password TEXT, lastname TEXT, firstname TEXT, phone TEXT, gender TEXT, nhi TEXT, level NUMBER, vaccine_status TEXT);");
+    query.prepare("CREATE TABLE user(email TEXT PRIMARY KEY, password TEXT, lastname TEXT, firstname TEXT, phone TEXT, gender TEXT, nhi TEXT, level NUMBER, vaccine_status TEXT, dob TEXT);");
 
     if (!query.exec())
     {
@@ -72,8 +72,7 @@ bool DbManager::createTable()
     return success;
 }
 
-bool DbManager::addPerson(const QString& email,const QString& password, const QString& lastname, const QString& firstname,
-                          const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status)
+bool DbManager::userRegister(const QString& email,const QString& password, const QString& lastname, const QString& firstname,const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status,const QString& dob)
 {
     bool success = false;
 
@@ -186,4 +185,8 @@ bool DbManager::removeAllPersons()
     }
 
     return success;
+}
+
+bool DbManager::dbClose() {
+    m_db.close();
 }
