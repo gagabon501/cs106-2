@@ -11,6 +11,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    login.cpp \
     main.cpp \
     mycovidrecord.cpp \
     registration.cpp \
@@ -18,11 +19,13 @@ SOURCES += \
 
 
 HEADERS += \
+    login.h \
     mycovidrecord.h \
     registration.h \
     dbmanager.h
 
 FORMS += \
+    login.ui \
     mycovidrecord.ui \
     registration.ui
 
