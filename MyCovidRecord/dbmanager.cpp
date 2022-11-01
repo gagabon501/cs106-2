@@ -62,7 +62,6 @@ bool DbManager::createTable()
     }
     query.prepare("CREATE TABLE error_logs(email TEXT, date_entered TEXT, log_description TEXT, log_priority NUMBER, log_status TEXT, actioned_by TEXT, remarks TEXT);");
 
-
     if (!query.exec())
     {
         qDebug() << "Couldn't create table ERROR_LOGS : one might already exist.";
@@ -72,14 +71,15 @@ bool DbManager::createTable()
     return success;
 }
 
-bool DbManager::userRegister(const QString& email,const QString& password, const QString& lastname, const QString& firstname,const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status,const QString& dob)
+bool DbManager::userRegister(const QString &email, const QString &password, const QString &lastname, const QString &firstname, const QString &phone,
+                             const QString &gender, const QString &nhi, int level, const QString &vaccine_status, const QString &dob)
 {
     bool success = false;
 
     if (!email.isEmpty())
     {
         QSqlQuery queryAdd;
-        queryAdd.prepare("INSERT INTO user (email,password,lastname,firstname,phone,gender,nhi,level,vaccine_status) VALUES (:email,:password,:lastname,:firstname,:phone,:gender,:nhi,:level,:vaccine_status)");
+        queryAdd.prepare("INSERT INTO user (email,password,lastname,firstname,phone,gender,nhi,level,vaccine_status,dob) VALUES (:email,:password,:lastname,:firstname,:phone,:gender,:nhi,:level,:vaccine_status,:dob);");
 
         queryAdd.bindValue(":email", email);
         queryAdd.bindValue(":password", password);
@@ -90,26 +90,26 @@ bool DbManager::userRegister(const QString& email,const QString& password, const
         queryAdd.bindValue(":nhi", nhi);
         queryAdd.bindValue(":level", level);
         queryAdd.bindValue(":vaccine_status", vaccine_status);
+        queryAdd.bindValue(":dob", dob);
 
-
-        if(queryAdd.exec())
+        if (queryAdd.exec())
         {
             success = true;
         }
         else
         {
-            qDebug() << "add person failed: " << queryAdd.lastError();
+            qDebug() << "registration failed: " << queryAdd.lastError();
         }
     }
     else
     {
-        qDebug() << "add person failed: email cannot be empty";
+        qDebug() << "registration failed: email cannot be empty";
     }
 
     return success;
 }
 
-bool DbManager::removePerson(const QString& name)
+bool DbManager::removePerson(const QString &name)
 {
     bool success = false;
 
@@ -120,7 +120,7 @@ bool DbManager::removePerson(const QString& name)
         queryDelete.bindValue(":name", name);
         success = queryDelete.exec();
 
-        if(!success)
+        if (!success)
         {
             qDebug() << "remove person failed: " << queryDelete.lastError();
         }
@@ -145,7 +145,7 @@ void DbManager::printAllPersons() const
     }
 }
 
-bool DbManager::personExists(const QString& name) const
+bool DbManager::personExists(const QString &name) const
 {
     bool exists = false;
 
@@ -187,6 +187,8 @@ bool DbManager::removeAllPersons()
     return success;
 }
 
-bool DbManager::dbClose() {
+bool DbManager::dbClose()
+{
     m_db.close();
+    return true;
 }

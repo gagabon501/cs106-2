@@ -47,7 +47,11 @@ public:
      * @return true - person added successfully, false - person not added
      */
 //    bool DbManager::userRegister
-    bool userRegister(const QString& email,const QString& password, const QString& lastname, const QString& firstname, const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status, const QString& dob);
+//    bool userRegister(const QString& email,const QString& password, const QString& lastname, const QString& firstname,
+//                      const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status, const QString& dob);
+    bool userRegister(const QString& email, const QString& password, const QString& lastname, const QString& firstname,const QString& phone,
+                                 const QString& gender, const QString& nhi, int level, const QString& vaccine_status, const QString& dob);
+
 
     /**
      * @brief Remove person data from db

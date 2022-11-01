@@ -21,6 +21,7 @@ void MyCovidRecord::on_pushButton_3_clicked()
     registration = new Registration(this);
     registration->setFixedSize(registration->size());
     registration->show();
+    this->show();
 }
 
 
