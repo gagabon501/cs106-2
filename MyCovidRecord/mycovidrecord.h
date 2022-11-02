@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "registration.h"
+#include "dashboard.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MyCovidRecord; }
@@ -24,5 +25,6 @@ private slots:
 private:
     Ui::MyCovidRecord *ui;
     Registration *registration;
+    Dashboard *dashboard;
 };
 #endif // MYCOVIDRECORD_H

@@ -31,9 +31,9 @@ void MyCovidRecord::on_pushButton_3_clicked()
 void MyCovidRecord::on_pushButton_clicked()
 {
     this->hide();
-    Login login(this);
+    Login login;
     login.setModal(true);
     login.exec();
-    this->show();
+//    this->show();
 }
 

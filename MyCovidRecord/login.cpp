@@ -15,6 +15,11 @@ Login::~Login()
 
 void Login::on_pushButton_clicked()
 {
+
     this->close();
+    dashboard = new Dashboard;
+    dashboard->show();
+    this->show();
+
 }
 
