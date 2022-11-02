@@ -13,6 +13,7 @@ CONFIG += c++17
 SOURCES += \
     login.cpp \
     main.cpp \
+    maindocuments.cpp \
     mycovidrecord.cpp \
     registration.cpp \
     dbmanager.cpp
@@ -20,12 +21,14 @@ SOURCES += \
 
 HEADERS += \
     login.h \
+    maindocuments.h \
     mycovidrecord.h \
     registration.h \
     dbmanager.h
 
 FORMS += \
     login.ui \
+    maindocuments.ui \
     mycovidrecord.ui \
     registration.ui
 
