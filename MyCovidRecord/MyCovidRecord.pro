@@ -16,7 +16,8 @@ SOURCES += \
     main.cpp \
     mycovidrecord.cpp \
     registration.cpp \
-    dbmanager.cpp
+    dbmanager.cpp \
+    user.cpp
 
 
 HEADERS += \
@@ -24,7 +25,8 @@ HEADERS += \
     login.h \
     mycovidrecord.h \
     registration.h \
-    dbmanager.h
+    dbmanager.h \
+    user.h
 
 FORMS += \
     dashboard.ui \

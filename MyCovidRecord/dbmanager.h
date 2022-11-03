@@ -2,6 +2,7 @@
 #define DBMANAGER_H
 
 #include <QSqlDatabase>
+#include <QString>
 
 /**
  * \class DbManager
@@ -15,6 +16,8 @@
  * 2. sqilte> CREATE TABLE people(ids integer primary key, name text);
  * 3. sqlite> .quit
  */
+
+
 class DbManager
 {
 public:
@@ -39,6 +42,8 @@ public:
      * @brief Creates a new 'people' table if it doesn't already exist
      * @return true - 'people' table created successfully, false - table not created
      */
+    void closeDb();
+
     bool createTable();
 
     /**
@@ -46,9 +51,7 @@ public:
      * @param name - name of person to add
      * @return true - person added successfully, false - person not added
      */
-//    bool DbManager::userRegister
-//    bool userRegister(const QString& email,const QString& password, const QString& lastname, const QString& firstname,
-//                      const QString& phone, const QString& gender, const QString& nhi, int level, const QString& vaccine_status, const QString& dob);
+
     bool userRegister(const QString& email, const QString& password, const QString& lastname, const QString& firstname,const QString& phone,
                                  const QString& gender, const QString& nhi, int level, const QString& vaccine_status, const QString& dob);
 
@@ -65,7 +68,11 @@ public:
      * @param name - name of person to check.
      * @return true - person exists, false - person does not exist
      */
-    bool personExists(const QString& name) const;
+//    bool userExists(const QString &email) const;
+
+    bool userExists(const QString &email);
+
+//    bool personExists(const QString& name) const;
 
     /**
      * @brief Print names of all persons in db

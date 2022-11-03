@@ -4,8 +4,11 @@
 #include <QSqlRecord>
 #include <QDebug>
 
+
+
 DbManager::DbManager(const QString &path)
 {
+
     m_db = QSqlDatabase::addDatabase("QSQLITE");
     m_db.setDatabaseName(path);
 
@@ -30,6 +33,12 @@ DbManager::~DbManager()
 bool DbManager::isOpen() const
 {
     return m_db.isOpen();
+}
+
+void DbManager::closeDb()
+{
+    m_db.close();
+    m_db.removeDatabase(QSqlDatabase::defaultConnection);
 }
 
 bool DbManager::createTable()
@@ -109,49 +118,16 @@ bool DbManager::userRegister(const QString &email, const QString &password, cons
     return success;
 }
 
-bool DbManager::removePerson(const QString &name)
+
+
+bool DbManager::userExists(const QString &email)
 {
-    bool success = false;
-
-    if (personExists(name))
-    {
-        QSqlQuery queryDelete;
-        queryDelete.prepare("DELETE FROM people WHERE name = (:name)");
-        queryDelete.bindValue(":name", name);
-        success = queryDelete.exec();
-
-        if (!success)
-        {
-            qDebug() << "remove person failed: " << queryDelete.lastError();
-        }
-    }
-    else
-    {
-        qDebug() << "remove person failed: person doesnt exist";
-    }
-
-    return success;
-}
-
-void DbManager::printAllPersons() const
-{
-    qDebug() << "Persons in db:";
-    QSqlQuery query("SELECT * FROM people");
-    int idName = query.record().indexOf("name");
-    while (query.next())
-    {
-        QString name = query.value(idName).toString();
-        qDebug() << "===" << name;
-    }
-}
-
-bool DbManager::personExists(const QString &name) const
-{
-    bool exists = false;
 
     QSqlQuery checkQuery;
-    checkQuery.prepare("SELECT name FROM people WHERE name = (:name)");
-    checkQuery.bindValue(":name", name);
+    checkQuery.prepare("SELECT email FROM user WHERE email = (:email)");
+    checkQuery.bindValue(":email", email);
+
+    bool exists;
 
     if (checkQuery.exec())
     {
@@ -162,7 +138,7 @@ bool DbManager::personExists(const QString &name) const
     }
     else
     {
-        qDebug() << "person exists failed: " << checkQuery.lastError();
+        qDebug() << "user exists failed: " << checkQuery.lastError();
     }
 
     return exists;
