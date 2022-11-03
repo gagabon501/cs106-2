@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainDocuments</class>
+ <widget class="QMainWindow" name="mainDocuments">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>330</width>
+    <height>524</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.960591, y1:1, x2:1, y2:0, stop:0 rgb(27, 0, 28), stop:1 rgb(28, 53, 87));</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="accountAvatar">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="resources/mycovidrecord.qrc">
+      <normaloff>:/images/images/5810431-03.png</normaloff>:/images/images/5810431-03.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>70</width>
+      <height>70</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>40</y>
+      <width>110</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2022</year>
+      <month>11</month>
+      <day>2</day>
+     </datetime>
+    </property>
+    <property name="displayFormat">
+     <string>d/MM/yy</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>60</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Raleway</family>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: none;</string>
+    </property>
+    <property name="text">
+     <string>Documents</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>390</y>
+      <width>271</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>-1</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: none;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources/mycovidrecord.qrc">
+         <normaloff>:/images/images/5810431-07.png</normaloff>:/images/images/5810431-07.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: none;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources/mycovidrecord.qrc">
+         <normaloff>:/images/images/5810431-08.png</normaloff>:/images/images/5810431-08.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="styleSheet">
+        <string notr="true">background-color: none;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resources/mycovidrecord.qrc">
+         <normaloff>:/images/images/5810431-09.png</normaloff>:/images/images/5810431-09.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>330</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources/mycovidrecord.qrc"/>
+ </resources>
+ <connections/>
+</ui>
