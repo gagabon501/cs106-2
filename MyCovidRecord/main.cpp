@@ -12,18 +12,6 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-//    DbManager db(path);
-
-//    if (db.isOpen())
-//    {
-//        db.createTable(); // Creates tables used by the application if it doens't exist. Otherwise, it will use existing table.
-//        db.dbClose();
-//    }
-//    else
-//    {
-//        qDebug() << "Database is not open!";
-//    }
-
     MyCovidRecord w;
     w.show();
     w.setFixedSize(w.size());

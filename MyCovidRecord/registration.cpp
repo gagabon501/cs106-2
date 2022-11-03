@@ -35,7 +35,7 @@ void Registration::on_pushButton_Save_clicked()
                         ui->lineEdit_gender->text(),ui->lineEdit_nhi->text(),1,"no status",ui->lineEdit_dob->text());
 
 
-        db.dbClose();
+        db.closeDb();
 
     }
     else
