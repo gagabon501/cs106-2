@@ -1,9 +1,9 @@
 #include "mycovidrecord.h"
 
 #include <QApplication>
-
 #include <QDebug>
-#include <dbmanager.h>
+
+//#include <dbmanager.h>
 
 // Change to any path you wish
 //static const QString path = "covid19.db";

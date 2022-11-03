@@ -34,6 +34,5 @@ void MyCovidRecord::on_pushButton_clicked()
     Login login(this);
     login.setModal(true);
     login.exec();
-//    this->show();
 }
 

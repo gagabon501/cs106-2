@@ -3,9 +3,10 @@
 #include <dbmanager.h>
 #include <QString>
 #include <QCryptographicHash>
+#include <QDebug>
 
 // Change to any path you wish
-static const QString path = "covid19.db";
+QString path = "covid19.db";
 
 DbManager db(path);
 
@@ -34,8 +35,6 @@ void Registration::on_pushButton_Save_clicked()
         db.userRegister(ui->lineEdit_email->text(),hashed_password,ui->lineEdit_lastname->text(),ui->lineEdit_firstname->text(),ui->lineEdit_phone->text(),
                         ui->lineEdit_gender->text(),ui->lineEdit_nhi->text(),1,"no status",ui->lineEdit_dob->text());
 
-
-        db.closeDb();
 
     }
     else

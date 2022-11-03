@@ -4,8 +4,6 @@
 #include <QSqlRecord>
 #include <QDebug>
 
-
-
 DbManager::DbManager(const QString &path)
 {
 
@@ -18,7 +16,7 @@ DbManager::DbManager(const QString &path)
     }
     else
     {
-        qDebug() << "Database: connection ok";
+        qDebug() << "Database: connection ok!";
     }
 }
 
@@ -38,7 +36,7 @@ bool DbManager::isOpen() const
 void DbManager::closeDb()
 {
     m_db.close();
-    m_db.removeDatabase(QSqlDatabase::defaultConnection);
+//    m_db.removeDatabase(QSqlDatabase::defaultConnection);
 }
 
 bool DbManager::createTable()
