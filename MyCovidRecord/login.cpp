@@ -11,6 +11,7 @@ Login::Login(QWidget *parent) :
     ui(new Ui::Login)
 {
     ui->setupUi(this);
+    this->setFixedSize(this->size());
 }
 
 Login::~Login()
@@ -31,7 +32,8 @@ void Login::on_pushButton_clicked()
          }
 
          if(count != 1) {
-             ui->label_Status->setText("Wrong username or password: "+QString::number(count));
+//             ui->label_ErrorMsg->setText("Wrong username or password: "+QString::number(count));
+             ui->label_ErrorMsg->setText("Wrong username or password.");
          } else {
              this->close();
              dashboard = new Dashboard();
