@@ -41,8 +41,7 @@ void Registration::on_pushButton_Save_clicked()
     {
         qDebug() << "Database is not open!";
     }
-    this->close();
-
+    Registration::hide();
 
 }
 

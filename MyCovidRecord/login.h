@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "dashboard.h"
+#include "registration.h"
 
 namespace Ui {
 class Login;
@@ -19,7 +20,6 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-
     void on_pushButton_forgotPassword_clicked();
 
     void on_pushButton_Register_clicked();
@@ -27,6 +27,7 @@ private slots:
 private:
     Ui::Login *ui;
     Dashboard *dashboard;
+    Registration *registration;
 };
 
 #endif // LOGIN_H

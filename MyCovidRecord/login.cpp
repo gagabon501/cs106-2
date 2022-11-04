@@ -33,17 +33,16 @@ void Login::on_pushButton_clicked()
          }
 
          if(count != 1) {
-//             ui->label_ErrorMsg->setText("Wrong username or password: "+QString::number(count));
              ui->label_ErrorMsg->setText("Wrong username or password.");
          } else {
              this->close();
              dashboard = new Dashboard();
              dashboard->show();
-             this->show();
          }
      } else {
           qDebug() << "Query unsuccessful!";
      }
+
 
 }
 
@@ -57,6 +56,12 @@ void Login::on_pushButton_forgotPassword_clicked()
 
 void Login::on_pushButton_Register_clicked()
 {
-     QMessageBox::information(this,"Info","Register Now!");
+//     QMessageBox::information(this,"Info","Register Now!");
+//    Login::hide();
+    registration = new Registration();
+    registration->show();
+    qDebug() << "Back to the future!";
+    Login::show();
+
 }
 

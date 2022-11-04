@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "registration.h"
 #include "dashboard.h"
+#include "login.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MyCovidRecord; }
@@ -26,5 +27,6 @@ private:
     Ui::MyCovidRecord *ui;
     Registration *registration;
     Dashboard *dashboard;
+    Login *login;
 };
 #endif // MYCOVIDRECORD_H

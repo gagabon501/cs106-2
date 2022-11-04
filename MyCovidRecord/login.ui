@@ -229,8 +229,8 @@ border-radius: 20px;</string>
   <widget class="QLabel" name="label_ErrorMsg">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>250</y>
+     <x>10</x>
+     <y>220</y>
      <width>301</width>
      <height>41</height>
     </rect>
