@@ -1,6 +1,7 @@
 #include "dashboard.h"
 #include "ui_dashboard.h"
 #include <QScreen>
+#include <QMessageBox>
 
 Dashboard::Dashboard(QWidget *parent) :
     QMainWindow(parent),
@@ -17,8 +18,17 @@ Dashboard::~Dashboard()
     delete ui;
 }
 
+
+
 void Dashboard::on_actionQuit_triggered()
 {
+
     QApplication::quit();
+}
+
+
+void Dashboard::on_actionViewVaccinationRecord_triggered()
+{
+    QMessageBox::information(this,"Message Title","View Vaccination Record") ;
 }
 

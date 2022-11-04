@@ -18,6 +18,8 @@ public:
 private slots:
     void on_actionQuit_triggered();
 
+    void on_actionViewVaccinationRecord_triggered();
+
 private:
     Ui::Dashboard *ui;
 };
