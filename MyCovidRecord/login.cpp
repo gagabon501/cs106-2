@@ -4,6 +4,7 @@
 #include <QString>
 #include <QCryptographicHash>
 #include <QDebug>
+#include <QMessageBox>
 
 
 Login::Login(QWidget *parent) :
@@ -44,5 +45,18 @@ void Login::on_pushButton_clicked()
           qDebug() << "Query unsuccessful!";
      }
 
+}
+
+
+
+void Login::on_pushButton_forgotPassword_clicked()
+{
+      QMessageBox::information(this,"Info","Forgot password!");
+}
+
+
+void Login::on_pushButton_Register_clicked()
+{
+     QMessageBox::information(this,"Info","Register Now!");
 }
 

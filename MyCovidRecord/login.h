@@ -19,6 +19,11 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+
+    void on_pushButton_forgotPassword_clicked();
+
+    void on_pushButton_Register_clicked();
+
 private:
     Ui::Login *ui;
     Dashboard *dashboard;
