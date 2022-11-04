@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>397</width>
-    <height>851</height>
+    <height>907</height>
    </rect>
   </property>
   <property name="acceptDrops">
@@ -27,157 +27,6 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_4">
       <item>
-       <widget class="QFrame" name="frame_5">
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
-           <item>
-            <widget class="QLabel" name="label_profile_photo">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="resources/mycovidrecord.qrc">:/images/images/5810431-09 1_qrcode.png</pixmap>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_2">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <family>Raleway</family>
-              </font>
-             </property>
-             <property name="text">
-              <string>Gilberto Gabon</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_3">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <family>Raleway</family>
-              </font>
-             </property>
-             <property name="text">
-              <string>Client</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
-           <item>
-            <widget class="QLabel" name="label_4">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <family>Raleway</family>
-               <pointsize>20</pointsize>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>DASHBOARD</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_5">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="font">
-              <font>
-               <family>Raleway</family>
-              </font>
-             </property>
-             <property name="text">
-              <string>02-Nov-2022</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
        <widget class="QFrame" name="frame_2">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -186,6 +35,111 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Raleway</family>
+             <pointsize>20</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>DASHBOARD</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Raleway</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>02-Nov-2022</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_profile_photo">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>resources/images/user_icon.png</pixmap>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Raleway</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Client</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Raleway</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Gilberto Gabon</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QLabel" name="label">
            <property name="sizePolicy">
@@ -252,6 +206,9 @@
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">padding:15px;
 background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1, stop:0 rgba(198, 112, 0, 255), stop:0.428571 rgba(208, 0, 24, 255));
@@ -277,6 +234,9 @@ border-radius: 25px;</string>
              <pointsize>12</pointsize>
             </font>
            </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">padding:15px;
 border: 1px solid;
@@ -301,6 +261,9 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
              <family>Raleway</family>
              <pointsize>12</pointsize>
             </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>OpenHandCursor</cursorShape>
            </property>
            <property name="styleSheet">
             <string notr="true">padding:15px;
@@ -329,6 +292,9 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
             <widget class="QLabel" name="label_8">
+             <property name="cursor">
+              <cursorShape>OpenHandCursor</cursorShape>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -342,6 +308,9 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
            </item>
            <item>
             <widget class="QLabel" name="label_9">
+             <property name="cursor">
+              <cursorShape>OpenHandCursor</cursorShape>
+             </property>
              <property name="text">
               <string/>
              </property>
@@ -355,6 +324,9 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
            </item>
            <item>
             <widget class="QLabel" name="label_7">
+             <property name="cursor">
+              <cursorShape>OpenHandCursor</cursorShape>
+             </property>
              <property name="text">
               <string/>
              </property>

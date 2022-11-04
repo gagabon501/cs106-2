@@ -23,5 +23,7 @@
         <file>images/cloud-computing.png</file>
         <file>images/upload.png</file>
         <file>images/report.png</file>
+        <file>images/user.png</file>
+        <file>images/user_icon.png</file>
     </qresource>
 </RCC>
