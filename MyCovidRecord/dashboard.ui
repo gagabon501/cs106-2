@@ -400,6 +400,8 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
     <property name="title">
      <string>Profile</string>
     </property>
+    <addaction name="actionUpdate_Profile"/>
+    <addaction name="actionChange_Password"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuProfile"/>
@@ -414,29 +416,58 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionViewVaccinationRecord"/>
+   <addaction name="actionView_RAT_Test_Record"/>
+   <addaction name="actionUpload_RAT_Test"/>
+   <addaction name="actionDownload_COVID_19_Certificate"/>
+   <addaction name="actionReport_Issues"/>
    <addaction name="actionQuit"/>
   </widget>
   <action name="actionViewVaccinationRecord">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/eye.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>View Vaccination Record</string>
    </property>
   </action>
   <action name="actionView_RAT_Test_Record">
+   <property name="icon">
+    <iconset resource="resources/mycovidrecord.qrc">
+     <normaloff>:/images/images/test.png</normaloff>:/images/images/test.png</iconset>
+   </property>
    <property name="text">
     <string>View RAT Test Record</string>
    </property>
   </action>
   <action name="actionUpload_RAT_Test">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/upload.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Upload RAT Test</string>
    </property>
   </action>
   <action name="actionDownload_COVID_19_Certificate">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/cloud-computing.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Download COVID-19 Certificate</string>
    </property>
   </action>
   <action name="actionReport_Issues">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/report.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Report Issues</string>
    </property>
@@ -444,10 +475,20 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
   <action name="actionQuit">
    <property name="icon">
     <iconset resource="resources/mycovidrecord.qrc">
-     <normaloff>:/images/images/exit_app.png</normaloff>:/images/images/exit_app.png</iconset>
+     <normaloff>:/images/images/power.png</normaloff>:/images/images/power.png</iconset>
    </property>
    <property name="text">
     <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Profile">
+   <property name="text">
+    <string>Update Profile</string>
+   </property>
+  </action>
+  <action name="actionChange_Password">
+   <property name="text">
+    <string>Change Password</string>
    </property>
   </action>
  </widget>

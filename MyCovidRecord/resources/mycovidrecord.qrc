@@ -17,5 +17,11 @@
         <file>images/5810431-08.png</file>
         <file>images/5810431-09.png</file>
         <file>images/exit_app.png</file>
+        <file>images/power.png</file>
+        <file>images/test.png</file>
+        <file>images/eye.png</file>
+        <file>images/cloud-computing.png</file>
+        <file>images/upload.png</file>
+        <file>images/report.png</file>
     </qresource>
 </RCC>
