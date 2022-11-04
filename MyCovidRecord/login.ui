@@ -297,16 +297,19 @@ border-radius: 20px;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>40</y>
-     <width>161</width>
-     <height>181</height>
+     <y>50</y>
+     <width>141</width>
+     <height>161</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources/mycovidrecord.qrc">:/images/images/5810431-03.png</pixmap>
+    <pixmap resource="resources/mycovidrecord.qrc">:/images/images/password_1.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

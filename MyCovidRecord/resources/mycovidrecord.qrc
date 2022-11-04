@@ -25,5 +25,8 @@
         <file>images/report.png</file>
         <file>images/user.png</file>
         <file>images/user_icon.png</file>
+        <file>images/user (1).png</file>
+        <file>images/padlock.png</file>
+        <file>images/password_1.png</file>
     </qresource>
 </RCC>

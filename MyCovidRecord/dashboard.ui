@@ -454,11 +454,19 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
    </property>
   </action>
   <action name="actionUpdate_Profile">
+   <property name="icon">
+    <iconset resource="resources/mycovidrecord.qrc">
+     <normaloff>:/images/images/user (1).png</normaloff>:/images/images/user (1).png</iconset>
+   </property>
    <property name="text">
     <string>Update Profile</string>
    </property>
   </action>
   <action name="actionChange_Password">
+   <property name="icon">
+    <iconset resource="resources/mycovidrecord.qrc">
+     <normaloff>:/images/images/padlock.png</normaloff>:/images/images/padlock.png</iconset>
+   </property>
    <property name="text">
     <string>Change Password</string>
    </property>
