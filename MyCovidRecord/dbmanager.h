@@ -55,6 +55,8 @@ public:
     bool userRegister(const QString& email, const QString& password, const QString& lastname, const QString& firstname,const QString& phone,
                                  const QString& gender, const QString& nhi, int level, const QString& vaccine_status, const QString& dob);
 
+//    bool userRegister(const QString& email, const QString& password, const QString& lastname, const QString& firstname,const QString& phone,
+//                                 const QString& nhi, int level, const QString& vaccine_status);
 
     /**
      * @brief Remove person data from db

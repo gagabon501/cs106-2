@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>609</width>
-    <height>562</height>
+    <width>645</width>
+    <height>501</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,14 +16,14 @@
   <widget class="QLabel" name="label_Registration">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>9</y>
+     <x>20</x>
+     <y>10</y>
      <width>242</width>
      <height>47</height>
     </rect>
    </property>
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -43,14 +43,14 @@
   <widget class="QPushButton" name="pushButton_Save">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>490</y>
+     <x>480</x>
+     <y>430</y>
      <width>141</width>
      <height>41</height>
     </rect>
    </property>
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -67,19 +67,16 @@ border-radius: 20px;</string>
     <string>Save</string>
    </property>
   </widget>
-  <widget class="QWidget" name="formLayoutWidget">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>60</y>
-     <width>511</width>
-     <height>411</height>
+     <x>20</x>
+     <y>70</y>
+     <width>601</width>
+     <height>349</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <property name="formAlignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
     <item row="0" column="0">
      <widget class="QLabel" name="label_email">
       <property name="font">
@@ -265,16 +262,42 @@ padding-right: 10px;
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit_gender">
-      <property name="styleSheet">
-       <string notr="true">border: 0.5px solid;
-border-radius: 15px;
-height: 30px;
-padding-left: 10px;
-padding-right: 10px;
-</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="radioButton_male">
+        <property name="text">
+         <string>Male</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_female">
+        <property name="text">
+         <string>Female</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_other">
+        <property name="text">
+         <string>Other</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="6" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QComboBox" name="comboBox_day"/>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_month"/>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_year"/>
+      </item>
+     </layout>
     </item>
     <item row="6" column="0">
      <widget class="QLabel" name="label_dob">
@@ -289,8 +312,8 @@ padding-right: 10px;
       </property>
      </widget>
     </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="lineEdit_dob">
+    <item row="7" column="1">
+     <widget class="QLineEdit" name="lineEdit_phone">
       <property name="font">
        <font>
         <family>Raleway</family>
@@ -320,37 +343,6 @@ padding-right: 10px;
       </property>
      </widget>
     </item>
-    <item row="7" column="1">
-     <widget class="QLineEdit" name="lineEdit_phone">
-      <property name="font">
-       <font>
-        <family>Raleway</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 0.5px solid;
-border-radius: 15px;
-height: 30px;
-padding-left: 10px;
-padding-right: 10px;
-</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QLabel" name="label_nhi">
-      <property name="font">
-       <font>
-        <family>Raleway</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>NHI</string>
-      </property>
-     </widget>
-    </item>
     <item row="8" column="1">
      <widget class="QLineEdit" name="lineEdit_nhi">
       <property name="font">
@@ -368,6 +360,19 @@ padding-right: 10px;</string>
       </property>
      </widget>
     </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label_nhi">
+      <property name="font">
+       <font>
+        <family>Raleway</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>NHI</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
  </widget>
@@ -377,11 +382,6 @@ padding-right: 10px;</string>
   <tabstop>lineEdit_ReTypePassword</tabstop>
   <tabstop>lineEdit_lastname</tabstop>
   <tabstop>lineEdit_firstname</tabstop>
-  <tabstop>lineEdit_gender</tabstop>
-  <tabstop>lineEdit_dob</tabstop>
-  <tabstop>lineEdit_phone</tabstop>
-  <tabstop>lineEdit_nhi</tabstop>
-  <tabstop>pushButton_Save</tabstop>
  </tabstops>
  <resources/>
  <connections/>
