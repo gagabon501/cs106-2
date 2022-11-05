@@ -56,11 +56,9 @@ void Login::on_pushButton_forgotPassword_clicked()
 
 void Login::on_pushButton_Register_clicked()
 {
-//     QMessageBox::information(this,"Info","Register Now!");
-//    Login::hide();
     registration = new Registration();
     registration->show();
-    qDebug() << "Back to the future!";
+
     Login::show();
 
 }
