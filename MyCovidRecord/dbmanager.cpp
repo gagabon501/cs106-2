@@ -131,7 +131,7 @@ bool DbManager::userExists(const QString &email)
 
     if (checkQuery.exec())
     {
-        int i =0;
+        int i = 0;
         while(checkQuery.next()){
             i++;
         }

@@ -18,20 +18,21 @@ MyCovidRecord::~MyCovidRecord()
 }
 
 
-void MyCovidRecord::on_pushButton_3_clicked()
+
+void MyCovidRecord::on_pushButton_login_clicked()
+{
+    this->close();
+    login = new Login(this);
+    login->show();
+}
+
+
+void MyCovidRecord::on_pushButton_register_clicked()
 {
     this->hide();
     registration = new Registration(this);
     registration->setFixedSize(registration->size());
     registration->show();
     this->show();
-}
-
-
-void MyCovidRecord::on_pushButton_clicked()
-{
-    this->close();
-    login = new Login(this);
-    login->show();
 }
 
