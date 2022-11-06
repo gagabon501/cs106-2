@@ -1,22 +1,38 @@
 #include "registration.h"
 #include "ui_registration.h"
-#include <dbmanager.h>
+
 #include <QString>
 #include <QCryptographicHash>
 #include <QDebug>
 #include <QStringList>
 
-// Change to any path you wish
-QString path = "covid19.db";
+#include <QtSql>
+#include <QSqlQuery>
+#include <QSqlDatabase>
 
-DbManager db(path);
 
+QString db_register_name = "covid19.db";
 
 Registration::Registration(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Registration)
 {
+    QSqlDatabase db_register = QSqlDatabase::addDatabase("QSQLITE");
+    db_register.setDatabaseName(db_register_name);
+
+    if (!db_register.open())
+    {
+        qDebug() << "Error: connection with database fail";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok!";
+
+    }
+
     ui->setupUi(this);
+
+    //Pre-fill the Combo Box
     int i = 0;
     QStringList months;
     months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
@@ -35,44 +51,70 @@ Registration::Registration(QWidget *parent) :
 Registration::~Registration()
 {
     delete ui;
+
+    QSqlDatabase::removeDatabase(db_register_name);
 }
 
 void Registration::on_pushButton_Save_clicked()
 {
 
-    if (db.isOpen())
+    QString email = ui->lineEdit_email->text();
+
+    QString password = ui->lineEdit_password->text();
+    QString hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex();
+
+    QString lastname = ui->lineEdit_lastname->text();
+    QString firstname = ui->lineEdit_firstname->text();
+    QString phone = ui->lineEdit_phone->text();
+    QString nhi = ui->lineEdit_nhi->text();
+    QString vaccine_status="no status";
+    int level = 1;
+
+    QString dob = ui->comboBox_year->currentText()+"-"+QString::number(ui->comboBox_month->currentIndex()+1)+"-"+ui->comboBox_day->currentText();
+    QString gender = "";
+    if(ui->radioButton_female->isChecked()){
+        gender = ui->radioButton_female->text();
+    }
+    if(ui->radioButton_male->isChecked()){
+        gender = ui->radioButton_male->text();
+    }
+    if(ui->radioButton_other->isChecked()){
+        gender = ui->radioButton_other->text();
+    }
+
+    if (!email.isEmpty())
     {
-        QString password = ui->lineEdit_password->text();
-        QByteArray hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex();
+        QSqlQuery queryAdd;
 
+        queryAdd.prepare("INSERT INTO user (email,password,lastname,firstname,phone,gender,nhi,level,vaccine_status,dob) VALUES (:email,:hashed_password,:lastname,:firstname,:phone,:gender,:nhi,:level,:vaccine_status,:dob);");
+        queryAdd.bindValue(":email", email);
+        queryAdd.bindValue(":hashed_password", hashed_password);
+        queryAdd.bindValue(":lastname", lastname);
+        queryAdd.bindValue(":firstname", firstname);
+        queryAdd.bindValue(":phone", phone);
+        queryAdd.bindValue(":gender", gender);
+        queryAdd.bindValue(":nhi", nhi);
+        queryAdd.bindValue(":level", level);
+        queryAdd.bindValue(":vaccine_status", vaccine_status);
+        queryAdd.bindValue(":dob", dob);
 
-//        db.userRegister(ui->lineEdit_email->text(),hashed_password,ui->lineEdit_lastname->text(),ui->lineEdit_firstname->text(),ui->lineEdit_phone->text(),
-//                        ui->lineEdit_gender->text(),ui->lineEdit_nhi->text(),1,"no status",ui->lineEdit_dob->text());
-
-        QString dob = ui->comboBox_year->currentText()+"-"+QString::number(ui->comboBox_month->currentIndex()+1)+"-"+ui->comboBox_day->currentText();
-        QString gender = "";
-        if(ui->radioButton_female->isChecked()){
-            gender = ui->radioButton_female->text();
+        if (queryAdd.exec())
+        {
+            qDebug() << "Registration successful!";
         }
-        if(ui->radioButton_male->isChecked()){
-            gender = ui->radioButton_male->text();
-        }
-        if(ui->radioButton_other->isChecked()){
-            gender = ui->radioButton_other->text();
+        else
+        {
+            qDebug() << "Registration error: " << queryAdd.lastError();
         }
 
-//        qDebug() << dob;
-        db.userRegister(ui->lineEdit_email->text(),hashed_password,ui->lineEdit_lastname->text(),ui->lineEdit_firstname->text(),ui->lineEdit_phone->text(),
-                                gender,ui->lineEdit_nhi->text(),1,"no status",dob);
-
-//        db.userRegister(ui->lineEdit_email->text(),hashed_password,ui->lineEdit_lastname->text(),ui->lineEdit_firstname->text(),ui->lineEdit_phone->text(),
-//                        ui->lineEdit_nhi->text(),1,"no status");
-
+           QSqlDatabase::removeDatabase(db_register_name);
     }
     else
     {
-        qDebug() << "Database is not open!";
+        qDebug() << "Registration failed: email cannot be empty";
     }
+
+
     Registration::hide();
 
 }

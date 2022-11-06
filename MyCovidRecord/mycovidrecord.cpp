@@ -2,6 +2,7 @@
 #include "ui_mycovidrecord.h"
 #include "login.h"
 #include <QScreen>
+#include <QString>
 
 MyCovidRecord::MyCovidRecord(QWidget *parent)
     : QMainWindow(parent)
@@ -16,7 +17,6 @@ MyCovidRecord::~MyCovidRecord()
 {
     delete ui;
 }
-
 
 
 void MyCovidRecord::on_pushButton_login_clicked()

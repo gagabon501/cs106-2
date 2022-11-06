@@ -1,7 +1,18 @@
 #include "dashboard.h"
 #include "ui_dashboard.h"
+//#include "dbmanager.h"
 #include <QScreen>
 #include <QMessageBox>
+#include <QString>
+
+//User user;
+//DbManager mgr();
+
+// Change to any path you wish
+//QString path = "covid19.db";
+
+//DbManager db("covid19.db");
+
 
 Dashboard::Dashboard(QWidget *parent) :
     QMainWindow(parent),
@@ -9,7 +20,16 @@ Dashboard::Dashboard(QWidget *parent) :
 {
     ui->setupUi(this);
 //    this->showMaximized();
+    // Change to any path you wish
+//    QString path = "covid19.db";
 
+//    DbManager db(path);
+
+    QString email = "bea@gmail.com";
+
+//    user = user.getUserData(email);
+
+//    ui->label_userName->setText(user.u_firstname+" "+user.u_lastname);
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
 }
 
@@ -17,6 +37,7 @@ Dashboard::~Dashboard()
 {
     delete ui;
 }
+
 
 
 

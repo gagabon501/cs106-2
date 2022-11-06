@@ -2,9 +2,13 @@
 #define MYCOVIDRECORD_H
 
 #include <QMainWindow>
+#include <QtSql>
+#include <QString>
+
 #include "registration.h"
 #include "dashboard.h"
 #include "login.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MyCovidRecord; }
@@ -29,5 +33,6 @@ private:
     Registration *registration;
     Dashboard *dashboard;
     Login *login;
+
 };
 #endif // MYCOVIDRECORD_H

@@ -1,10 +1,17 @@
 #include "login.h"
 #include "ui_login.h"
+
+#include <QtSql>
 #include <QSqlQuery>
+#include <QSqlDatabase>
+
 #include <QString>
 #include <QCryptographicHash>
 #include <QDebug>
 #include <QMessageBox>
+
+
+QString dbname = "covid19.db";
 
 
 Login::Login(QWidget *parent) :
@@ -13,35 +20,68 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setFixedSize(this->size());
+
+    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
+
+    n_db.setDatabaseName(dbname);
+
+    if (!n_db.open())
+    {
+        qDebug() << "Error: connection with database fail";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok!";
+
+    }
+
 }
 
 Login::~Login()
 {
     delete ui;
+   QSqlDatabase::removeDatabase(dbname);
 }
+
 
 void Login::on_pushButton_clicked()
 {
-     QString password = ui->lineEdit_password->text(), email = ui->lineEdit_username->text();
-     QByteArray hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex();
+
+     QString password = ui->lineEdit_password->text(), email = ui->lineEdit_username->text(), pw;
+     QString hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex();
+
      QSqlQuery query;
-     if(query.exec("SELECT * FROM user WHERE email='"+email +"' and password='"+hashed_password +"'"))
+
+     query.prepare("SELECT email, password FROM user WHERE email='"+email +"'");
+
+     if(query.exec())
      {
+
          int count = 0;
          while(query.next()) {
              count++;
+             pw = query.value(1).toString();
          }
 
+
          if(count != 1) {
-             ui->label_ErrorMsg->setText("Wrong username or password.");
+             ui->label_ErrorMsg->setText("Wrong username or password: "+QString::number(count));
          } else {
-             this->close();
-             dashboard = new Dashboard();
-             dashboard->show();
+             if (pw == hashed_password) {
+                 this->close();
+                 dashboard = new Dashboard();
+                 dashboard->show();
+
+             } else {
+                 ui->label_ErrorMsg->setText("Wrong username or password: "+QString::number(count));
+             }
+
          }
      } else {
           qDebug() << "Query unsuccessful!";
      }
+
+     QSqlDatabase::removeDatabase(dbname);
 
 
 }

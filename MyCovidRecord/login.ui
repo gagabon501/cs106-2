@@ -113,7 +113,7 @@
      </sizepolicy>
     </property>
     <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <enum>QLineEdit::Normal</enum>
     </property>
    </widget>
   </widget>
@@ -248,7 +248,7 @@ border-radius: 20px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -313,7 +313,6 @@ border-radius: 20px;</string>
      </widget>
     </item>
    </layout>
-   <zorder>pushButton_Register</zorder>
   </widget>
  </widget>
  <resources>
