@@ -21,6 +21,8 @@ Login::Login(QWidget *parent) :
     ui->setupUi(this);
     this->setFixedSize(this->size());
 
+    connect(ui->pushButton,SIGNAL(clicked()),SLOT(on_pushButton_clicked()));
+
     QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
 
     n_db.setDatabaseName(dbname);
@@ -35,6 +37,7 @@ Login::Login(QWidget *parent) :
 
     }
 
+
 }
 
 Login::~Login()
@@ -43,9 +46,17 @@ Login::~Login()
    QSqlDatabase::removeDatabase(dbname);
 }
 
+//QString *Login::userEmail() {
+//    return ui->lineEdit_username->text();
+//}
 
 void Login::on_pushButton_clicked()
 {
+
+    emit Info_Collected(ui->lineEdit_username->text());
+
+    dashboard = new Dashboard;
+    dashboard->onInfoPassed(ui->lineEdit_username->text());
 
      QString password = ui->lineEdit_password->text(), email = ui->lineEdit_username->text(), pw;
      QString hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex();
@@ -68,8 +79,10 @@ void Login::on_pushButton_clicked()
              ui->label_ErrorMsg->setText("Wrong username or password: "+QString::number(count));
          } else {
              if (pw == hashed_password) {
+
+
                  this->close();
-                 dashboard = new Dashboard();
+
                  dashboard->show();
 
              } else {

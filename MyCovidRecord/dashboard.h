@@ -1,7 +1,9 @@
 #ifndef DASHBOARD_H
 #define DASHBOARD_H
 
+
 #include <QMainWindow>
+#include <QString>
 
 namespace Ui {
 class Dashboard;
@@ -14,6 +16,9 @@ class Dashboard : public QMainWindow
 public:
     explicit Dashboard(QWidget *parent = nullptr);
     ~Dashboard();
+
+public slots:
+    void onInfoPassed(QString uemail);
 
 private slots:
     void on_actionQuit_triggered();
@@ -34,6 +39,7 @@ private slots:
 
 private:
     Ui::Dashboard *ui;
+
 };
 
 #endif // DASHBOARD_H

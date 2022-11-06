@@ -2,6 +2,8 @@
 #define LOGIN_H
 
 #include <QDialog>
+#include <QString>
+
 #include "dashboard.h"
 #include "registration.h"
 
@@ -14,9 +16,12 @@ class Login : public QDialog
     Q_OBJECT
 
 public:
+
     explicit Login(QWidget *parent = nullptr);
     ~Login();
 
+signals:
+    void Info_Collected(QString uemail);
 
 private slots:
     void on_pushButton_clicked();

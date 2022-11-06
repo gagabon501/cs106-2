@@ -1,18 +1,16 @@
 #include "dashboard.h"
 #include "ui_dashboard.h"
-//#include "dbmanager.h"
+
 #include <QScreen>
 #include <QMessageBox>
 #include <QString>
 
-//User user;
-//DbManager mgr();
+#include <QtSql>
+#include <QSqlQuery>
+#include <QSqlDatabase>
 
-// Change to any path you wish
-//QString path = "covid19.db";
 
-//DbManager db("covid19.db");
-
+QString db_dashboard= "covid19.db";
 
 Dashboard::Dashboard(QWidget *parent) :
     QMainWindow(parent),
@@ -20,24 +18,37 @@ Dashboard::Dashboard(QWidget *parent) :
 {
     ui->setupUi(this);
 //    this->showMaximized();
-    // Change to any path you wish
-//    QString path = "covid19.db";
 
-//    DbManager db(path);
 
-    QString email = "bea@gmail.com";
+    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
 
-//    user = user.getUserData(email);
 
-//    ui->label_userName->setText(user.u_firstname+" "+user.u_lastname);
+    n_db.setDatabaseName(db_dashboard);
+
+    if (!n_db.open())
+    {
+        qDebug() << "Error: connection with database fail";
+    }
+    else
+    {
+        qDebug() << "Database: connection ok!";
+
+    }
+
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
 }
 
 Dashboard::~Dashboard()
 {
     delete ui;
+    QSqlDatabase::removeDatabase(db_dashboard);
 }
 
+void Dashboard::onInfoPassed(QString uemail)
+{
+    ui->label_userName->setText(uemail);
+
+}
 
 
 
