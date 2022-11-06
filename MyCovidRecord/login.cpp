@@ -46,9 +46,6 @@ Login::~Login()
    QSqlDatabase::removeDatabase(dbname);
 }
 
-//QString *Login::userEmail() {
-//    return ui->lineEdit_username->text();
-//}
 
 void Login::on_pushButton_clicked()
 {
