@@ -1,10 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
-#include "user.h"
 
-//#include <QtSql>
 #include <QSqlQuery>
-//#include <QSqlDatabase>
 
 #include <QString>
 #include <QCryptographicHash>
@@ -12,51 +9,29 @@
 #include <QMessageBox>
 
 
-//QString dbname = "covid19.db";
-
-
 Login::Login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Login)
 {
-//    User user;
 
     ui->setupUi(this);
     this->setFixedSize(this->size());
 
-    connect(ui->pushButton,SIGNAL(clicked()),SLOT(on_pushButton_clicked()));
-
-//    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
-
-//    n_db.setDatabaseName(dbname);
-
-//    if (!n_db.open())
-//    {
-//        qDebug() << "Error: connection with database fail";
-//    }
-//    else
-//    {
-//        qDebug() << "Database: connection ok!";
-
-//    }
-
+//    connect(ui->pushButton,SIGNAL(clicked()),SLOT(on_pushButton_clicked())); //this causes another Dashboard form to be created. There is actually no need for this since in main.cpp
+//                                                                               both Login (signal - event emitter) and Dashboard (slot - event receiver) have already been connected
 
 }
 
 Login::~Login()
 {
     delete ui;
-//   QSqlDatabase::removeDatabase(dbname);
+
 }
 
 
 void Login::on_pushButton_clicked()
 {
 
-    emit Info_Collected(ui->lineEdit_username->text());
-
-    dashboard = new Dashboard;
-    dashboard->onInfoPassed(ui->lineEdit_username->text());
 
      QString password = ui->lineEdit_password->text(), email = ui->lineEdit_username->text(), pw;
      QString hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex();
@@ -80,9 +55,12 @@ void Login::on_pushButton_clicked()
          } else {
              if (pw == hashed_password) {
 
-
                  this->close();
 
+                 emit Info_Collected(ui->lineEdit_username->text());
+
+                 dashboard = new Dashboard;
+                 dashboard->onInfoPassed(ui->lineEdit_username->text());
                  dashboard->show();
 
              } else {
@@ -93,9 +71,6 @@ void Login::on_pushButton_clicked()
      } else {
           qDebug() << "Query unsuccessful!";
      }
-
-//     QSqlDatabase::removeDatabase(dbname);
-
 
 }
 
