@@ -15,6 +15,9 @@ public:
     explicit manageDocuments(QWidget *parent = nullptr);
     ~manageDocuments();
 
+private slots:
+    void on_pushButton_6_clicked();
+
 private:
     Ui::manageDocuments *ui;
 };

@@ -12,3 +12,9 @@ manageDocuments::~manageDocuments()
 {
     delete ui;
 }
+
+void manageDocuments::on_pushButton_6_clicked()
+{
+
+}
+
