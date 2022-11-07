@@ -6,29 +6,12 @@
 #include <QDebug>
 #include <QStringList>
 
-#include <QtSql>
 #include <QSqlQuery>
-#include <QSqlDatabase>
-
-
-QString db_register_name = "covid19.db";
 
 Registration::Registration(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Registration)
 {
-    QSqlDatabase db_register = QSqlDatabase::addDatabase("QSQLITE");
-    db_register.setDatabaseName(db_register_name);
-
-    if (!db_register.open())
-    {
-        qDebug() << "Error: connection with database fail";
-    }
-    else
-    {
-        qDebug() << "Database: connection ok!";
-
-    }
 
     ui->setupUi(this);
 
@@ -51,8 +34,6 @@ Registration::Registration(QWidget *parent) :
 Registration::~Registration()
 {
     delete ui;
-
-    QSqlDatabase::removeDatabase(db_register_name);
 }
 
 void Registration::on_pushButton_Save_clicked()
@@ -104,10 +85,9 @@ void Registration::on_pushButton_Save_clicked()
         }
         else
         {
-            qDebug() << "Registration error: " << queryAdd.lastError();
+             qDebug() << "Query unsuccessful!";
         }
 
-           QSqlDatabase::removeDatabase(db_register_name);
     }
     else
     {
@@ -118,4 +98,3 @@ void Registration::on_pushButton_Save_clicked()
     Registration::hide();
 
 }
-

@@ -1,8 +1,15 @@
 #include "mycovidrecord.h"
 #include "ui_mycovidrecord.h"
-#include "login.h"
+
 #include <QScreen>
 #include <QString>
+
+#include <QtSql>
+#include <QSqlQuery>
+#include <QSqlDatabase>
+
+QString dbname = "covid19.db";
+QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
 
 MyCovidRecord::MyCovidRecord(QWidget *parent)
     : QMainWindow(parent)
@@ -10,12 +17,25 @@ MyCovidRecord::MyCovidRecord(QWidget *parent)
 {
     ui->setupUi(this);
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
-//    this->showMaximized();
+
+    db.setDatabaseName(dbname);
+
+    if (!db.open())
+    {
+        qDebug() << db.lastError();
+    }
+    else
+    {
+        qDebug() << "Database: connection ok!";
+
+    }
+
 }
 
 MyCovidRecord::~MyCovidRecord()
 {
     delete ui;
+    db.close();
 }
 
 

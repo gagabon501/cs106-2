@@ -1,9 +1,10 @@
 #include "login.h"
 #include "ui_login.h"
+#include "user.h"
 
-#include <QtSql>
+//#include <QtSql>
 #include <QSqlQuery>
-#include <QSqlDatabase>
+//#include <QSqlDatabase>
 
 #include <QString>
 #include <QCryptographicHash>
@@ -11,31 +12,33 @@
 #include <QMessageBox>
 
 
-QString dbname = "covid19.db";
+//QString dbname = "covid19.db";
 
 
 Login::Login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Login)
 {
+//    User user;
+
     ui->setupUi(this);
     this->setFixedSize(this->size());
 
     connect(ui->pushButton,SIGNAL(clicked()),SLOT(on_pushButton_clicked()));
 
-    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
+//    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
 
-    n_db.setDatabaseName(dbname);
+//    n_db.setDatabaseName(dbname);
 
-    if (!n_db.open())
-    {
-        qDebug() << "Error: connection with database fail";
-    }
-    else
-    {
-        qDebug() << "Database: connection ok!";
+//    if (!n_db.open())
+//    {
+//        qDebug() << "Error: connection with database fail";
+//    }
+//    else
+//    {
+//        qDebug() << "Database: connection ok!";
 
-    }
+//    }
 
 
 }
@@ -43,7 +46,7 @@ Login::Login(QWidget *parent) :
 Login::~Login()
 {
     delete ui;
-   QSqlDatabase::removeDatabase(dbname);
+//   QSqlDatabase::removeDatabase(dbname);
 }
 
 
@@ -91,7 +94,7 @@ void Login::on_pushButton_clicked()
           qDebug() << "Query unsuccessful!";
      }
 
-     QSqlDatabase::removeDatabase(dbname);
+//     QSqlDatabase::removeDatabase(dbname);
 
 
 }

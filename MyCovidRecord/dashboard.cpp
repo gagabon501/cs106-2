@@ -5,12 +5,12 @@
 #include <QMessageBox>
 #include <QString>
 
-#include <QtSql>
+//#include <QtSql>
 #include <QSqlQuery>
-#include <QSqlDatabase>
+//#include <QSqlDatabase>
 
 
-QString db_dashboard= "covid19.db";
+//QString db_dashboard= "covid19.db";
 
 Dashboard::Dashboard(QWidget *parent) :
     QMainWindow(parent),
@@ -20,20 +20,20 @@ Dashboard::Dashboard(QWidget *parent) :
 //    this->showMaximized();
 
 
-    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
+//    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
 
 
-    n_db.setDatabaseName(db_dashboard);
+//    n_db.setDatabaseName(db_dashboard);
 
-    if (!n_db.open())
-    {
-        qDebug() << "Error: connection with database fail";
-    }
-    else
-    {
-        qDebug() << "Database: connection ok!";
+//    if (!n_db.open())
+//    {
+//        qDebug() << "Error: connection with database fail";
+//    }
+//    else
+//    {
+//        qDebug() << "Database: connection ok!";
 
-    }
+//    }
 
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
 }
@@ -41,7 +41,7 @@ Dashboard::Dashboard(QWidget *parent) :
 Dashboard::~Dashboard()
 {
     delete ui;
-    QSqlDatabase::removeDatabase(db_dashboard);
+//    QSqlDatabase::removeDatabase(db_dashboard);
 }
 
 void Dashboard::onInfoPassed(QString uemail)
