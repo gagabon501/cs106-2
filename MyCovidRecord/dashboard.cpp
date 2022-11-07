@@ -1,39 +1,19 @@
 #include "dashboard.h"
 #include "ui_dashboard.h"
+#include "user.h"
 
 #include <QScreen>
 #include <QMessageBox>
 #include <QString>
 
-//#include <QtSql>
+
 #include <QSqlQuery>
-//#include <QSqlDatabase>
-
-
-//QString db_dashboard= "covid19.db";
 
 Dashboard::Dashboard(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Dashboard)
 {
     ui->setupUi(this);
-//    this->showMaximized();
-
-
-//    QSqlDatabase n_db = QSqlDatabase::addDatabase("QSQLITE");
-
-
-//    n_db.setDatabaseName(db_dashboard);
-
-//    if (!n_db.open())
-//    {
-//        qDebug() << "Error: connection with database fail";
-//    }
-//    else
-//    {
-//        qDebug() << "Database: connection ok!";
-
-//    }
 
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
 }
@@ -41,12 +21,14 @@ Dashboard::Dashboard(QWidget *parent) :
 Dashboard::~Dashboard()
 {
     delete ui;
-//    QSqlDatabase::removeDatabase(db_dashboard);
 }
 
 void Dashboard::onInfoPassed(QString uemail)
 {
-    ui->label_userName->setText(uemail);
+
+
+    User user(nullptr,uemail); //when this object is instantiated, the query inside user.cpp is executed thus filling in all the properties (variables) in there.
+    ui->label_userName->setText(user.firstname + " "+ user.lastname);
 
 }
 
