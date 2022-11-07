@@ -148,7 +148,7 @@ padding-right: 10px;
        <string/>
       </property>
       <property name="echoMode">
-       <enum>QLineEdit::Normal</enum>
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
@@ -182,7 +182,7 @@ padding-right: 10px;
 </string>
       </property>
       <property name="echoMode">
-       <enum>QLineEdit::Normal</enum>
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>

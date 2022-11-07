@@ -23,6 +23,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #12365A;
+color: #FFFFFF;
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">

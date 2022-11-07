@@ -78,13 +78,17 @@ void Login::on_pushButton_clicked()
 
 void Login::on_pushButton_forgotPassword_clicked()
 {
-      QMessageBox::information(this,"Info","Forgot password!");
+//      QMessageBox::information(this,"Info","Forgot password!");
+    Login::close();
+    changepassword = new ChangePassword(this);
+    changepassword->show();
+    Login::show();
 }
 
 
 void Login::on_pushButton_Register_clicked()
 {
-    registration = new Registration();
+    registration = new Registration(this);
     registration->show();
 
     Login::show();

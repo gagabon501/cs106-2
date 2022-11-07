@@ -6,6 +6,7 @@
 
 #include "dashboard.h"
 #include "registration.h"
+#include "changepassword.h"
 
 namespace Ui {
 class Login;
@@ -34,6 +35,7 @@ private:
     Ui::Login *ui;
     Dashboard *dashboard;
     Registration *registration;
+    ChangePassword *changepassword;
 };
 
 #endif // LOGIN_H
