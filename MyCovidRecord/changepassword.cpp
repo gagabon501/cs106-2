@@ -12,3 +12,9 @@ ChangePassword::~ChangePassword()
 {
     delete ui;
 }
+
+void ChangePassword::on_pushButton_clicked()
+{
+    this->close();
+}
+

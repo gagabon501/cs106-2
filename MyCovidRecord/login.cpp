@@ -79,10 +79,12 @@ void Login::on_pushButton_clicked()
 void Login::on_pushButton_forgotPassword_clicked()
 {
 //      QMessageBox::information(this,"Info","Forgot password!");
-    Login::close();
-    changepassword = new ChangePassword(this);
+//    this->hide();
+//    changepassword = new ChangePassword(this);
+    changepassword = new ChangePassword();
     changepassword->show();
-    Login::show();
+    changepassword->setFixedSize(changepassword->size());
+    this->show();
 }
 
 
