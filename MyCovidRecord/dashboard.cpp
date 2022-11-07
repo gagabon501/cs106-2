@@ -5,6 +5,8 @@
 #include <QScreen>
 #include <QMessageBox>
 #include <QString>
+#include <QDateTime>
+#include <QByteArray>
 
 
 #include <QSqlQuery>
@@ -26,9 +28,15 @@ Dashboard::~Dashboard()
 void Dashboard::onInfoPassed(QString uemail)
 {
 
+    QDateTime date = QDateTime::currentDateTime();
+    QString formattedTime = date.toString("dd-MMM-yyyy");
 
     User user(nullptr,uemail); //when this object is instantiated, the query inside user.cpp is executed thus filling in all the properties (variables) in there.
+
     ui->label_userName->setText(user.firstname + " "+ user.lastname);
+    ui->label_currentDate->setText(formattedTime);
+
+//    QByteArray formattedTimeMsg = formattedTime.toLocal8Bit();
 
 }
 
