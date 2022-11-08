@@ -18,3 +18,9 @@ void manageDocuments::on_pushButton_6_clicked()
 
 }
 
+
+void manageDocuments::on_CreateVaccineRecord_clicked()
+{
+
+}
+
