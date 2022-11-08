@@ -7,6 +7,7 @@
 #include "dashboard.h"
 #include "registration.h"
 #include "changepassword.h"
+#include "updateprofile.h"
 
 namespace Ui {
 class Login;
@@ -31,11 +32,13 @@ private slots:
 
     void on_pushButton_Register_clicked();
 
+
 private:
     Ui::Login *ui;
     Dashboard *dashboard;
     Registration *registration;
     ChangePassword *changepassword;
+    UpdateProfile *updateprofile;
 };
 
 #endif // LOGIN_H

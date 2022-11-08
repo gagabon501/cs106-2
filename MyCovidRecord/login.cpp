@@ -64,6 +64,9 @@ void Login::on_pushButton_clicked()
                  dashboard->onInfoPassed(ui->lineEdit_username->text());
                  dashboard->show();
 
+//                 updateprofile = new UpdateProfile;
+//                 updateprofile->onInfoPassed1(ui->lineEdit_username->text());
+
              } else {
                  ui->label_ErrorMsg->setText("Wrong username or password: "+QString::number(count));
              }
@@ -95,4 +98,7 @@ void Login::on_pushButton_Register_clicked()
     Login::show();
 
 }
+
+
+
 

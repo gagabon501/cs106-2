@@ -5,6 +5,8 @@
 #include <QMainWindow>
 #include <QString>
 
+#include "updateprofile.h"
+
 namespace Ui {
 class Dashboard;
 }
@@ -16,6 +18,9 @@ class Dashboard : public QMainWindow
 public:
     explicit Dashboard(QWidget *parent = nullptr);
     ~Dashboard();
+
+signals:
+    void Info1_Collected(QString uemail);
 
 public slots:
     void onInfoPassed(QString uemail);
@@ -39,6 +44,7 @@ private slots:
 
 private:
     Ui::Dashboard *ui;
+    UpdateProfile *updateprofile;
 
 };
 

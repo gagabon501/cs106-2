@@ -19,6 +19,7 @@ SOURCES += \
     managedocuments.cpp \
     mycovidrecord.cpp \
     registration.cpp \
+    updateprofile.cpp \
     user.cpp
 
 
@@ -30,6 +31,7 @@ HEADERS += \
     managedocuments.h \
     mycovidrecord.h \
     registration.h \
+    updateprofile.h \
     user.h
 
 FORMS += \
@@ -39,7 +41,8 @@ FORMS += \
     login.ui \
     managedocuments.ui \
     mycovidrecord.ui \
-    registration.ui
+    registration.ui \
+    updateprofile.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

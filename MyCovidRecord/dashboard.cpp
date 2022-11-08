@@ -11,6 +11,8 @@
 
 #include <QSqlQuery>
 
+QString userEmail; //this variable is accessible within this file
+
 Dashboard::Dashboard(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Dashboard)
@@ -27,6 +29,7 @@ Dashboard::~Dashboard()
 
 void Dashboard::onInfoPassed(QString uemail)
 {
+    userEmail = uemail;
 
     QDateTime date = QDateTime::currentDateTime();
     QString formattedTime = date.toString("dd-MMM-yyyy");
@@ -81,7 +84,18 @@ void Dashboard::on_actionReport_Issues_triggered()
 
 void Dashboard::on_actionUpdate_Profile_triggered()
 {
-     QMessageBox::information(this,"Info","Update Profile") ;
+//     QMessageBox::information(this,"Info","Update Profile") ;
+
+
+//    emit Info1_Collected(ui->label_userName->text());
+
+//    qDebug() << "emitted: " << ui->label_userName->text() ;
+
+//     updateprofile = new UpdateProfile;
+
+    updateprofile = new UpdateProfile(this);
+    updateprofile->onInfoPassed1(userEmail);
+    updateprofile->show();
 }
 
 
