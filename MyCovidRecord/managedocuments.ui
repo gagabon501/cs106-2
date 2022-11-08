@@ -28,8 +28,8 @@
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>81</width>
-      <height>71</height>
+      <width>106</width>
+      <height>86</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -63,7 +63,7 @@
       <x>120</x>
       <y>50</y>
       <width>131</width>
-      <height>41</height>
+      <height>45</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -122,7 +122,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="ManageDocuments">
        <property name="maximumSize">
         <size>
          <width>70</width>
@@ -150,7 +150,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="DashboardMenu">
        <property name="maximumSize">
         <size>
          <width>70</width>
@@ -178,7 +178,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="QRCodeMenu">
        <property name="maximumSize">
         <size>
          <width>70</width>
@@ -230,7 +230,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="CreateVaccineRecord">
        <property name="maximumSize">
         <size>
          <width>230</width>
@@ -259,7 +259,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="SearchVaccineRecord">
        <property name="maximumSize">
         <size>
          <width>230</width>
@@ -288,7 +288,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="UpdateVaccineRecord">
        <property name="maximumSize">
         <size>
          <width>230</width>
@@ -317,7 +317,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="DeleteVaccineRecord">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
          <horstretch>0</horstretch>
