@@ -38,6 +38,21 @@ void UpdateProfile::onInfoPassed1(QString uemail)
     //fill-in the lineEdit widgets with values from the user object
     ui->lineEdit_firstname->setText(user.firstname);
     ui->lineEdit_lastname->setText(user.lastname);
+    ui->lineEdit_phone->setText(user.phone);
+    ui->lineEdit_nhi->setText(user.nhi);
+//    qDebug() << user.gender;
+    qDebug() << user.dob;
+    if(user.gender == "Female"){
+
+       ui->radioButton_female->setChecked(true);
+    }
+    if(user.gender == "Male"){
+       ui->radioButton_male->setChecked(true);
+    }
+    if(user.gender == "Other"){
+       ui->radioButton_other->setChecked(true);
+    }
+
 
 //    qDebug() << "hey " << user.lastname;
 
