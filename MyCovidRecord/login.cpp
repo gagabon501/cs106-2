@@ -34,6 +34,7 @@ void Login::on_pushButton_clicked()
 
 
      QString password = ui->lineEdit_password->text(), email = ui->lineEdit_username->text(), pw;
+
      QString hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex();
 
      QSqlQuery query;
@@ -78,13 +79,11 @@ void Login::on_pushButton_clicked()
 
 void Login::on_pushButton_forgotPassword_clicked()
 {
-//      QMessageBox::information(this,"Info","Forgot password!");
-//    this->hide();
-//    changepassword = new ChangePassword(this);
+
     changepassword = new ChangePassword();
     changepassword->show();
     changepassword->setFixedSize(changepassword->size());
-    this->show();
+    Login::show();
 }
 
 

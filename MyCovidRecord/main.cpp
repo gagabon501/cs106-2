@@ -13,6 +13,8 @@ int main(int argc, char *argv[])
 
     Login w1;
     Dashboard w2;
+    ChangePassword w3;
+
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w2,SLOT(onInfoPassed(QString)));
 
     MyCovidRecord w;
