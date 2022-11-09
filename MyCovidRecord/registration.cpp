@@ -16,18 +16,18 @@ Registration::Registration(QWidget *parent) :
     ui->setupUi(this);
 
     //Pre-fill the Combo Box
-    int i = 0;
-    QStringList months;
-    months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
-    for(i = 1; i <= 31; i++) {
-        ui->comboBox_day->addItem(QString::number(i));
-    }
-    for(int i=0;i<12;i++) {
-        ui->comboBox_month->addItem(months[i]);
-    }
-    for(i=1940;i<=2022;i++) {
-        ui->comboBox_year->addItem(QString::number(i));
-    }
+//    int i = 0;
+//    QStringList months;
+//    months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
+//    for(i = 1; i <= 31; i++) {
+//        ui->comboBox_day->addItem(QString::number(i));
+//    }
+//    for(int i=0;i<12;i++) {
+//        ui->comboBox_month->addItem(months[i]);
+//    }
+//    for(i=1940;i<=2022;i++) {
+//        ui->comboBox_year->addItem(QString::number(i));
+//    }
 
 }
 
@@ -51,7 +51,8 @@ void Registration::on_pushButton_Save_clicked()
     QString vaccine_status="no status";
     int level = 1;
 
-    QString dob = ui->comboBox_year->currentText()+"-"+QString::number(ui->comboBox_month->currentIndex()+1)+"-"+ui->comboBox_day->currentText();
+//    QString dob = ui->comboBox_year->currentText()+"-"+QString::number(ui->comboBox_month->currentIndex()+1)+"-"+ui->comboBox_day->currentText();
+    QString dob = ui->dateEdit->date().toString("yyyy-MM-dd");
     QString gender = "";
     if(ui->radioButton_female->isChecked()){
         gender = ui->radioButton_female->text();

@@ -28,5 +28,6 @@
         <file>images/user (1).png</file>
         <file>images/padlock.png</file>
         <file>images/password_1.png</file>
+        <file>images/RAT_Result.png</file>
     </qresource>
 </RCC>

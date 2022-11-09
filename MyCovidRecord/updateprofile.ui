@@ -59,21 +59,24 @@
     <string>Update Profile</string>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>80</y>
+     <x>21</x>
+     <y>71</y>
      <width>551</width>
-     <height>231</height>
+     <height>251</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <property name="labelAlignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMaximumSize</enum>
     </property>
-    <property name="verticalSpacing">
-     <number>15</number>
+    <property name="labelAlignment">
+     <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+    </property>
+    <property name="formAlignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
     <item row="0" column="0">
      <widget class="QLabel" name="label_2">
@@ -203,29 +206,14 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QComboBox" name="comboBox_day">
-        <property name="font">
-         <font>
-          <family>Raleway</family>
-         </font>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="comboBox_month">
-        <property name="font">
-         <font>
-          <family>Raleway</family>
-         </font>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="comboBox_year"/>
-      </item>
-     </layout>
+     <widget class="QDateEdit" name="dateEdit">
+      <property name="displayFormat">
+       <string>dd-MM-yyyy</string>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+     </widget>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="label_7">

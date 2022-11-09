@@ -6,6 +6,7 @@
 #include <QString>
 
 #include "updateprofile.h"
+#include "uploadrat.h"
 
 namespace Ui {
 class Dashboard;
@@ -45,6 +46,7 @@ private slots:
 private:
     Ui::Dashboard *ui;
     UpdateProfile *updateprofile;
+    UploadRAT *uploadrat;
 
 };
 

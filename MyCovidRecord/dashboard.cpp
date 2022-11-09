@@ -66,7 +66,10 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 
 void Dashboard::on_actionUpload_RAT_Test_triggered()
 {
-    QMessageBox::information(this,"Info","Upload RAT Test Record") ;
+//    QMessageBox::information(this,"Info","Upload RAT Test Record") ;
+    uploadrat = new UploadRAT();
+    uploadrat->show();
+
 }
 
 
