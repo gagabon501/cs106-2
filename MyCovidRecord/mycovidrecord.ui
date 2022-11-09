@@ -48,6 +48,12 @@ color: #FFFFFF;
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="maximumSize">
+          <size>
+           <width>450</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -62,7 +68,7 @@ color: #FFFFFF;
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QGroupBox" name="groupBox_2">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -70,8 +76,18 @@ color: #FFFFFF;
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="toolTipDuration">
+       <number>0</number>
+      </property>
       <property name="styleSheet">
-       <string notr="true">border: 0;</string>
+       <string notr="true">border: none;
+</string>
       </property>
       <property name="title">
        <string/>
@@ -80,6 +96,12 @@ color: #FFFFFF;
        <bool>true</bool>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>30</number>
+       </property>
+       <property name="rightMargin">
+        <number>30</number>
+       </property>
        <item>
         <widget class="QPushButton" name="pushButton_login">
          <property name="sizePolicy">
@@ -88,17 +110,57 @@ color: #FFFFFF;
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Raleway</family>
+          </font>
+         </property>
          <property name="cursor">
           <cursorShape>OpenHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid;
-border-radius: 30px;
-background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1, stop:0 rgba(198, 112, 0, 255), stop:0.428571 rgba(208, 0, 24, 255));
-</string>
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.951, y1:1, x2:1, y2:0, stop:0 rgb(255, 102, 53), stop:1 rgb(255, 147, 0));
+border-radius: 15px;</string>
          </property>
          <property name="text">
           <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_admin">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Raleway</family>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>OpenHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.951, y1:1, x2:1, y2:0, stop:0 rgb(255, 102, 53), stop:1 rgb(255, 147, 0));
+border-radius: 15px;</string>
+         </property>
+         <property name="text">
+          <string>Admin login</string>
          </property>
         </widget>
        </item>
@@ -110,13 +172,29 @@ background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1,
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Raleway</family>
+          </font>
+         </property>
          <property name="cursor">
           <cursorShape>OpenHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">border:1px solid;
-border-radius: 30px;
-background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1, stop:0 rgba(198, 112, 0, 255), stop:0.428571 rgba(208, 0, 24, 255));</string>
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.951, y1:1, x2:1, y2:0, stop:0 rgb(255, 102, 53), stop:1 rgb(255, 147, 0));
+border-radius: 15px;</string>
          </property>
          <property name="text">
           <string>Create new account</string>
