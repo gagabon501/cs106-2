@@ -1,4 +1,5 @@
 #include "mycovidrecord.h"
+#include "adminlogin.h"
 #include "ui_mycovidrecord.h"
 
 #include <QScreen>
@@ -55,4 +56,6 @@ void MyCovidRecord::on_pushButton_register_clicked()
     registration->show();
     this->show();
 }
+
+
 
