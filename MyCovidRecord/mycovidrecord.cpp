@@ -59,3 +59,12 @@ void MyCovidRecord::on_pushButton_register_clicked()
 
 
 
+
+void MyCovidRecord::on_pushButton_admin_clicked()
+{
+    this->close();
+    adminlogin = new AdminLogin(this);
+    registration->show();
+    this->show();
+}
+

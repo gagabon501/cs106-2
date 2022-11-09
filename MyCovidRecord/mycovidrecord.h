@@ -5,6 +5,7 @@
 #include <QtSql>
 #include <QString>
 
+#include "adminlogin.h"
 #include "registration.h"
 #include "dashboard.h"
 #include "login.h"
@@ -35,6 +36,7 @@ private:
     Registration *registration;
     Dashboard *dashboard;
     Login *login;
+    AdminLogin *adminlogin;
 
 };
 #endif // MYCOVIDRECORD_H
