@@ -10,6 +10,7 @@ class User : public QObject
 public:
     explicit User(QObject *parent = nullptr, QString email="");
 
+    QString userEmail;
     QString lastname;
     QString firstname;
     QString phone;

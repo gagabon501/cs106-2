@@ -23,6 +23,7 @@ User::User(QObject *parent, QString email)
         while(query.next()) {
             count++;
 
+            userEmail = query.value(0).toString();
             lastname = query.value(1).toString();
             firstname = query.value(2).toString();
             gender = query.value(3).toString();

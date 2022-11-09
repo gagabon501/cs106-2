@@ -19,6 +19,11 @@ public:
 public slots:
     void onInfoPassed1(QString uemail);
 
+private slots:
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
 private:
     Ui::UpdateProfile *ui;
 };
