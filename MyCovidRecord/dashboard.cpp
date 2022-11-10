@@ -65,7 +65,8 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 void Dashboard::on_actionUpload_RAT_Test_triggered()
 {
 
-    uploadrat = new UploadRAT();
+    uploadrat = new UploadRAT(this);
+    uploadrat->onInfoPassed2(userEmail);
     uploadrat->show();
 
 }

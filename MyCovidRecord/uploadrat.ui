@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>753</width>
-    <height>292</height>
+    <width>640</width>
+    <height>259</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,33 +19,36 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>10</y>
+     <x>540</x>
+     <y>0</y>
      <width>81</width>
-     <height>241</height>
+     <height>261</height>
     </rect>
    </property>
    <property name="orientation">
     <enum>Qt::Vertical</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+   </property>
+   <property name="centerButtons">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>221</width>
-     <height>221</height>
+     <x>0</x>
+     <y>0</y>
+     <width>231</width>
+     <height>251</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources/mycovidrecord.qrc">:/images/images/covid-test.png</pixmap>
+    <pixmap resource="resources/mycovidrecord.qrc">:/images/images/RAT_Result.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -54,15 +57,21 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>240</x>
      <y>20</y>
-     <width>251</width>
+     <width>261</width>
      <height>26</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QLabel" name="label_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>Date Tested</string>
       </property>
@@ -93,6 +102,104 @@
        <enum>Qt::LocalTime</enum>
       </property>
      </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>100</y>
+     <width>261</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Is the control line (C) visible?</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QRadioButton" name="radioButton_C_Yes">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Yes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_C_No">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>No</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>200</y>
+     <width>261</width>
+     <height>48</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Is the test line (T) visible?</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="radioButton_T_Yes">
+        <property name="text">
+         <string>Yes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_T_No">
+        <property name="text">
+         <string>No</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

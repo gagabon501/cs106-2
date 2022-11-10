@@ -15,6 +15,9 @@ public:
     explicit UploadRAT(QWidget *parent = nullptr);
     ~UploadRAT();
 
+public slots:
+    void onInfoPassed2(QString uemail);
+
 private slots:
 
     void on_buttonBox_accepted();
