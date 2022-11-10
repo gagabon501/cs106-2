@@ -38,7 +38,6 @@ void UploadRAT::on_buttonBox_accepted()
 {
     User user(nullptr,uEmail); //when this object is instantiated, the query inside user.cpp is executed thus filling in all the properties (variables) in there.
 
-    qDebug() << "email: " << uEmail << user.firstname << user.lastname;
 
     QString dateStr = ui->dateEdit_tested->date().toString("yyyy-MM-dd"), lastname, firstname, email, test_result = "Negative";
     qDebug() << dateStr;
@@ -47,14 +46,12 @@ void UploadRAT::on_buttonBox_accepted()
     lastname = user.lastname;
     firstname = user.firstname;
 
-    qDebug() << "Result from: " << firstname + " " +lastname;
 
     if(ui->radioButton_C_Yes->isChecked() && ui->radioButton_T_Yes->isChecked())
     {
         test_result ="Positive";
 
     }
-
 
     queryAdd.prepare("INSERT INTO covid_test (email,date_entered, date_administered, administered_by, test_type, test_result) VALUES (:email,:date_entered,:date_administered,:administered_by,:test_type,:test_result);");
     queryAdd.bindValue(":email", uEmail);

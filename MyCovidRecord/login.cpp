@@ -32,7 +32,6 @@ Login::~Login()
 void Login::on_pushButton_clicked()
 {
 
-
      QString password = ui->lineEdit_password->text(), email = ui->lineEdit_username->text(), pw;
 
      QString hashed_password = QCryptographicHash::hash(password.toUtf8(),QCryptographicHash::Sha224).toHex(); //hash the entered password before comparing with hashed password from the database
@@ -57,32 +56,11 @@ void Login::on_pushButton_clicked()
 
               emit Info_Collected(ui->lineEdit_username->text());
 
-              dashboard = new Dashboard;
+              dashboard = new Dashboard(this);
               dashboard->onInfoPassed(ui->lineEdit_username->text());
               dashboard->show();
 
          }
-
-
-//         if(count != 1) {
-//             ui->label_ErrorMsg->setText("Wrong username or password: ");
-//         } else {
-//             if (pw == hashed_password) {
-
-//                 this->close();
-
-//                 emit Info_Collected(ui->lineEdit_username->text());
-
-//                 dashboard = new Dashboard;
-//                 dashboard->onInfoPassed(ui->lineEdit_username->text());
-//                 dashboard->show();
-
-
-//             } else {
-//                 ui->label_ErrorMsg->setText("Wrong username or password: "+QString::number(count));
-//             }
-
-//         }
 
      } else {
           qDebug() << "Query unsuccessful!";
@@ -91,11 +69,10 @@ void Login::on_pushButton_clicked()
 }
 
 
-
 void Login::on_pushButton_forgotPassword_clicked()
 {
 
-    changepassword = new ChangePassword();
+    changepassword = new ChangePassword(this);
     changepassword->show();
     changepassword->setFixedSize(changepassword->size());
     Login::show();

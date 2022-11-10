@@ -20,9 +20,6 @@ public:
     explicit Dashboard(QWidget *parent = nullptr);
     ~Dashboard();
 
-//signals:
-//    void Info1_Collected(QString uemail);
-
 public slots:
     void onInfoPassed(QString uemail);
 

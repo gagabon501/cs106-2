@@ -9,7 +9,9 @@
 #include "registration.h"
 #include "dashboard.h"
 #include "login.h"
-
+#include "changepassword.h"
+#include "updateprofile.h"
+#include "uploadrat.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MyCovidRecord; }
@@ -37,6 +39,9 @@ private:
     Dashboard *dashboard;
     Login *login;
     AdminLogin *adminlogin;
+    ChangePassword *changepassword;
+    UpdateProfile *updateprofile;
+    UploadRAT *uploadrat;
 
 };
 #endif // MYCOVIDRECORD_H
