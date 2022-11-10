@@ -39,8 +39,6 @@ void Dashboard::onInfoPassed(QString uemail)
     ui->label_userName->setText(user.firstname + " "+ user.lastname);
     ui->label_currentDate->setText(formattedTime);
 
-//    QByteArray formattedTimeMsg = formattedTime.toLocal8Bit();
-
 }
 
 
@@ -66,7 +64,7 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 
 void Dashboard::on_actionUpload_RAT_Test_triggered()
 {
-//    QMessageBox::information(this,"Info","Upload RAT Test Record") ;
+
     uploadrat = new UploadRAT();
     uploadrat->show();
 
@@ -87,14 +85,6 @@ void Dashboard::on_actionReport_Issues_triggered()
 
 void Dashboard::on_actionUpdate_Profile_triggered()
 {
-//     QMessageBox::information(this,"Info","Update Profile") ;
-
-
-//    emit Info1_Collected(ui->label_userName->text());
-
-//    qDebug() << "emitted: " << ui->label_userName->text() ;
-
-//     updateprofile = new UpdateProfile;
 
     updateprofile = new UpdateProfile(this);
     updateprofile->onInfoPassed1(userEmail);

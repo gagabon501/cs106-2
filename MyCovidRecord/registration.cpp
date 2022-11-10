@@ -5,7 +5,7 @@
 #include <QCryptographicHash>
 #include <QDebug>
 #include <QStringList>
-
+#include <QMessageBox>
 #include <QSqlQuery>
 
 Registration::Registration(QWidget *parent) :
@@ -14,20 +14,6 @@ Registration::Registration(QWidget *parent) :
 {
 
     ui->setupUi(this);
-
-    //Pre-fill the Combo Box
-//    int i = 0;
-//    QStringList months;
-//    months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
-//    for(i = 1; i <= 31; i++) {
-//        ui->comboBox_day->addItem(QString::number(i));
-//    }
-//    for(int i=0;i<12;i++) {
-//        ui->comboBox_month->addItem(months[i]);
-//    }
-//    for(i=1940;i<=2022;i++) {
-//        ui->comboBox_year->addItem(QString::number(i));
-//    }
 
 }
 
@@ -38,6 +24,7 @@ Registration::~Registration()
 
 void Registration::on_pushButton_Save_clicked()
 {
+
 
     QString email = ui->lineEdit_email->text();
 
@@ -66,29 +53,33 @@ void Registration::on_pushButton_Save_clicked()
 
     if (!email.isEmpty())
     {
-        QSqlQuery queryAdd;
 
-        queryAdd.prepare("INSERT INTO user (email,password,lastname,firstname,phone,gender,nhi,level,vaccine_status,dob) VALUES (:email,:hashed_password,:lastname,:firstname,:phone,:gender,:nhi,:level,:vaccine_status,:dob);");
-        queryAdd.bindValue(":email", email);
-        queryAdd.bindValue(":hashed_password", hashed_password);
-        queryAdd.bindValue(":lastname", lastname);
-        queryAdd.bindValue(":firstname", firstname);
-        queryAdd.bindValue(":phone", phone);
-        queryAdd.bindValue(":gender", gender);
-        queryAdd.bindValue(":nhi", nhi);
-        queryAdd.bindValue(":level", level);
-        queryAdd.bindValue(":vaccine_status", vaccine_status);
-        queryAdd.bindValue(":dob", dob);
+        if (ui->lineEdit_password->text()==ui->lineEdit_ReTypePassword->text()) {
+            QSqlQuery queryAdd;
 
-        if (queryAdd.exec())
-        {
-            qDebug() << "Registration successful!";
+            queryAdd.prepare("INSERT INTO user (email,password,lastname,firstname,phone,gender,nhi,level,vaccine_status,dob) VALUES (:email,:hashed_password,:lastname,:firstname,:phone,:gender,:nhi,:level,:vaccine_status,:dob);");
+            queryAdd.bindValue(":email", email);
+            queryAdd.bindValue(":hashed_password", hashed_password);
+            queryAdd.bindValue(":lastname", lastname);
+            queryAdd.bindValue(":firstname", firstname);
+            queryAdd.bindValue(":phone", phone);
+            queryAdd.bindValue(":gender", gender);
+            queryAdd.bindValue(":nhi", nhi);
+            queryAdd.bindValue(":level", level);
+            queryAdd.bindValue(":vaccine_status", vaccine_status);
+            queryAdd.bindValue(":dob", dob);
+
+            if (queryAdd.exec())
+            {
+                qDebug() << "Registration successful!";
+            }
+            else
+            {
+                 qDebug() << "Query unsuccessful!";
+            }
+        } else {
+            QMessageBox::information(this,"Info","Passwords do not match. Registration unsuccessful!") ;
         }
-        else
-        {
-             qDebug() << "Query unsuccessful!";
-        }
-
     }
     else
     {
@@ -99,3 +90,11 @@ void Registration::on_pushButton_Save_clicked()
     Registration::hide();
 
 }
+
+void Registration::on_lineEdit_ReTypePassword_editingFinished()
+{
+    if (ui->lineEdit_password->text() != ui->lineEdit_ReTypePassword->text()) {
+        QMessageBox::information(this,"Info","Passwords do not match!") ;
+    }
+}
+

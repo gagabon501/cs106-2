@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_Save_clicked();
 
+    void on_lineEdit_ReTypePassword_editingFinished();
+
 private:
     Ui::Registration *ui;
 };
