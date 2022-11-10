@@ -22,7 +22,8 @@ SOURCES += \
     registration.cpp \
     updateprofile.cpp \
     uploadrat.cpp \
-    user.cpp
+    user.cpp \
+    viewcovidtestresult.cpp
 
 
 HEADERS += \
@@ -36,7 +37,8 @@ HEADERS += \
     registration.h \
     updateprofile.h \
     uploadrat.h \
-    user.h
+    user.h \
+    viewcovidtestresult.h
 
 FORMS += \
     adminlogin.ui \
@@ -48,7 +50,8 @@ FORMS += \
     mycovidrecord.ui \
     registration.ui \
     updateprofile.ui \
-    uploadrat.ui
+    uploadrat.ui \
+    viewcovidtestresult.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

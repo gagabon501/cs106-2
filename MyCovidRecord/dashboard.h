@@ -7,6 +7,7 @@
 
 #include "updateprofile.h"
 #include "uploadrat.h"
+#include "viewcovidtestresult.h"
 
 namespace Ui {
 class Dashboard;
@@ -44,6 +45,7 @@ private:
     Ui::Dashboard *ui;
     UpdateProfile *updateprofile;
     UploadRAT *uploadrat;
+    ViewCovidTestResult *viewcovidtestresult;
 
 };
 

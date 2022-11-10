@@ -30,7 +30,6 @@ void UploadRAT::onInfoPassed2(QString uemail)
 {
     uEmail = uemail;
 
-
 }
 
 
