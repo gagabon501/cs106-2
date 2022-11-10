@@ -9,6 +9,8 @@ UploadRAT::UploadRAT(QWidget *parent) :
     ui(new Ui::UploadRAT)
 {
     ui->setupUi(this);
+    ui->dateEdit_tested->setDate(QDate::currentDate());
+
 }
 
 UploadRAT::~UploadRAT()
@@ -23,7 +25,7 @@ UploadRAT::~UploadRAT()
 
 void UploadRAT::on_buttonBox_accepted()
 {
-    QString dateStr = ui->dateEdit->date().toString("yyyy-MM-dd");
+    QString dateStr = ui->dateEdit_tested->date().toString("yyyy-MM-dd");
     qDebug() << dateStr;
 }
 

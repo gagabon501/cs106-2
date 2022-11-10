@@ -37,7 +37,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>171</width>
+     <width>221</width>
      <height>221</height>
     </rect>
    </property>
@@ -45,16 +45,16 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources/mycovidrecord.qrc">:/images/images/RAT_Result.png</pixmap>
+    <pixmap resource="resources/mycovidrecord.qrc">:/images/images/covid-test.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>280</x>
      <y>20</y>
      <width>251</width>
      <height>26</height>
@@ -69,7 +69,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QDateEdit" name="dateEdit">
+     <widget class="QDateEdit" name="dateEdit_tested">
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>

@@ -29,5 +29,6 @@
         <file>images/padlock.png</file>
         <file>images/password_1.png</file>
         <file>images/RAT_Result.png</file>
+        <file>images/covid-test.png</file>
     </qresource>
 </RCC>
