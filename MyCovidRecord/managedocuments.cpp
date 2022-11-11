@@ -1,4 +1,5 @@
 #include "managedocuments.h"
+#include "createrecord.h"
 #include "ui_managedocuments.h"
 
 manageDocuments::manageDocuments(QWidget *parent) :
@@ -13,14 +14,15 @@ manageDocuments::~manageDocuments()
     delete ui;
 }
 
-void manageDocuments::on_pushButton_6_clicked()
+
+
+
+
+
+void manageDocuments::on_CreateVacRec_clicked()
 {
-
-}
-
-
-void manageDocuments::on_CreateVaccineRecord_clicked()
-{
-
+    this->close();
+    createrecord = new CreateRecord(this);
+    createrecord->show();
 }
 
