@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>287</width>
+    <width>285</width>
     <height>556</height>
    </rect>
   </property>
@@ -62,7 +62,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="formHeader">
        <property name="font">
         <font>
          <family>Raleway</family>
@@ -116,7 +116,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="myRecordsMenu">
        <property name="maximumSize">
         <size>
          <width>70</width>
@@ -144,7 +144,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="dashboardMenu">
        <property name="maximumSize">
         <size>
          <width>70</width>
@@ -172,7 +172,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="QRcodeMenu">
        <property name="maximumSize">
         <size>
          <width>70</width>
@@ -206,8 +206,8 @@
      <rect>
       <x>20</x>
       <y>130</y>
-      <width>241</width>
-      <height>191</height>
+      <width>251</width>
+      <height>181</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -229,23 +229,36 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
-        <widget class="QLabel" name="label_4">
+        <widget class="QPushButton" name="searchUser">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>40</height>
+           <height>30</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Raleway</family>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: none;</string>
+          <string notr="true">border-radius: 10px;
+background-color: rgb(66, 66, 66);
+</string>
          </property>
          <property name="text">
-          <string>Search user</string>
+          <string>Search User</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_3">
+        <widget class="QLineEdit" name="searchUserForm">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -263,23 +276,41 @@ background-color: #000;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QPushButton" name="vaccineType">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>40</height>
+           <height>16777215</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Raleway</family>
+           <bold>false</bold>
+          </font>
+         </property>
          <property name="styleSheet">
-          <string notr="true">background-color: none;</string>
+          <string notr="true">border-radius: 10px;
+background-color: rgb(66, 66, 66);
+
+</string>
          </property>
          <property name="text">
-          <string>Vaccine type</string>
+          <string>Vaccine Type</string>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>300</number>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="SearchVaccForm">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -297,7 +328,7 @@ background-color: #000;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="dateIn">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -313,7 +344,7 @@ background-color: #000;</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_2">
+        <widget class="QLineEdit" name="inputDateLine">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -330,7 +361,7 @@ background-color: #000;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="createRecord">
     <property name="geometry">
      <rect>
       <x>160</x>
