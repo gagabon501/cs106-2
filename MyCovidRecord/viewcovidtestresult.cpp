@@ -11,22 +11,24 @@ ViewCovidTestResult::ViewCovidTestResult(QWidget *parent) :
     ui(new Ui::ViewCovidTestResult)
 {
     ui->setupUi(this);
+    this->setFixedSize(this->size());
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    for (int c = 0; c < ui->tableView->horizontalHeader()->count(); ++c)
-    {
-        ui->tableView->horizontalHeader()->setSectionResizeMode(
-            c, QHeaderView::Stretch);
-    }
-    User user;
+//    for (int c = 0; c < ui->tableView->horizontalHeader()->count(); ++c)
+//    {
+//        ui->tableView->horizontalHeader()->setSectionResizeMode(
+//            c, QHeaderView::Stretch);
+//    }
 
-    QSqlQuery *query = new QSqlQuery();
-    QSqlQueryModel *model = new QSqlQueryModel;
+//    User user;
 
-    query->prepare("SELECT * from covid_test");
-    query->exec();
-    model->setQuery(*query);
+//    QSqlQuery *query = new QSqlQuery();
+//    QSqlQueryModel *model = new QSqlQueryModel;
 
-    ui->tableView->setModel(model);
+//    query->prepare("SELECT * from covid_test");
+//    query->exec();
+//    model->setQuery(*query);
+
+//    ui->tableView->setModel(model);
 
 }
 
@@ -38,6 +40,18 @@ ViewCovidTestResult::~ViewCovidTestResult()
 void ViewCovidTestResult::onInfoPassed3(QString uemail)
 {
     resultEmail = uemail;
+    User user(nullptr,uemail);
+
+    QSqlQuery *query = new QSqlQuery();
+    QSqlQueryModel *model = new QSqlQueryModel;
+
+    query->prepare("SELECT * from covid_test where email='"+uemail+"'");
+    query->exec();
+    model->setQuery(*query);
+
+    ui->label_result->setText("Covid test results for: "+user.firstname+" "+user.lastname);
+    ui->tableView->setModel(model);
+
 
 }
 
