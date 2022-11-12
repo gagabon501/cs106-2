@@ -10,8 +10,6 @@ ChangePassword::ChangePassword(QWidget *parent) :
     ui(new Ui::ChangePassword)
 {
     ui->setupUi(this);
-//    qDebug() << "the email outside of scope: " << pwEmail;
-
 }
 
 ChangePassword::~ChangePassword()

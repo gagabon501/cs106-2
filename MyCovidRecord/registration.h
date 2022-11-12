@@ -20,6 +20,10 @@ private slots:
 
     void on_lineEdit_ReTypePassword_editingFinished();
 
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
 private:
     Ui::Registration *ui;
 };
