@@ -25,7 +25,8 @@ SOURCES += \
     uploadselftest.cpp \
     updatevaccinerecord.cpp \
     user.cpp \
-    viewcovidtestresult.cpp
+    viewcovidtestresult.cpp \
+    viewvaccinereport.cpp
 
 
 HEADERS += \
@@ -42,7 +43,8 @@ HEADERS += \
     uploadselftest.h \
     updatevaccinerecord.h \
     user.h \
-    viewcovidtestresult.h
+    viewcovidtestresult.h \
+    viewvaccinereport.h
 
 FORMS += \
     adminlogin.ui \
@@ -57,7 +59,8 @@ FORMS += \
     updateprofile.ui \
     uploadselftest.ui \
     updatevaccinerecord.ui \
-    viewcovidtestresult.ui
+    viewcovidtestresult.ui \
+    viewvaccinereport.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

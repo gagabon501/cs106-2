@@ -18,8 +18,8 @@ Dashboard::Dashboard(QWidget *parent) :
     ui(new Ui::Dashboard)
 {
     ui->setupUi(this);
-
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
+    this->setFixedSize(this->size());
 }
 
 Dashboard::~Dashboard()
@@ -52,7 +52,10 @@ void Dashboard::on_actionQuit_triggered()
 
 void Dashboard::on_actionViewVaccinationRecord_triggered()
 {
-    QMessageBox::information(this,"Info","View Vaccination Record") ;
+//    QMessageBox::information(this,"Info","View Vaccination Record") ;
+    viewvaccinereport = new ViewVaccineReport(this);
+    viewvaccinereport->onInfoPassed6(userEmail);
+    viewvaccinereport->show();
 }
 
 

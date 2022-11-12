@@ -51,7 +51,8 @@ void Login::on_pushButton_clicked()
          }
 
          if (count != 1) {
-              ui->label_ErrorMsg->setText("Wrong username or password: ");
+
+              QMessageBox::information(this,"Info","Wrong username or password.") ;
          } else {
               this->close();
 
@@ -60,6 +61,8 @@ void Login::on_pushButton_clicked()
              emit Info_Collected(ui->lineEdit_username->text()); //emit here the password for use by receipt by slots of other forms
 
              qDebug() << "User level: " << user.level;
+//             QMessageBox::information(this,"Info","Login successful.") ;
+
 
              if (user.level > 1) {
                  adminlogin = new AdminLogin(this);
@@ -78,6 +81,7 @@ void Login::on_pushButton_clicked()
 
      } else {
           qDebug() << "Query unsuccessful!";
+          QMessageBox::information(this,"Info","Query unsuccessful!") ;
      }
 
 }

@@ -9,6 +9,7 @@
 #include "viewcovidtestresult.h"
 #include "uploadselftest.h"
 #include "changepassword.h"
+#include "viewvaccinereport.h"
 
 namespace Ui {
 class Dashboard;
@@ -48,6 +49,8 @@ private:
     ViewCovidTestResult *viewcovidtestresult;
     UploadSelfTest *uploadselftest;
     ChangePassword *changepassword;
+    ViewVaccineReport *viewvaccinereport;
+
 
 };
 

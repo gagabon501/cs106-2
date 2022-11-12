@@ -60,10 +60,10 @@
    <widget class="QWidget" name="verticalLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>150</x>
       <y>50</y>
       <width>131</width>
-      <height>47</height>
+      <height>51</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -244,7 +244,6 @@
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 20px;
-align: center;
 background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
        </property>
        <property name="text">
@@ -273,7 +272,6 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 20px;
-align: center;
 background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
        </property>
        <property name="text">
@@ -314,7 +312,6 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 20px;
-align: center;
 background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
        </property>
        <property name="text">

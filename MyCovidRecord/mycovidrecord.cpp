@@ -1,10 +1,9 @@
 #include "mycovidrecord.h"
-#include "adminlogin.h"
 #include "ui_mycovidrecord.h"
 
 #include <QScreen>
 #include <QString>
-
+#include <QMessageBox>
 #include <QtSql>
 #include <QSqlQuery>
 #include <QSqlDatabase>
@@ -18,16 +17,19 @@ MyCovidRecord::MyCovidRecord(QWidget *parent)
 {
     ui->setupUi(this);
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
-
+    this->setFixedSize(this->size());
     db.setDatabaseName(dbname);
 
     if (!db.open())
     {
         qDebug() << db.lastError();
+        QMessageBox::information(this,"Info","Unable to open DATABASE") ;
     }
     else
     {
         qDebug() << "Database: connection ok!";
+//        QMessageBox::information(this,"Info","Database connection ok!") ;
+        ui->statusBar->showMessage("Connected to the database: "+db.databaseName());
 
     }
 
@@ -56,19 +58,4 @@ void MyCovidRecord::on_pushButton_register_clicked()
     registration->show();
     this->show();
 }
-
-
-
-
-//void MyCovidRecord::on_pushButton_admin_clicked()
-//{
-//    this->close();
-//    login = new Login(this);
-//    login->show();
-
-////    this->close();
-////    adminlogin = new AdminLogin(this);
-////    adminlogin->show();
-////    this->show();
-//}
 
