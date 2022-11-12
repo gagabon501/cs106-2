@@ -15,8 +15,14 @@ public:
     explicit ChangePassword(QWidget *parent = nullptr);
     ~ChangePassword();
 
+public slots:
+    void onInfoPassed5(QString uemail);
+
 private slots:
-    void on_pushButton_clicked();
+
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
 
 private:
     Ui::ChangePassword *ui;

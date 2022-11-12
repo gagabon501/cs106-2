@@ -36,10 +36,10 @@ void UploadSelfTest::on_buttonBox_accepted()
     User user(nullptr,uEmail); //when this object is instantiated, the query inside user.cpp is executed thus filling in all the properties (variables) in there.
 
 
-    QString dateStr = ui->dateEdit_taken->date().toString("yyyy-MM-dd"), lastname, firstname, email, test_result = "Negative";
+    QString dateStr = ui->dateEdit_taken->date().toString("yyyy-MM-dd"), lastname, firstname, test_result = "Negative";
     QString timeStr = ui->timeEdit_taken->time().toString("HH:mm:ss");
 
-    qDebug() << timeStr;
+//    qDebug() << timeStr;
 
     QSqlQuery queryAdd;
 

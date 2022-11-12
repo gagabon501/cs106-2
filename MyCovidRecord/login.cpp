@@ -57,7 +57,7 @@ void Login::on_pushButton_clicked()
 
              User user(nullptr,ui->lineEdit_username->text());
 
-             emit Info_Collected(ui->lineEdit_username->text());
+             emit Info_Collected(ui->lineEdit_username->text()); //emit here the password for use by receipt by slots of other forms
 
              qDebug() << "User level: " << user.level;
 

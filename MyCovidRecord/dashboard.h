@@ -8,6 +8,7 @@
 #include "updateprofile.h"
 #include "viewcovidtestresult.h"
 #include "uploadselftest.h"
+#include "changepassword.h"
 
 namespace Ui {
 class Dashboard;
@@ -46,6 +47,7 @@ private:
     UpdateProfile *updateprofile;
     ViewCovidTestResult *viewcovidtestresult;
     UploadSelfTest *uploadselftest;
+    ChangePassword *changepassword;
 
 };
 

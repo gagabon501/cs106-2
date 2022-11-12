@@ -75,6 +75,7 @@ void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
 void Dashboard::on_actionReport_Issues_triggered()
 {
     QMessageBox::information(this,"Info","Report Issues") ;
+
 }
 
 
@@ -89,17 +90,11 @@ void Dashboard::on_actionUpdate_Profile_triggered()
 
 void Dashboard::on_actionChange_Password_triggered()
 {
-     QMessageBox::information(this,"Info","Change password") ;
+//     QMessageBox::information(this,"Info","Change password") ;
+     changepassword = new ChangePassword(this);
+     changepassword->onInfoPassed5(userEmail);
+     changepassword->show();
 }
-
-//void Dashboard::on_actionUpload_RAT_Test_triggered()
-//{
-
-//    uploadrat = new UploadRAT(this);
-//    uploadrat->onInfoPassed2(userEmail);
-//    uploadrat->show();
-
-//}
 
 
 void Dashboard::on_actionUpload_RAT_Test_triggered()

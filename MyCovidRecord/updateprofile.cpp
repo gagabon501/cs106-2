@@ -60,7 +60,7 @@ void UpdateProfile::on_buttonBox_accepted()
     QSqlQuery query;
 
     QString lastname, firstname, gender, phone, nhi;
-//    QString dob = ui->comboBox_year->currentText()+"-"+QString::number(ui->comboBox_month->currentIndex()+1)+"-"+ui->comboBox_day->currentText();
+
      QString dob = ui->dateEdit->date().toString("yyyy-MM-dd");
 
     lastname = ui->lineEdit_lastname->text();
