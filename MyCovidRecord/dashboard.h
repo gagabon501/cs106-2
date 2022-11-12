@@ -6,8 +6,8 @@
 #include <QString>
 
 #include "updateprofile.h"
-#include "uploadrat.h"
 #include "viewcovidtestresult.h"
+#include "uploadselftest.h"
 
 namespace Ui {
 class Dashboard;
@@ -44,8 +44,8 @@ private slots:
 private:
     Ui::Dashboard *ui;
     UpdateProfile *updateprofile;
-    UploadRAT *uploadrat;
     ViewCovidTestResult *viewcovidtestresult;
+    UploadSelfTest *uploadselftest;
 
 };
 

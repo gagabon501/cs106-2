@@ -38,3 +38,9 @@ void AdminLogin::onInfoPassed4(QString uemail)
 
 }
 
+
+void AdminLogin::on_actionQuit_3_triggered()
+{
+      QApplication::quit();
+}
+

@@ -29,7 +29,7 @@ Dashboard::~Dashboard()
 
 void Dashboard::onInfoPassed(QString uemail)
 {
-    userEmail = uemail;
+    userEmail = uemail; //userEmail gets filled-in here
 
     QDateTime date = QDateTime::currentDateTime();
     QString formattedTime = date.toString("dd-MMM-yyyy");
@@ -66,16 +66,6 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 }
 
 
-//void Dashboard::on_actionUpload_RAT_Test_triggered()
-//{
-
-//    uploadrat = new UploadRAT(this);
-//    uploadrat->onInfoPassed2(userEmail);
-//    uploadrat->show();
-
-//}
-
-
 void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
 {
     QMessageBox::information(this,"Info","Download COVID-19 Vaccination Certificate") ;
@@ -102,9 +92,21 @@ void Dashboard::on_actionChange_Password_triggered()
      QMessageBox::information(this,"Info","Change password") ;
 }
 
+//void Dashboard::on_actionUpload_RAT_Test_triggered()
+//{
+
+//    uploadrat = new UploadRAT(this);
+//    uploadrat->onInfoPassed2(userEmail);
+//    uploadrat->show();
+
+//}
+
 
 void Dashboard::on_actionUpload_RAT_Test_triggered()
 {
-     QMessageBox::information(this,"Info","Upload RAT") ;
+//     QMessageBox::information(this,"Info","Upload RAT") ;
+    uploadselftest = new UploadSelfTest(this);
+    uploadselftest->onInfoPassed2(userEmail);
+    uploadselftest->show();
 }
 

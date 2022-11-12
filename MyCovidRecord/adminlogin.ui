@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Admin Dashboard</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -279,7 +279,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
     </layout>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -288,8 +289,48 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionManage_Users"/>
+    <addaction name="actionManage_Documents"/>
+    <addaction name="actionManage_Errors"/>
+    <addaction name="actionGenerate_QR_Codes"/>
+    <addaction name="actionQuit_3"/>
+   </widget>
+   <addaction name="menuFile"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionQuit_2">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionManage_Users">
+   <property name="text">
+    <string>Manage Users</string>
+   </property>
+  </action>
+  <action name="actionManage_Documents">
+   <property name="text">
+    <string>Manage Documents</string>
+   </property>
+  </action>
+  <action name="actionManage_Errors">
+   <property name="text">
+    <string>Manage Errors</string>
+   </property>
+  </action>
+  <action name="actionGenerate_QR_Codes">
+   <property name="text">
+    <string>Generate QR Codes</string>
+   </property>
+  </action>
+  <action name="actionQuit_3">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="resources/mycovidrecord.qrc"/>

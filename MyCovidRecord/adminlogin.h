@@ -21,6 +21,8 @@ public slots:
 private slots:
 
 
+    void on_actionQuit_3_triggered();
+
 private:
     Ui::AdminLogin *ui;
 };

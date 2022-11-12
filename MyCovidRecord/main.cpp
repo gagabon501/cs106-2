@@ -3,6 +3,7 @@
 #include "dashboard.h"
 #include "updateprofile.h"
 //#include "uploadrat.h"
+#include "uploadselftest.h"
 #include "viewcovidtestresult.h"
 #include "adminlogin.h"
 
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
     Login w1;
     Dashboard w2;
     UpdateProfile w3;
-//    UploadRAT w4;
+    UploadSelfTest w4;
     ViewCovidTestResult w5;
     AdminLogin w6;
 
@@ -26,7 +27,7 @@ int main(int argc, char *argv[])
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w3,SLOT(onInfoPassed1(QString)));
 
-//    QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w4,SLOT(onInfoPassed2(QString)));
+    QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w4,SLOT(onInfoPassed2(QString)));
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w5,SLOT(onInfoPassed3(QString)));
 

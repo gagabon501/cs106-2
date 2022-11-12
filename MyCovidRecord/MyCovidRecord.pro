@@ -21,6 +21,7 @@ SOURCES += \
     mycovidrecord.cpp \
     registration.cpp \
     updateprofile.cpp \
+    uploadselftest.cpp \
     user.cpp \
     viewcovidtestresult.cpp
 
@@ -35,6 +36,7 @@ HEADERS += \
     mycovidrecord.h \
     registration.h \
     updateprofile.h \
+    uploadselftest.h \
     user.h \
     viewcovidtestresult.h
 
@@ -48,6 +50,7 @@ FORMS += \
     mycovidrecord.ui \
     registration.ui \
     updateprofile.ui \
+    uploadselftest.ui \
     viewcovidtestresult.ui
 
 # Default rules for deployment.
