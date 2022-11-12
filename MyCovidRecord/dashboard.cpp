@@ -66,14 +66,14 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 }
 
 
-void Dashboard::on_actionUpload_RAT_Test_triggered()
-{
+//void Dashboard::on_actionUpload_RAT_Test_triggered()
+//{
 
-    uploadrat = new UploadRAT(this);
-    uploadrat->onInfoPassed2(userEmail);
-    uploadrat->show();
+//    uploadrat = new UploadRAT(this);
+//    uploadrat->onInfoPassed2(userEmail);
+//    uploadrat->show();
 
-}
+//}
 
 
 void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
@@ -100,5 +100,11 @@ void Dashboard::on_actionUpdate_Profile_triggered()
 void Dashboard::on_actionChange_Password_triggered()
 {
      QMessageBox::information(this,"Info","Change password") ;
+}
+
+
+void Dashboard::on_actionUpload_RAT_Test_triggered()
+{
+     QMessageBox::information(this,"Info","Upload RAT") ;
 }
 
