@@ -24,3 +24,20 @@ void manageDocuments::on_CreateVacRec_clicked()
     createrecord->show();
 }
 
+
+void manageDocuments::on_DeleteVacRec_clicked()
+{
+    this->close();
+    deletevaccinerecord = new deleteVaccineRecord(this);
+    deletevaccinerecord->show();
+}
+
+
+
+void manageDocuments::on_UpdateVacRec_clicked()
+{
+    this->close();
+    updatevaccinerecord = new UpdateVaccineRecord(this);
+    updatevaccinerecord->show();
+}
+
