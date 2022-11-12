@@ -8,6 +8,7 @@
 #include "registration.h"
 #include "changepassword.h"
 #include "updateprofile.h"
+#include "adminlogin.h"
 
 namespace Ui {
 class Login;
@@ -39,6 +40,7 @@ private:
     Registration *registration;
     ChangePassword *changepassword;
     UpdateProfile *updateprofile;
+    AdminLogin *adminlogin;
 };
 
 #endif // LOGIN_H
