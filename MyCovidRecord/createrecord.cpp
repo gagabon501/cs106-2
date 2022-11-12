@@ -16,8 +16,3 @@ CreateRecord::~CreateRecord()
 
 
 
-void CreateRecord::on_searchUser_clicked()
-{
-
-}
-
