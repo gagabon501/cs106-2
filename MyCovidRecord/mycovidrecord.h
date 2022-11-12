@@ -31,7 +31,7 @@ private slots:
 
     void on_pushButton_register_clicked();
 
-    void on_pushButton_admin_clicked();
+//    void on_pushButton_admin_clicked();
 
 private:
     Ui::MyCovidRecord *ui;

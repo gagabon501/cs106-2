@@ -1,5 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
+#include "user.h"
 
 #include <QSqlQuery>
 
@@ -54,11 +55,24 @@ void Login::on_pushButton_clicked()
          } else {
               this->close();
 
-              emit Info_Collected(ui->lineEdit_username->text());
+             User user(nullptr,ui->lineEdit_username->text());
 
-              dashboard = new Dashboard(this);
-              dashboard->onInfoPassed(ui->lineEdit_username->text());
-              dashboard->show();
+             emit Info_Collected(ui->lineEdit_username->text());
+
+             qDebug() << "User level: " << user.level;
+
+             if (user.level > 1) {
+                 adminlogin = new AdminLogin(this);
+                 adminlogin->onInfoPassed4(ui->lineEdit_username->text());
+                 adminlogin->show();
+
+             } else {
+                 dashboard = new Dashboard(this);
+                 dashboard->onInfoPassed(ui->lineEdit_username->text());
+                 dashboard->show();
+
+             }
+
 
          }
 
