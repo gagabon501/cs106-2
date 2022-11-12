@@ -44,3 +44,11 @@ void AdminLogin::on_actionQuit_3_triggered()
       QApplication::quit();
 }
 
+
+void AdminLogin::on_actionManage_Documents_triggered()
+{
+    managedocuments = new manageDocuments(this);
+    managedocuments->show();
+
+}
+

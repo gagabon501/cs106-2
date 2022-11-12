@@ -30,5 +30,8 @@
         <file>images/password_1.png</file>
         <file>images/RAT_Result.png</file>
         <file>images/covid-test.png</file>
+        <file>images/computer.png</file>
+        <file>images/document.png</file>
+        <file>images/qr.png</file>
     </qresource>
 </RCC>

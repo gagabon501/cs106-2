@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>525</width>
-    <height>684</height>
+    <height>728</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -90,10 +90,10 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>100</y>
-      <width>311</width>
-      <height>251</height>
+      <x>120</x>
+      <y>120</y>
+      <width>291</width>
+      <height>231</height>
      </rect>
     </property>
     <property name="text">
@@ -137,10 +137,13 @@
       <height>41</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">border: 0.5px solid;
 border-radius: 20px;
-background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 rgba(77, 91, 180, 255), stop:1 rgba(255, 255, 255, 255));</string>
+background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
     </property>
     <property name="text">
      <string>Notification</string>
@@ -155,10 +158,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
       <height>41</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">border: 0.5px solid;
 border-radius: 20px;
-background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 rgba(77, 91, 180, 255), stop:1 rgba(255, 255, 255, 255));</string>
+background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
     </property>
     <property name="text">
      <string>Information</string>
@@ -173,10 +179,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
       <height>41</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">border: 0.5px solid;
 border-radius: 20px;
-background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 rgba(77, 91, 180, 255), stop:1 rgba(255, 255, 255, 255));</string>
+background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
     </property>
     <property name="text">
      <string>PushButton</string>
@@ -217,6 +226,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="cursor">
+          <cursorShape>OpenHandCursor</cursorShape>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
@@ -239,6 +251,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="cursor">
+          <cursorShape>OpenHandCursor</cursorShape>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -263,6 +278,9 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="cursor">
+          <cursorShape>OpenHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">image: url(:/images/images/5810431-09.png);</string>
          </property>
@@ -279,14 +297,13 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
     </layout>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>525</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -301,32 +318,71 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.38, x2:1, y2:1, stop:0 
    </widget>
    <addaction name="menuFile"/>
   </widget>
-  <action name="actionQuit_2">
-   <property name="text">
-    <string>Quit</string>
+  <widget class="QToolBar" name="toolBar">
+   <property name="cursor">
+    <cursorShape>OpenHandCursor</cursorShape>
    </property>
-  </action>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionManage_Users"/>
+   <addaction name="actionManage_Documents"/>
+   <addaction name="actionManage_Errors"/>
+   <addaction name="actionGenerate_QR_Codes"/>
+   <addaction name="actionQuit_3"/>
+  </widget>
   <action name="actionManage_Users">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/user.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Manage Users</string>
    </property>
   </action>
   <action name="actionManage_Documents">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/document.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Manage Documents</string>
    </property>
   </action>
   <action name="actionManage_Errors">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/computer.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Manage Errors</string>
    </property>
   </action>
   <action name="actionGenerate_QR_Codes">
+   <property name="icon">
+    <iconset resource="resources/mycovidrecord.qrc">
+     <normaloff>:/images/images/qr.png</normaloff>
+     <normalon>:/images/images/5810431-09 1_qrcode.png</normalon>:/images/images/qr.png</iconset>
+   </property>
    <property name="text">
     <string>Generate QR Codes</string>
    </property>
   </action>
   <action name="actionQuit_3">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/images/power.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Quit</string>
    </property>
