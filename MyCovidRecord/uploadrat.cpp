@@ -35,10 +35,14 @@ void UploadRAT::onInfoPassed2(QString uemail)
 
 void UploadRAT::on_buttonBox_accepted()
 {
+<<<<<<< Updated upstream
     User user(nullptr,uEmail); //when this object is instantiated, the query inside user.cpp is executed thus filling in all the properties (variables) in there.
 
 
     QString dateStr = ui->dateEdit_tested->date().toString("yyyy-MM-dd"), lastname, firstname, email, test_result = "Negative";
+=======
+    QString dateStr = ui->dateEdit_tested->date().toString("yyyy-MM-dd");
+>>>>>>> Stashed changes
     qDebug() << dateStr;
     QSqlQuery queryAdd;
 
