@@ -13,3 +13,11 @@ CreateRecord::~CreateRecord()
     delete ui;
 }
 
+
+void CreateRecord::on_vaccineType_clicked()
+{
+
+
+
+}
+
