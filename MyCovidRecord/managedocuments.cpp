@@ -12,6 +12,7 @@ manageDocuments::manageDocuments(QWidget *parent) :
 manageDocuments::~manageDocuments()
 {
     delete ui;
+
 }
 
 

@@ -1,5 +1,10 @@
 #include "createrecord.h"
 #include "ui_createrecord.h"
+#include <QSqlQuery>
+#include <QString>
+#include <QCryptographicHash>
+#include <QDebug>
+
 
 CreateRecord::CreateRecord(QWidget *parent) :
     QMainWindow(parent),
@@ -15,4 +20,11 @@ CreateRecord::~CreateRecord()
 
 
 
+
+void CreateRecord::on_searchUser_clicked()
+{
+
+
+
+}
 

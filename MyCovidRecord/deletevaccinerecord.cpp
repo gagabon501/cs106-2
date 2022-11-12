@@ -1,5 +1,9 @@
 #include "deletevaccinerecord.h"
 #include "ui_deletevaccinerecord.h"
+#include <QSqlQuery>
+#include <QString>
+#include <QCryptographicHash>
+#include <QDebug>
 
 deleteVaccineRecord::deleteVaccineRecord(QWidget *parent) :
     QMainWindow(parent),
@@ -12,3 +16,4 @@ deleteVaccineRecord::~deleteVaccineRecord()
 {
     delete ui;
 }
+

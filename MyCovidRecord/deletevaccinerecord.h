@@ -15,6 +15,9 @@ public:
     explicit deleteVaccineRecord(QWidget *parent = nullptr);
     ~deleteVaccineRecord();
 
+private slots:
+    void on_searchUser_clicked();
+
 private:
     Ui::deleteVaccineRecord *ui;
 };

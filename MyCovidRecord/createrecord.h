@@ -20,6 +20,8 @@ private slots:
 
 
 
+    void on_searchUser_clicked();
+
 private:
     Ui::CreateRecord *ui;
 };
