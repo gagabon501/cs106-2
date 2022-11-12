@@ -15,12 +15,14 @@ SOURCES += \
     changepassword.cpp \
     createrecord.cpp \
     dashboard.cpp \
+    deletevaccinerecord.cpp \
     login.cpp \
     main.cpp \
     managedocuments.cpp \
     mycovidrecord.cpp \
     registration.cpp \
     updateprofile.cpp \
+    updatevaccinerecord.cpp \
     user.cpp \
     viewcovidtestresult.cpp
 
@@ -30,11 +32,13 @@ HEADERS += \
     changepassword.h \
     createrecord.h \
     dashboard.h \
+    deletevaccinerecord.h \
     login.h \
     managedocuments.h \
     mycovidrecord.h \
     registration.h \
     updateprofile.h \
+    updatevaccinerecord.h \
     user.h \
     viewcovidtestresult.h
 
@@ -43,11 +47,13 @@ FORMS += \
     changepassword.ui \
     createrecord.ui \
     dashboard.ui \
+    deletevaccinerecord.ui \
     login.ui \
     managedocuments.ui \
     mycovidrecord.ui \
     registration.ui \
     updateprofile.ui \
+    updatevaccinerecord.ui \
     viewcovidtestresult.ui
 
 # Default rules for deployment.

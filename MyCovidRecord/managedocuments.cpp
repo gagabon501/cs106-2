@@ -17,8 +17,6 @@ manageDocuments::~manageDocuments()
 
 
 
-
-
 void manageDocuments::on_CreateVacRec_clicked()
 {
     this->close();

@@ -20,6 +20,8 @@ private slots:
 
 //    void on_pushButton_4_clicked();
 
+    void on_vaccineType_clicked();
+
 private:
     Ui::CreateRecord *ui;
 };
