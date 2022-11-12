@@ -14,10 +14,10 @@ CreateRecord::~CreateRecord()
 }
 
 
-void CreateRecord::on_vaccineType_clicked()
+
+
+void CreateRecord::on_searchUser_clicked()
 {
-
-
 
 }
 

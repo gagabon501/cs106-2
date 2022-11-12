@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>295</width>
+    <width>280</width>
     <height>556</height>
    </rect>
   </property>
@@ -205,9 +205,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>130</y>
-      <width>261</width>
-      <height>181</height>
+      <y>120</y>
+      <width>241</width>
+      <height>211</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -227,7 +227,39 @@
       <number>12</number>
      </property>
      <item>
+      <widget class="QLabel" name="searchUserText">
+       <property name="font">
+        <font>
+         <family>Raleway</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;</string>
+       </property>
+       <property name="text">
+        <string>Search user first and last name</string>
+       </property>
+       <property name="margin">
+        <number>6</number>
+       </property>
+      </widget>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLineEdit" name="searchUserForm">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 15px;
+background-color: #000;</string>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QPushButton" name="searchUser">
          <property name="sizePolicy">
@@ -248,30 +280,36 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border-radius: 10px;
-background-color: rgb(66, 66, 66);
+          <string notr="true">border-radius: 13px;
+background-color: rgb(169, 169, 169);
+color: black;
+
 </string>
          </property>
          <property name="text">
-          <string>Search User</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="searchUserForm">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 15px;
-background-color: #000;</string>
+          <string>  Search </string>
          </property>
         </widget>
        </item>
       </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="searchUserText_2">
+       <property name="font">
+        <font>
+         <family>Raleway</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;</string>
+       </property>
+       <property name="text">
+        <string>Search Vaccine type</string>
+       </property>
+       <property name="margin">
+        <number>6</number>
+       </property>
+      </widget>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -310,13 +348,14 @@ background-color: #000;</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border-radius: 10px;
-background-color: rgb(66, 66, 66);
+          <string notr="true">border-radius: 13px;
+background-color: rgb(169, 169, 169);
+color: black;
 
 </string>
          </property>
          <property name="text">
-          <string>  Search Vaccine Type  </string>
+          <string>  Search  </string>
          </property>
          <property name="autoRepeatDelay">
           <number>300</number>
@@ -326,23 +365,25 @@ background-color: rgb(66, 66, 66);
       </layout>
      </item>
      <item>
+      <widget class="QLabel" name="searchUserText_3">
+       <property name="font">
+        <font>
+         <family>Raleway</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;</string>
+       </property>
+       <property name="text">
+        <string>Enter date created</string>
+       </property>
+       <property name="margin">
+        <number>6</number>
+       </property>
+      </widget>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QLabel" name="dateIn">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: none;</string>
-         </property>
-         <property name="text">
-          <string>Date</string>
-         </property>
-        </widget>
-       </item>
        <item>
         <widget class="QLineEdit" name="inputDateLine">
          <property name="maximumSize">
@@ -365,7 +406,7 @@ background-color: #000;</string>
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>310</y>
+      <y>330</y>
       <width>100</width>
       <height>32</height>
      </rect>
