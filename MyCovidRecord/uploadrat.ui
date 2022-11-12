@@ -38,17 +38,17 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-<<<<<<< Updated upstream
+
      <x>0</x>
      <y>0</y>
      <width>231</width>
      <height>251</height>
-=======
+
      <x>10</x>
      <y>10</y>
      <width>221</width>
      <height>221</height>
->>>>>>> Stashed changes
+
     </rect>
    </property>
    <property name="text">
@@ -64,11 +64,11 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-<<<<<<< Updated upstream
+
      <x>240</x>
-=======
+
      <x>280</x>
->>>>>>> Stashed changes
+
      <y>20</y>
      <width>261</width>
      <height>26</height>
