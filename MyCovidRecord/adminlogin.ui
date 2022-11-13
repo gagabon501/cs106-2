@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>525</width>
+    <width>514</width>
     <height>728</height>
    </rect>
   </property>
@@ -131,7 +131,7 @@
    <widget class="QPushButton" name="pushButton_notify">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>33</x>
       <y>390</y>
       <width>451</width>
       <height>41</height>
@@ -152,7 +152,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    <widget class="QPushButton" name="pushButton_info">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>33</x>
       <y>440</y>
       <width>451</width>
       <height>41</height>
@@ -173,7 +173,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    <widget class="QPushButton" name="pushButton_support">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>33</x>
       <y>490</y>
       <width>451</width>
       <height>41</height>
@@ -194,7 +194,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>33</x>
       <y>540</y>
       <width>451</width>
       <height>131</height>
@@ -302,7 +302,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>525</width>
+     <width>514</width>
      <height>21</height>
     </rect>
    </property>

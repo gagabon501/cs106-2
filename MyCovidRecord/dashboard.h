@@ -10,6 +10,7 @@
 #include "uploadselftest.h"
 #include "changepassword.h"
 #include "viewvaccinereport.h"
+#include "reporterror.h"
 
 namespace Ui {
 class Dashboard;
@@ -50,6 +51,7 @@ private:
     UploadSelfTest *uploadselftest;
     ChangePassword *changepassword;
     ViewVaccineReport *viewvaccinereport;
+    ReportError *reporterror;
 
 
 };

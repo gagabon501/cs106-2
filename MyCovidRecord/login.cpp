@@ -9,7 +9,7 @@
 #include <QDebug>
 #include <QMessageBox>
 
-
+//QDialog(parent),
 Login::Login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Login)

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QString>
+//#include <QMainWindow>
 
 #include "dashboard.h"
 #include "registration.h"
@@ -15,6 +16,7 @@ class Login;
 }
 
 class Login : public QDialog
+//class Login : public QMainWindow
 {
     Q_OBJECT
 

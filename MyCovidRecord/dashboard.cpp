@@ -52,7 +52,7 @@ void Dashboard::on_actionQuit_triggered()
 
 void Dashboard::on_actionViewVaccinationRecord_triggered()
 {
-//    QMessageBox::information(this,"Info","View Vaccination Record") ;
+
     viewvaccinereport = new ViewVaccineReport(this);
     viewvaccinereport->onInfoPassed6(userEmail);
     viewvaccinereport->show();
@@ -61,7 +61,7 @@ void Dashboard::on_actionViewVaccinationRecord_triggered()
 
 void Dashboard::on_actionView_RAT_Test_Record_triggered()
 {
-//    QMessageBox::information(this,"Info","View RAT Test Record") ;
+
     viewcovidtestresult = new ViewCovidTestResult(this);
     viewcovidtestresult->onInfoPassed3(userEmail);
     viewcovidtestresult->show();
@@ -77,8 +77,9 @@ void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
 
 void Dashboard::on_actionReport_Issues_triggered()
 {
-    QMessageBox::information(this,"Info","Report Issues") ;
-
+    reporterror = new ReportError(this);
+    reporterror->onInfoPassed7(userEmail);
+    reporterror->show();
 }
 
 

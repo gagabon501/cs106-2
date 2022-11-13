@@ -21,6 +21,7 @@ SOURCES += \
     managedocuments.cpp \
     mycovidrecord.cpp \
     registration.cpp \
+    reporterror.cpp \
     updateprofile.cpp \
     uploadselftest.cpp \
     updatevaccinerecord.cpp \
@@ -39,6 +40,7 @@ HEADERS += \
     managedocuments.h \
     mycovidrecord.h \
     registration.h \
+    reporterror.h \
     updateprofile.h \
     uploadselftest.h \
     updatevaccinerecord.h \
@@ -56,6 +58,7 @@ FORMS += \
     managedocuments.ui \
     mycovidrecord.ui \
     registration.ui \
+    reporterror.ui \
     updateprofile.ui \
     uploadselftest.ui \
     updatevaccinerecord.ui \
