@@ -7,6 +7,9 @@
 #include <QString>
 #include <QDateTime>
 #include <QByteArray>
+#include <QPrinter>
+#include <QTextDocument>
+#include <QPainter>
 
 
 #include <QSqlQuery>
@@ -71,7 +74,15 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 
 void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
 {
-    QMessageBox::information(this,"Info","Download COVID-19 Vaccination Certificate") ;
+    QMessageBox::information(this,"Info","Download COVID-19 Vaccination Certificate");
+    QString name = "Gilberto Gabon", filename="CovidCert.pdf";
+    QString html = "<h1>Covid-19 Vaccination Certificate</h1><br><p>This is to certify that: "+name+" is a fully vaccinated individual</p>";
+    QTextDocument document;
+    document.setHtml(html);
+    QPrinter printer(QPrinter::HighResolution);
+    printer.setOutputFileName(filename);
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    document.print(&printer);
 }
 
 
