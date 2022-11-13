@@ -2,6 +2,11 @@
 #include "ui_dashboard.h"
 #include "user.h"
 
+#include "QRWidget.hpp"
+#include <QPainter>
+#include <QDebug>
+#include <qrencode.h>
+
 #include <QScreen>
 #include <QMessageBox>
 #include <QString>
@@ -9,8 +14,6 @@
 #include <QByteArray>
 #include <QPrinter>
 #include <QTextDocument>
-#include <QPainter>
-
 
 #include <QSqlQuery>
 
@@ -23,6 +26,15 @@ Dashboard::Dashboard(QWidget *parent) :
     ui->setupUi(this);
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
     this->setFixedSize(this->size());
+
+//    QtQrCodeWidget *qrCodeWidget = new QtQrCodeWidget(this);
+//    qrCodeWidget->setBackground(Qt::transparent);
+////    qrCodeWidget->setData(windowTitle().toUtf8());
+//    qrCodeWidget->setData("Gilberto Gabon");
+//    qrCodeWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
+////    addWidget(qrCodeWidget);
+//    ui->centralwidget->layout()->addWidget(qrCodeWidget);
 }
 
 Dashboard::~Dashboard()
@@ -124,5 +136,17 @@ void Dashboard::on_actionUpload_RAT_Test_triggered()
     uploadselftest = new UploadSelfTest(this);
     uploadselftest->onInfoPassed2(userEmail);
     uploadselftest->show();
+}
+
+
+void Dashboard::on_pushButton_6_clicked()
+{
+//    QMessageBox::information(this,"Info","Generate QR Code");
+    User user(nullptr,userEmail);
+    QString qrData = user.userEmail+"/"+user.firstname+" "+user.lastname+"/"+user.dob+"/"+user.vaccine_status;
+    qrwidget = new QRWidget();
+    qrwidget->setQRData(qrData);
+    qrwidget->show();
+
 }
 

@@ -10,12 +10,16 @@ CONFIG += c++17
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+LIBS += -lqrencode
+
 SOURCES += \
+    QRWidget.cpp \
     adminlogin.cpp \
     changepassword.cpp \
     createrecord.cpp \
     dashboard.cpp \
     deletevaccinerecord.cpp \
+    gagqr.cpp \
     login.cpp \
     main.cpp \
     managedocuments.cpp \
@@ -31,11 +35,13 @@ SOURCES += \
 
 
 HEADERS += \
+    QRWidget.hpp \
     adminlogin.h \
     changepassword.h \
     createrecord.h \
     dashboard.h \
     deletevaccinerecord.h \
+    gagqr.h \
     login.h \
     managedocuments.h \
     mycovidrecord.h \
@@ -72,3 +78,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources/mycovidrecord.qrc
+

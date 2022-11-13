@@ -11,6 +11,7 @@
 #include "changepassword.h"
 #include "viewvaccinereport.h"
 #include "reporterror.h"
+#include "QRWidget.hpp"
 
 namespace Ui {
 class Dashboard;
@@ -44,6 +45,8 @@ private slots:
 
     void on_actionChange_Password_triggered();
 
+    void on_pushButton_6_clicked();
+
 private:
     Ui::Dashboard *ui;
     UpdateProfile *updateprofile;
@@ -52,8 +55,7 @@ private:
     ChangePassword *changepassword;
     ViewVaccineReport *viewvaccinereport;
     ReportError *reporterror;
-
-
+    QRWidget *qrwidget;
 };
 
 #endif // DASHBOARD_H
