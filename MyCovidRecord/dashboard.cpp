@@ -143,10 +143,10 @@ void Dashboard::on_pushButton_6_clicked()
 {
 //    QMessageBox::information(this,"Info","Generate QR Code");
     User user(nullptr,userEmail);
-    QString qrData = user.userEmail+"/"+user.firstname+" "+user.lastname+"/"+user.dob+"/"+user.vaccine_status;
-    qrwidget = new QRWidget();
-    qrwidget->setQRData(qrData);
-    qrwidget->show();
+//    QString qrData = user.userEmail+"/"+user.firstname+" "+user.lastname+"/"+user.dob+"/"+user.vaccine_status;
+//    qrwidget = new QRWidget();
+//    qrwidget->setQRData(qrData);
+//    qrwidget->show();
 
 }
 
