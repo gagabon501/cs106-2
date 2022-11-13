@@ -52,3 +52,10 @@ void AdminLogin::on_actionManage_Documents_triggered()
 
 }
 
+
+void AdminLogin::on_actionManage_Users_triggered()
+{
+    manageusers = new ManageUsers(this);
+    manageusers->show();
+}
+

@@ -1,6 +1,7 @@
 #ifndef ADMINLOGIN_H
 #define ADMINLOGIN_H
 #include "managedocuments.h"
+#include "manageusers.h"
 
 #include <QMainWindow>
 
@@ -26,9 +27,12 @@ private slots:
 
     void on_actionManage_Documents_triggered();
 
+    void on_actionManage_Users_triggered();
+
 private:
     Ui::AdminLogin *ui;
     manageDocuments *managedocuments;
+    ManageUsers *manageusers;
 };
 
 #endif // ADMINLOGIN_H
