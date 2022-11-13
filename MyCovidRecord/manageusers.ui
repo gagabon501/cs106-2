@@ -204,7 +204,7 @@
       <x>20</x>
       <y>120</y>
       <width>241</width>
-      <height>211</height>
+      <height>251</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -234,7 +234,7 @@
         <string notr="true">background-color: none;</string>
        </property>
        <property name="text">
-        <string>Search user first and last name</string>
+        <string>Search user by email</string>
        </property>
        <property name="margin">
         <number>6</number>
@@ -301,7 +301,7 @@ color: black;
         <string notr="true">background-color: none;</string>
        </property>
        <property name="text">
-        <string>Search Vaccine type</string>
+        <string>Update vaccine status</string>
        </property>
        <property name="margin">
         <number>6</number>
@@ -364,7 +364,7 @@ color: black;
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLabel" name="searchUserText_3">
+        <widget class="QLabel" name="PCRTtestResults">
          <property name="font">
           <font>
            <family>Raleway</family>
@@ -374,31 +374,63 @@ color: black;
           <string notr="true">background-color: none;</string>
          </property>
          <property name="text">
-          <string>Enter date created:</string>
+          <string>Update PCRT test results</string>
          </property>
          <property name="margin">
           <number>6</number>
          </property>
         </widget>
        </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QDateEdit" name="dateEdit_2">
-         <property name="dateTime">
-          <datetime>
-           <hour>9</hour>
-           <minute>0</minute>
-           <second>0</second>
-           <year>2022</year>
-           <month>11</month>
-           <day>11</day>
-          </datetime>
+        <widget class="QLineEdit" name="SearchVaccForm_2">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
          </property>
-         <property name="maximumTime">
-          <time>
-           <hour>11</hour>
-           <minute>59</minute>
-           <second>59</second>
-          </time>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 15px;
+background-color: #000;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="vaccineType_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Raleway</family>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 13px;
+background-color: rgb(169, 169, 169);
+color: black;
+
+</string>
+         </property>
+         <property name="text">
+          <string>  Search  </string>
+         </property>
+         <property name="autoRepeatDelay">
+          <number>300</number>
          </property>
         </widget>
        </item>
@@ -406,11 +438,11 @@ color: black;
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="createRecord">
+   <widget class="QPushButton" name="deleteUser">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>330</y>
+      <x>20</x>
+      <y>380</y>
       <width>100</width>
       <height>32</height>
      </rect>
@@ -420,7 +452,24 @@ color: black;
 background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
     </property>
     <property name="text">
-     <string>Create record</string>
+     <string>Delete user</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="updatUse">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>380</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
+    </property>
+    <property name="text">
+     <string>Update User</string>
     </property>
    </widget>
   </widget>
