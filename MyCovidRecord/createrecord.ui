@@ -388,12 +388,12 @@ color: black;
         <widget class="QDateEdit" name="dateEdit_2">
          <property name="dateTime">
           <datetime>
-           <hour>0</hour>
+           <hour>11</hour>
            <minute>0</minute>
            <second>0</second>
            <year>2022</year>
            <month>11</month>
-           <day>13</day>
+           <day>12</day>
           </datetime>
          </property>
          <property name="maximumTime">
@@ -431,5 +431,38 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
  <resources>
   <include location="resources/mycovidrecord.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>searchUserForm</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>searchUser</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>227</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SearchVaccForm</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>vaccineType</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>258</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

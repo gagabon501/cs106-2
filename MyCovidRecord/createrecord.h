@@ -18,12 +18,6 @@ public:
 private slots:
 
 
-
-
-    void on_searchUser_clicked();
-
-    void on_vaccineType_clicked();
-
 //    void on_createRecord_clicked();
 
 private:
