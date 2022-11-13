@@ -19,6 +19,7 @@ private slots:
 
 
 //    void on_createRecord_clicked();
+    void on_searchUser_clicked();
 
 private:
     Ui::CreateRecord *ui;
