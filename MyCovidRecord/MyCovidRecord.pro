@@ -23,6 +23,7 @@ SOURCES += \
     login.cpp \
     main.cpp \
     managedocuments.cpp \
+    manageusers.cpp \
     mycovidrecord.cpp \
     registration.cpp \
     reporterror.cpp \
@@ -44,6 +45,7 @@ HEADERS += \
     gagqr.h \
     login.h \
     managedocuments.h \
+    manageusers.h \
     mycovidrecord.h \
     registration.h \
     reporterror.h \
@@ -62,6 +64,7 @@ FORMS += \
     deletevaccinerecord.ui \
     login.ui \
     managedocuments.ui \
+    manageusers.ui \
     mycovidrecord.ui \
     registration.ui \
     reporterror.ui \
