@@ -74,11 +74,17 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 
 void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
 {
-    QMessageBox::information(this,"Info","Download COVID-19 Vaccination Certificate");
+    QMessageBox::information(this,"Info","Downloaded Covid-19 certificate. Refer to CovidCert.pdf.");
     QString name = "Gilberto Gabon", filename="CovidCert.pdf";
-    QString html = "<h1>Covid-19 Vaccination Certificate</h1><br><p>This is to certify that: "+name+" is a fully vaccinated individual</p>";
+    QString dob = "1968-12-20";
+    QString dateExpiryStr = "2023-02-01";
+    QString html = "<h1>Covid19 Vaccination Certificate</h1><h3>Kia ora</h3><p>This card is your personal vaccine pass - an official record of your COVID-19 vaccination status.</p><p>My Vaccine Pass allows you to access places within Aotearoa New Zealand that require proof of your vaccination status.</p><p>Name: "+name+"</p>";
+    QString html1 = "<p>Date of birth: "+dob+"</p><p>Expires on: "+dateExpiryStr+"</p>";
+    QString html2 = "<h6>You may be asked to show photo ID.For use in Aotearoa New Zealand and for international travels.</h6>";
+//    QString html3 = "<img src='qr.png' width='500px' height='500px' />";
+    QString html3 = "<div><img src='qr-code.png' width='100' height='100' /></div>";
     QTextDocument document;
-    document.setHtml(html);
+    document.setHtml(html+html1+html2+html3);
     QPrinter printer(QPrinter::HighResolution);
     printer.setOutputFileName(filename);
     printer.setOutputFormat(QPrinter::PdfFormat);
