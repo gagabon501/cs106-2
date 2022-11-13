@@ -1,10 +1,10 @@
 #include "createrecord.h"
 #include "ui_createrecord.h"
-#include "user.h"
 #include <QSqlQuery>
 #include <QString>
+#include <QtDebug>
 #include <QCryptographicHash>
-#include <QDebug>
+
 
 
 CreateRecord::CreateRecord(QWidget *parent) :
@@ -20,13 +20,9 @@ CreateRecord::~CreateRecord()
 }
 
 
+
+
 void CreateRecord::on_searchUser_clicked()
-{
-
-}
-
-
-void CreateRecord::on_vaccineType_clicked()
 {
 
 }
