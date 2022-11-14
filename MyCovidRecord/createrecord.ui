@@ -314,20 +314,6 @@ color: black;
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLineEdit" name="SearchVaccForm">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-radius: 15px;
-background-color: #000;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QPushButton" name="vaccineType">
          <property name="minimumSize">
           <size>
@@ -362,6 +348,20 @@ color: black;
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QLineEdit" name="SearchVaccForm">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 15px;
+background-color: #000;</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
@@ -388,12 +388,12 @@ color: black;
         <widget class="QDateEdit" name="dateEdit_2">
          <property name="dateTime">
           <datetime>
-           <hour>9</hour>
+           <hour>20</hour>
            <minute>0</minute>
            <second>0</second>
            <year>2022</year>
            <month>11</month>
-           <day>11</day>
+           <day>10</day>
           </datetime>
          </property>
          <property name="maximumTime">

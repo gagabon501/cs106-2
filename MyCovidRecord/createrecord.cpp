@@ -3,7 +3,7 @@
 #include <QSqlQuery>
 #include <QString>
 #include <QtDebug>
-#include <QCryptographicHash>
+#include <QMessageBox>
 
 
 
@@ -20,10 +20,9 @@ CreateRecord::~CreateRecord()
 }
 
 
-
-
-void CreateRecord::on_searchUser_clicked()
+void CreateRecord::on_vaccineType_clicked()
 {
-
+    QMessageBox::information(this,"Info","CLick on the correct vaccine type.");
+    QString name = "vaccine type";
 }
 

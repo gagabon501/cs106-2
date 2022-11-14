@@ -19,7 +19,8 @@ private slots:
 
 
 //    void on_createRecord_clicked();
-    void on_searchUser_clicked();
+
+    void on_vaccineType_clicked();
 
 private:
     Ui::CreateRecord *ui;
