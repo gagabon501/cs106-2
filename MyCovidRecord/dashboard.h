@@ -11,7 +11,7 @@
 #include "changepassword.h"
 #include "viewvaccinereport.h"
 #include "reporterror.h"
-//#include "QRWidget.hpp"
+#include "QRWidget.hpp"
 
 namespace Ui {
 class Dashboard;
@@ -55,7 +55,7 @@ private:
     ChangePassword *changepassword;
     ViewVaccineReport *viewvaccinereport;
     ReportError *reporterror;
-//    QRWidget *qrwidget;
+    QRWidget *qrwidget;
 };
 
 #endif // DASHBOARD_H
