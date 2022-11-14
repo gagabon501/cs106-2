@@ -2,10 +2,8 @@
 #include "ui_dashboard.h"
 #include "user.h"
 
-#include "QRWidget.hpp"
 #include <QPainter>
 #include <QDebug>
-#include <qrencode.h>
 
 #include <QScreen>
 #include <QMessageBox>

@@ -45,6 +45,7 @@ HEADERS += \
     managedocuments.h \
     manageusers.h \
     mycovidrecord.h \
+    qrencode.h \
     registration.h \
     reporterror.h \
     updateprofile.h \
