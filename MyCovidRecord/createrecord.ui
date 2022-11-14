@@ -237,7 +237,7 @@
         <string notr="true">background-color: none;</string>
        </property>
        <property name="text">
-        <string>Search user first and last name</string>
+        <string>Enter username (email)</string>
        </property>
        <property name="margin">
         <number>6</number>
@@ -287,7 +287,7 @@ color: black;
 </string>
          </property>
          <property name="text">
-          <string>  Search </string>
+          <string>  Enter  </string>
          </property>
         </widget>
        </item>
