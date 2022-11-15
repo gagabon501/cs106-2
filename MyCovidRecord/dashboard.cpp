@@ -69,8 +69,9 @@ void Dashboard::on_actionView_RAT_Test_Record_triggered()
 
 void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
 {
+//    qrcode = new QrCode();
+//    qrcode->show();
 
-    // Generate QR Code
     User user(nullptr, userEmail);
     //    QDateTime date = QDateTime::currentDateTime();
     //    QString fileName = date.toString()+"_"+user.lastname+"_"+user.firstname;
@@ -105,6 +106,8 @@ void Dashboard::on_actionDownload_COVID_19_Certificate_triggered()
     {
         QMessageBox::information(this, "Error", "Error creating the certificate.");
     }
+
+
 }
 
 void Dashboard::on_actionReport_Issues_triggered()
@@ -140,7 +143,24 @@ void Dashboard::on_pushButton_6_clicked()
 {
     User user(nullptr, userEmail);
     QString qrData = user.userEmail + "/" + user.firstname + " " + user.lastname + "/" + user.dob + "/" + user.vaccine_status;
+
     qrwidget = new QRWidget();
     qrwidget->setQRData(qrData);
     qrwidget->show();
+
 }
+
+//void Dashboard::on_actionQR_Code_triggered()
+//{
+//    ggqr = new gagqr(this);
+//    ggqr->show();
+//}
+
+
+void Dashboard::on_pushButton_4_clicked()
+{
+    userrecords = new UserRecords(this);
+    userrecords->onInfoPassed8(userEmail);
+    userrecords->show();
+}
+

@@ -8,6 +8,7 @@
 #include "changepassword.h"
 #include "viewvaccinereport.h"
 #include "reporterror.h"
+#include "userrecords.h"
 
 #include <QApplication>
 #include <QDebug>
@@ -27,6 +28,7 @@ int main(int argc, char *argv[])
     ChangePassword w7;
     ViewVaccineReport w8;
     ReportError w9;
+    UserRecords w10;
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w2,SLOT(onInfoPassed(QString)));
 
@@ -43,6 +45,8 @@ int main(int argc, char *argv[])
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w8,SLOT(onInfoPassed6(QString)));
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w9,SLOT(onInfoPassed7(QString)));
+
+    QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w10,SLOT(onInfoPassed8(QString)));
 
     MyCovidRecord w;
     w.show();

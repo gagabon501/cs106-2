@@ -3,16 +3,23 @@
 
 #include <QWidget>
 
+
+
 class QRWidget : public QWidget{
     Q_OBJECT
 private:
     QString data;
+
+
 public:
     explicit QRWidget(QWidget *parent = 0);
     void setQRData(QString data);
+    ~QRWidget();
+
 
 protected:
     void paintEvent(QPaintEvent *);
+
 };
 
 

@@ -30,6 +30,7 @@ SOURCES += \
     uploadselftest.cpp \
     updatevaccinerecord.cpp \
     user.cpp \
+    userrecords.cpp \
     viewcovidtestresult.cpp \
     viewvaccinereport.cpp \
     QRWidget.cpp
@@ -53,6 +54,7 @@ HEADERS += \
     uploadselftest.h \
     updatevaccinerecord.h \
     user.h \
+    userrecords.h \
     viewcovidtestresult.h \
     viewvaccinereport.h \
     QRWidget.hpp
@@ -63,6 +65,7 @@ FORMS += \
     createrecord.ui \
     dashboard.ui \
     deletevaccinerecord.ui \
+    gagqr.ui \
     login.ui \
     managedocuments.ui \
     manageusers.ui \
@@ -72,6 +75,7 @@ FORMS += \
     updateprofile.ui \
     uploadselftest.ui \
     updatevaccinerecord.ui \
+    userrecords.ui \
     viewcovidtestresult.ui \
     viewvaccinereport.ui
 

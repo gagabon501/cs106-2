@@ -12,6 +12,8 @@
 #include "viewvaccinereport.h"
 #include "reporterror.h"
 #include "QRWidget.hpp"
+//#include "gagqr.h"
+#include "userrecords.h"
 
 namespace Ui {
 class Dashboard;
@@ -47,6 +49,10 @@ private slots:
 
     void on_pushButton_6_clicked();
 
+//    void on_actionQR_Code_triggered();
+
+    void on_pushButton_4_clicked();
+
 private:
     Ui::Dashboard *ui;
     UpdateProfile *updateprofile;
@@ -56,6 +62,9 @@ private:
     ViewVaccineReport *viewvaccinereport;
     ReportError *reporterror;
     QRWidget *qrwidget;
+//    gagqr *ggqr;
+    UserRecords *userrecords;
+
 };
 
 #endif // DASHBOARD_H

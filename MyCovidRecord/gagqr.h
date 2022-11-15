@@ -1,12 +1,28 @@
 #ifndef GAGQR_H
 #define GAGQR_H
 
-#include <QWidget>
+#include <QDialog>
+#include "QRWidget.hpp"
 
-class gagqr
+namespace Ui {
+class gagqr;
+}
+
+class gagqr : public QDialog
 {
+    Q_OBJECT
+
 public:
-    gagqr();
+    explicit gagqr(QWidget *parent = nullptr);
+    ~gagqr();
+
+private slots:
+    void on_pushButton_clicked();
+
+private:
+    Ui::gagqr *ui;
+    QRWidget *qrwidget;
+
 };
 
 #endif // GAGQR_H
