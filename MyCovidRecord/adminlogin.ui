@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>493</width>
-    <height>713</height>
+    <height>737</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -90,10 +90,10 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>140</y>
-      <width>431</width>
-      <height>301</height>
+      <width>451</width>
+      <height>351</height>
      </rect>
     </property>
     <property name="text">
@@ -132,7 +132,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>480</y>
+      <y>511</y>
       <width>451</width>
       <height>41</height>
      </rect>
@@ -153,7 +153,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>530</y>
+      <y>561</y>
       <width>451</width>
       <height>41</height>
      </rect>
@@ -174,7 +174,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>580</y>
+      <y>611</y>
       <width>451</width>
       <height>41</height>
      </rect>
@@ -208,7 +208,6 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
     <addaction name="actionManage_Users"/>
     <addaction name="actionManage_Documents"/>
     <addaction name="actionManage_Errors"/>
-    <addaction name="actionGenerate_QR_Codes"/>
     <addaction name="actionQuit_3"/>
    </widget>
    <addaction name="menuFile"/>
@@ -229,7 +228,6 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    <addaction name="actionManage_Users"/>
    <addaction name="actionManage_Documents"/>
    <addaction name="actionManage_Errors"/>
-   <addaction name="actionGenerate_QR_Codes"/>
    <addaction name="actionQuit_3"/>
   </widget>
   <action name="actionManage_Users">
@@ -260,16 +258,6 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    </property>
    <property name="text">
     <string>Manage Errors</string>
-   </property>
-  </action>
-  <action name="actionGenerate_QR_Codes">
-   <property name="icon">
-    <iconset resource="resources/mycovidrecord.qrc">
-     <normaloff>:/images/images/qr.png</normaloff>
-     <normalon>:/images/images/5810431-09 1_qrcode.png</normalon>:/images/images/qr.png</iconset>
-   </property>
-   <property name="text">
-    <string>Generate QR Codes</string>
    </property>
   </action>
   <action name="actionQuit_3">

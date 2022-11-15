@@ -9,6 +9,7 @@
 #include "viewvaccinereport.h"
 #include "reporterror.h"
 #include "userrecords.h"
+#include "manageerrorlogs.h"
 
 #include <QApplication>
 #include <QDebug>
@@ -29,6 +30,7 @@ int main(int argc, char *argv[])
     ViewVaccineReport w8;
     ReportError w9;
     UserRecords w10;
+    ManageErrorLogs w11;
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w2,SLOT(onInfoPassed(QString)));
 
@@ -47,6 +49,8 @@ int main(int argc, char *argv[])
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w9,SLOT(onInfoPassed7(QString)));
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w10,SLOT(onInfoPassed8(QString)));
+
+    QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w11,SLOT(onInfoPassed9(QString)));
 
     MyCovidRecord w;
     w.show();

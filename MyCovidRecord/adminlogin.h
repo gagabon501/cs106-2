@@ -2,6 +2,7 @@
 #define ADMINLOGIN_H
 #include "managedocuments.h"
 #include "manageusers.h"
+#include "manageerrorlogs.h"
 
 #include <QMainWindow>
 
@@ -29,10 +30,13 @@ private slots:
 
     void on_actionManage_Users_triggered();
 
+    void on_actionManage_Errors_triggered();
+
 private:
     Ui::AdminLogin *ui;
     manageDocuments *managedocuments;
     ManageUsers *manageusers;
+    ManageErrorLogs *manageerrorlogs;
 };
 
 #endif // ADMINLOGIN_H

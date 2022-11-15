@@ -59,3 +59,10 @@ void AdminLogin::on_actionManage_Users_triggered()
     manageusers->show();
 }
 
+
+void AdminLogin::on_actionManage_Errors_triggered()
+{
+    manageerrorlogs = new ManageErrorLogs(this);
+    manageerrorlogs->show();
+}
+

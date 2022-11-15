@@ -22,6 +22,7 @@ SOURCES += \
     login.cpp \
     main.cpp \
     managedocuments.cpp \
+    manageerrorlogs.cpp \
     manageusers.cpp \
     mycovidrecord.cpp \
     registration.cpp \
@@ -45,6 +46,7 @@ HEADERS += \
     gagqr.h \
     login.h \
     managedocuments.h \
+    manageerrorlogs.h \
     manageusers.h \
     mycovidrecord.h \
     qrencode.h \
@@ -68,6 +70,7 @@ FORMS += \
     gagqr.ui \
     login.ui \
     managedocuments.ui \
+    manageerrorlogs.ui \
     manageusers.ui \
     mycovidrecord.ui \
     registration.ui \
