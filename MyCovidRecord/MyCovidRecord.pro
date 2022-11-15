@@ -15,7 +15,6 @@ LIBS += -lqrencode
 SOURCES += \
     adminlogin.cpp \
     changepassword.cpp \
-    createrecord.cpp \
     dashboard.cpp \
     deletevaccinerecord.cpp \
     gagqr.cpp \
@@ -40,7 +39,6 @@ SOURCES += \
 HEADERS += \
     adminlogin.h \
     changepassword.h \
-    createrecord.h \
     dashboard.h \
     deletevaccinerecord.h \
     gagqr.h \
@@ -64,7 +62,6 @@ HEADERS += \
 FORMS += \
     adminlogin.ui \
     changepassword.ui \
-    createrecord.ui \
     dashboard.ui \
     deletevaccinerecord.ui \
     gagqr.ui \
