@@ -30,7 +30,7 @@ void ViewCovidTestResult::onInfoPassed3(QString uemail)
     QSqlQuery *query = new QSqlQuery();
     QSqlQueryModel *model = new QSqlQueryModel;
 
-    query->prepare("SELECT * from covid_test where email='"+uemail+"'");
+    query->prepare("SELECT date_administered, time_administered, administered_by, test_type, test_result from covid_test where email='"+uemail+"'");
     query->exec();
 
 //    model->setQuery(*query);

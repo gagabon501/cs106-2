@@ -27,7 +27,8 @@ void UserRecords::onInfoPassed8(QString email)
     QSqlQuery *query = new QSqlQuery();
     QSqlQueryModel *model = new QSqlQueryModel;
 
-    query->prepare("SELECT * from covid_test where email='"+email+"'");
+//    query->prepare("SELECT * from covid_test where email='"+email+"'");
+    query->prepare("SELECT date_administered, time_administered, administered_by, test_type, test_result from covid_test where email='"+email+"'");
     query->exec();
 
 //    model->setQuery(*query);
