@@ -2,23 +2,25 @@
 #include "ui_manageerrorlogs.h"
 #include <QSqlQuery>
 #include <QSqlQueryModel>
+#include <QSqlTableModel>
+#include <QTableView>
+#include <QMessageBox>
+#include <QDebug>
+#include <QSqlError>
+
 
 ManageErrorLogs::ManageErrorLogs(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ManageErrorLogs)
 {
     ui->setupUi(this);
-    QSqlQuery *query = new QSqlQuery();
-    QSqlQueryModel *model = new QSqlQueryModel;
     this->setFixedSize(this->size());
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableView->resizeColumnsToContents();
 
-    query->prepare("SELECT * from error_logs");
-    query->exec();
-
-//    model->setQuery(*query);
-    model->setQuery(std::move(*query)); //to resolve the warning
-//
+    QSqlTableModel *model = new QSqlTableModel();
+    model->setTable("error_logs");
+    model->select();
 
     ui->tableView->setModel(model);
 
@@ -29,20 +31,18 @@ ManageErrorLogs::~ManageErrorLogs()
     delete ui;
 }
 
-void ManageErrorLogs::onInfoPassed9(QString uemail)
-{
-//Not in use for the meantime
 
-}
 
-void ManageErrorLogs::on_buttonBox_accepted()
+void ManageErrorLogs::on_pushButton_save_clicked()
 {
     this->close();
 }
 
 
-void ManageErrorLogs::on_buttonBox_rejected()
+
+void ManageErrorLogs::on_tableView_activated(const QModelIndex &index)
 {
-    this->close();
+    QString val = ui->tableView->model()->data(index).toString();
+    qDebug() << val;
 }
 

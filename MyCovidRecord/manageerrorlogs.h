@@ -15,13 +15,13 @@ public:
     explicit ManageErrorLogs(QWidget *parent = nullptr);
     ~ManageErrorLogs();
 
-public slots:
-    void onInfoPassed9(QString uemail);
 
 private slots:
-    void on_buttonBox_accepted();
 
-    void on_buttonBox_rejected();
+    void on_pushButton_save_clicked();
+
+
+    void on_tableView_activated(const QModelIndex &index);
 
 private:
     Ui::ManageErrorLogs *ui;
