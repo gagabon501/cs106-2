@@ -15,6 +15,14 @@ public:
     explicit ManageUsers(QWidget *parent = nullptr);
     ~ManageUsers();
 
+public slots:
+    void onInfoPassed10(QString uemail);
+
+private slots:
+    void on_updatUser_accepted();
+
+    void on_updatUser_rejected();
+
 private:
     Ui::ManageUsers *ui;
 };
