@@ -16,12 +16,12 @@ public:
     ~ManageUsers();
 
 public slots:
-    void onInfoPassed10(QString uemail);
+//    void onInfoPassed10(QString uemail);
 
 private slots:
-    void on_updatUser_accepted();
+//    void on_updatUser_accepted();
 
-    void on_updatUser_rejected();
+//    void on_updatUser_rejected();
 
     void on_updatUser_clicked();
 

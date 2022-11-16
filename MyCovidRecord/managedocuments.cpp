@@ -8,19 +8,6 @@ manageDocuments::manageDocuments(QWidget *parent) :
     ui(new Ui::manageDocuments)
 {
     ui->setupUi(this);
-}
-
-manageDocuments::~manageDocuments()
-{
-    delete ui;
-}
-
-
-manageDocuments::manageDocuments(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::manageDocuments)
-{
-    ui->setupUi(this);
     QSqlQuery *query = new QSqlQuery();
     QSqlQueryModel *model = new QSqlQueryModel;
     this->setFixedSize(this->size());
@@ -36,6 +23,12 @@ manageDocuments::manageDocuments(QWidget *parent) :
     ui->tableView->setModel(model);
 
 }
+
+manageDocuments::~manageDocuments()
+{
+    delete ui;
+}
+
 
 void manageDocuments::on_updatUser_clicked()
 {

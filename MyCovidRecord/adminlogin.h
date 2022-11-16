@@ -32,7 +32,7 @@ private slots:
 
     void on_actionManage_Errors_triggered();
 
-    void on_pushButton_info_clicked();
+//    void on_pushButton_info_clicked();
 
 private:
     Ui::AdminLogin *ui;

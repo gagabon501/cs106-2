@@ -8,13 +8,6 @@ ManageUsers::ManageUsers(QWidget *parent) :
     ui(new Ui::ManageUsers)
 {
     ui->setupUi(this);
-}
-
-ManageUsers::ManageUsers(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::ManageUsers)
-{
-    ui->setupUi(this);
     QSqlQuery *query = new QSqlQuery();
     QSqlQueryModel *model = new QSqlQueryModel;
     this->setFixedSize(this->size());
@@ -28,10 +21,10 @@ ManageUsers::ManageUsers(QWidget *parent) :
     //
 
     ui->tableView->setModel(model);
-
 }
 
-void ManageUsers::~ManageUsers()
+
+ManageUsers::~ManageUsers()
 {
     delete ui;
 }
