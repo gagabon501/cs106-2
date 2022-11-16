@@ -16,7 +16,6 @@ SOURCES += \
     adminlogin.cpp \
     changepassword.cpp \
     dashboard.cpp \
-    deletevaccinerecord.cpp \
     gagqr.cpp \
     login.cpp \
     main.cpp \
@@ -40,7 +39,6 @@ HEADERS += \
     adminlogin.h \
     changepassword.h \
     dashboard.h \
-    deletevaccinerecord.h \
     gagqr.h \
     login.h \
     managedocuments.h \
@@ -63,7 +61,6 @@ FORMS += \
     adminlogin.ui \
     changepassword.ui \
     dashboard.ui \
-    deletevaccinerecord.ui \
     gagqr.ui \
     login.ui \
     managedocuments.ui \

@@ -10,12 +10,6 @@ ManageUsers::ManageUsers(QWidget *parent) :
     ui->setupUi(this);
 }
 
-ManageUsers::~ManageUsers()
-{
-    delete ui;
-}
-
-
 ManageUsers::ManageUsers(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ManageUsers)
@@ -42,10 +36,10 @@ void ManageUsers::~ManageUsers()
     delete ui;
 }
 
-void ManageUsers::onInfoPassed10(QString comments)
+
+
+void ManageUsers::on_updatUser_clicked()
 {
 
 }
-
-
 

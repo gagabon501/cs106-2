@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>303</width>
-    <height>569</height>
+    <width>754</width>
+    <height>517</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,314 +23,54 @@
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QPushButton" name="updatUser">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>81</width>
-      <height>86</height>
+      <x>610</x>
+      <y>470</y>
+      <width>100</width>
+      <height>32</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="accoutnAvatar">
-       <property name="styleSheet">
-        <string notr="true">border: 0;
-
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="resources/mycovidrecord.qrc">
-         <normaloff>:/images/images/5810431-03.png</normaloff>:/images/images/5810431-03.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>70</width>
-         <height>70</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>50</y>
-      <width>131</width>
-      <height>51</height>
-     </rect>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 15px;
+background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <family>Raleway</family>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: none;
-</string>
-       </property>
-       <property name="text">
-        <string>Manage Documents</string>
-       </property>
-      </widget>
-     </item>
-     <item alignment="Qt::AlignHCenter">
-      <widget class="QDateEdit" name="dateEdit">
-       <property name="font">
-        <font>
-         <family>Raleway</family>
-        </font>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">text-align: center;</string>
-       </property>
-       <property name="currentSection">
-        <enum>QDateTimeEdit::MonthSection</enum>
-       </property>
-       <property name="date">
-        <date>
-         <year>2022</year>
-         <month>11</month>
-         <day>5</day>
-        </date>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string>Update</string>
+    </property>
    </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>440</y>
+      <x>40</x>
+      <y>10</y>
       <width>241</width>
-      <height>101</height>
+      <height>41</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="ManageDocuments">
-       <property name="maximumSize">
-        <size>
-         <width>70</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border:0;
-
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="resources/mycovidrecord.qrc">
-         <normaloff>:/images/images/5810431-07 1_Info.png</normaloff>:/images/images/5810431-07 1_Info.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>70</width>
-         <height>70</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="DashboardMenu">
-       <property name="maximumSize">
-        <size>
-         <width>70</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: 0;
-
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="resources/mycovidrecord.qrc">
-         <normaloff>:/images/images/5810431-08 1_Home.png</normaloff>:/images/images/5810431-08 1_Home.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>70</width>
-         <height>70</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="QRCodeMenu">
-       <property name="maximumSize">
-        <size>
-         <width>70</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border: 0;
-
-</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset resource="resources/mycovidrecord.qrc">
-         <normaloff>:/images/images/5810431-09 1_qrcode.png</normaloff>:/images/images/5810431-09 1_qrcode.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>70</width>
-         <height>70</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="font">
+     <font>
+      <family>Raleway</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Manage Documents</string>
+    </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_3">
+   <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>150</y>
-      <width>241</width>
-      <height>191</height>
+      <x>40</x>
+      <y>60</y>
+      <width>661</width>
+      <height>391</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <property name="spacing">
-      <number>0</number>
-     </property>
-     <property name="leftMargin">
-      <number>2</number>
-     </property>
-     <property name="rightMargin">
-      <number>2</number>
-     </property>
-     <property name="bottomMargin">
-      <number>0</number>
-     </property>
-     <item>
-      <widget class="QPushButton" name="CreateVacRec">
-       <property name="maximumSize">
-        <size>
-         <width>230</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Raleway</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-radius: 20px;
-background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
-       </property>
-       <property name="text">
-        <string>Create Vaccine Record</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>16</width>
-         <height>40</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="UpdateVacRec">
-       <property name="maximumSize">
-        <size>
-         <width>230</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Raleway</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-radius: 20px;
-background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
-       </property>
-       <property name="text">
-        <string>Update Vaccine Record</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>16</width>
-         <height>40</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="DeleteVacRec">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>230</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Raleway</family>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-radius: 20px;
-background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
-       </property>
-       <property name="text">
-        <string>Delete Vaccine Record</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>80</width>
-         <height>80</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="resources/mycovidrecord.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

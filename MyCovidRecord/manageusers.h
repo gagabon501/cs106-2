@@ -1,6 +1,6 @@
 #ifndef MANAGEUSERS_H
 #define MANAGEUSERS_H
-
+#include <QDialog>
 #include <QMainWindow>
 
 namespace Ui {
@@ -22,6 +22,8 @@ private slots:
     void on_updatUser_accepted();
 
     void on_updatUser_rejected();
+
+    void on_updatUser_clicked();
 
 private:
     Ui::ManageUsers *ui;
