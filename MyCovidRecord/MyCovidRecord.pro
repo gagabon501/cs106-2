@@ -27,7 +27,6 @@ SOURCES += \
     reporterror.cpp \
     updateprofile.cpp \
     uploadselftest.cpp \
-    updatevaccinerecord.cpp \
     user.cpp \
     userrecords.cpp \
     viewcovidtestresult.cpp \
@@ -50,7 +49,6 @@ HEADERS += \
     reporterror.h \
     updateprofile.h \
     uploadselftest.h \
-    updatevaccinerecord.h \
     user.h \
     userrecords.h \
     viewcovidtestresult.h \
@@ -71,7 +69,6 @@ FORMS += \
     reporterror.ui \
     updateprofile.ui \
     uploadselftest.ui \
-    updatevaccinerecord.ui \
     userrecords.ui \
     viewcovidtestresult.ui \
     viewvaccinereport.ui

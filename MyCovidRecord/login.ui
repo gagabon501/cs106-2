@@ -28,6 +28,11 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
@@ -52,6 +57,11 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="font">
+     <font>
+      <family>Raleway</family>
+     </font>
+    </property>
     <property name="text">
      <string>Username</string>
     </property>
@@ -74,6 +84,11 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="font">
+     <font>
+      <family>Raleway</family>
+     </font>
+    </property>
    </widget>
    <widget class="QLabel" name="label_username">
     <property name="geometry">
@@ -89,6 +104,11 @@
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Raleway</family>
+     </font>
     </property>
     <property name="text">
      <string>Password</string>
@@ -112,6 +132,11 @@
       <verstretch>0</verstretch>
      </sizepolicy>
     </property>
+    <property name="font">
+     <font>
+      <family>Raleway</family>
+     </font>
+    </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
     </property>
@@ -131,6 +156,11 @@
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">border: 0;</string>
@@ -192,11 +222,18 @@
      <height>100</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="cursor">
     <cursorShape>OpenHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.433429, y1:0.852, x2:1, y2:1, stop:0 rgba(198, 112, 0, 255), stop:0.428571 rgba(208, 0, 24, 255));
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(240, 107, 27), stop:1 rgb(255, 147, 0));
 border: 1px solid;
 border-radius: 20px;</string>
    </property>
@@ -210,7 +247,7 @@ border-radius: 20px;</string>
      <x>30</x>
      <y>20</y>
      <width>141</width>
-     <height>161</height>
+     <height>141</height>
     </rect>
    </property>
    <property name="text">
@@ -235,6 +272,11 @@ border-radius: 20px;</string>
      <height>18</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
+   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QPushButton" name="pushButton_forgotPassword">
@@ -243,6 +285,11 @@ border-radius: 20px;</string>
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Raleway</family>
+       </font>
       </property>
       <property name="cursor">
        <cursorShape>OpenHandCursor</cursorShape>
@@ -263,6 +310,11 @@ border-radius: 20px;</string>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="font">
+       <font>
+        <family>Raleway</family>
+       </font>
+      </property>
       <property name="text">
        <string>|</string>
       </property>
@@ -278,6 +330,11 @@ border-radius: 20px;</string>
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Raleway</family>
+       </font>
       </property>
       <property name="cursor">
        <cursorShape>OpenHandCursor</cursorShape>
