@@ -32,7 +32,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>10</x>
      <y>20</y>
      <width>271</width>
      <height>191</height>
@@ -77,6 +77,11 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
+   </property>
    <property name="text">
     <string>Date and time taken</string>
    </property>
@@ -90,6 +95,11 @@
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
+   </property>
    <property name="text">
     <string>Is the control line (C) visible</string>
    </property>
@@ -102,6 +112,11 @@
      <width>261</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
    </property>
    <property name="text">
     <string>Is the test line (C) visible</string>

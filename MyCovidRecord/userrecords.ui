@@ -24,6 +24,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Raleway</family>
      <pointsize>14</pointsize>
     </font>
    </property>
@@ -40,6 +41,11 @@
      <height>192</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
+   </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
@@ -52,6 +58,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Raleway</family>
      <pointsize>11</pointsize>
      <bold>true</bold>
     </font>
@@ -71,6 +78,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Raleway</family>
      <pointsize>11</pointsize>
      <bold>true</bold>
     </font>
@@ -88,11 +96,16 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
+   </property>
    <property name="text">
     <string>OK</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -101,11 +114,21 @@
      <height>101</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Raleway</family>
+    </font>
+   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0">
        <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="text">
          <string>1st Dose</string>
         </property>
@@ -113,6 +136,11 @@
       </item>
       <item row="0" column="1">
        <widget class="QLineEdit" name="lineEdit_dose1">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -120,6 +148,11 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="text">
          <string>2nd Dose</string>
         </property>
@@ -127,6 +160,11 @@
       </item>
       <item row="1" column="1">
        <widget class="QLineEdit" name="lineEdit_dose2">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -134,6 +172,11 @@
       </item>
       <item row="2" column="0">
        <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="text">
          <string>3rd Dose</string>
         </property>
@@ -141,6 +184,11 @@
       </item>
       <item row="2" column="1">
        <widget class="QLineEdit" name="lineEdit_dose3">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -152,6 +200,11 @@
      <layout class="QFormLayout" name="formLayout_2">
       <item row="0" column="0">
        <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="text">
          <string>Vaccine Name</string>
         </property>
@@ -159,6 +212,11 @@
       </item>
       <item row="0" column="1">
        <widget class="QLineEdit" name="lineEdit_vaccine_name">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>
@@ -166,6 +224,11 @@
       </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="text">
          <string>Manufacturer</string>
         </property>
@@ -173,6 +236,11 @@
       </item>
       <item row="1" column="1">
        <widget class="QLineEdit" name="lineEdit_manufacturer">
+        <property name="font">
+         <font>
+          <family>Raleway</family>
+         </font>
+        </property>
         <property name="readOnly">
          <bool>true</bool>
         </property>

@@ -35,8 +35,8 @@
    <property name="font">
     <font>
      <family>Raleway</family>
-     <pointsize>16</pointsize>
-     <bold>true</bold>
+     <pointsize>24</pointsize>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
