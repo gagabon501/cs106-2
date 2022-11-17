@@ -34,6 +34,10 @@ ManageErrorLogs::ManageErrorLogs(QWidget *parent) :
     ui->tableView->setModel(model); //put the model into the view
 //    ui->label_date_reported->setText(ui->tableView->model()->data())
 
+
+
+    ui->tableView->setColumnHidden(0,true); //hide id column
+
     ui->comboBox_status->addItem("Open");
     ui->comboBox_status->addItem("Closed");
     ui->comboBox_status->addItem("Deferred");
@@ -71,7 +75,6 @@ void ManageErrorLogs::on_tableView_activated(const QModelIndex &index)
     } else {
         qDebug() << "Query error: " << query->lastError();
     }
-//    emit ui->tableView->model()->dataChanged(ui->tableView->model()->index(1,1),ui->tableView->model()->index(10,8));
 }
 
 
@@ -100,7 +103,6 @@ void ManageErrorLogs::on_buttonBox_accepted()
     }
 
     this->close();
-//    ui->tableView->model()->
 
 
 }
@@ -112,25 +114,4 @@ void ManageErrorLogs::on_buttonBox_rejected()
 }
 
 
-//void ManageErrorLogs::on_buttonBox_clicked(QAbstractButton *button)
-//{
-//qDebug() << "clicked apply";
-//}
-
-
-
-
-void ManageErrorLogs::on_pushButton_refresh_clicked()
-{
-
-    QSqlQuery *query = new QSqlQuery();
-    QSqlQueryModel *model = new QSqlQueryModel;
-
-    query->prepare("SELECT * from error_logs");
-    query->exec();
-
-    model->setQuery(std::move(*query));
-
-
-}
 

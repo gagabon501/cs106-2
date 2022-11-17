@@ -27,9 +27,6 @@ private slots:
     void on_buttonBox_rejected();
 
 
-
-    void on_pushButton_refresh_clicked();
-
 private:
     Ui::ManageErrorLogs *ui;
 };
