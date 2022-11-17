@@ -2,6 +2,7 @@
 #define MANAGEERRORLOGS_H
 
 #include <QDialog>
+#include <QAbstractButton>
 
 namespace Ui {
 class ManageErrorLogs;
@@ -18,10 +19,18 @@ public:
 
 private slots:
 
-    void on_pushButton_save_clicked();
-
 
     void on_tableView_activated(const QModelIndex &index);
+
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
+//    void on_buttonBox_clicked(QAbstractButton *button);
+
+    void on_buttonBox_helpRequested();
+
+    void on_pushButton_refresh_clicked();
 
 private:
     Ui::ManageErrorLogs *ui;
