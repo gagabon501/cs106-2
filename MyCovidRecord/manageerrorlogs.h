@@ -26,9 +26,7 @@ private slots:
 
     void on_buttonBox_rejected();
 
-//    void on_buttonBox_clicked(QAbstractButton *button);
 
-    void on_buttonBox_helpRequested();
 
     void on_pushButton_refresh_clicked();
 

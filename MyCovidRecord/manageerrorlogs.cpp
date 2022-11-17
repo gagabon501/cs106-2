@@ -8,7 +8,6 @@
 #include <QDebug>
 #include <QSqlError>
 
-
 ManageErrorLogs::ManageErrorLogs(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ManageErrorLogs)
@@ -29,9 +28,12 @@ ManageErrorLogs::ManageErrorLogs(QWidget *parent) :
     query->prepare("SELECT * from error_logs");
     query->exec();
 
+//    model->setQuery(*query); //deprecated function, hence the use of move()
     model->setQuery(std::move(*query));
 
-    ui->tableView->setModel(model);
+    ui->tableView->setModel(model); //put the model into the view
+//    ui->label_date_reported->setText(ui->tableView->model()->data())
+
     ui->comboBox_status->addItem("Open");
     ui->comboBox_status->addItem("Closed");
     ui->comboBox_status->addItem("Deferred");
@@ -47,6 +49,8 @@ ManageErrorLogs::~ManageErrorLogs()
 
 void ManageErrorLogs::on_tableView_activated(const QModelIndex &index)
 {
+
+
     QString id = ui->tableView->model()->data(ui->tableView->model()->index(index.row(),0)).toString(); //id
 
     QSqlQuery *query = new QSqlQuery();
@@ -67,7 +71,7 @@ void ManageErrorLogs::on_tableView_activated(const QModelIndex &index)
     } else {
         qDebug() << "Query error: " << query->lastError();
     }
-
+//    emit ui->tableView->model()->dataChanged(ui->tableView->model()->index(1,1),ui->tableView->model()->index(10,8));
 }
 
 
@@ -84,15 +88,20 @@ void ManageErrorLogs::on_buttonBox_accepted()
     if(query->exec()) {
         if(query->numRowsAffected() < 1) {
             qDebug() << "No rows updated.";
+
         } else {
+
             qDebug() << "Update successful";
+
         }
 
     } else {
         qDebug() << "Update error: " << query->lastError();
     }
 
-//    this->close();
+    this->close();
+//    ui->tableView->model()->
+
 
 }
 
@@ -109,10 +118,6 @@ void ManageErrorLogs::on_buttonBox_rejected()
 //}
 
 
-void ManageErrorLogs::on_buttonBox_helpRequested()
-{
-    qDebug() << "help requested";
-}
 
 
 void ManageErrorLogs::on_pushButton_refresh_clicked()
