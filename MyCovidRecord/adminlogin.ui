@@ -205,6 +205,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionUpdate_Vaccine_Record"/>
     <addaction name="actionManage_Users"/>
     <addaction name="actionManage_Documents"/>
     <addaction name="actionUpload_Documents"/>
@@ -226,6 +227,7 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionUpdate_Vaccine_Record"/>
    <addaction name="actionManage_Users"/>
    <addaction name="actionUpload_Documents"/>
    <addaction name="actionManage_Documents"/>
@@ -279,6 +281,15 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    </property>
    <property name="text">
     <string>Upload Documents</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Vaccine_Record">
+   <property name="icon">
+    <iconset resource="resources/mycovidrecord.qrc">
+     <normaloff>:/images/images/covid-test.png</normaloff>:/images/images/covid-test.png</iconset>
+   </property>
+   <property name="text">
+    <string>Update Vaccine Record</string>
    </property>
   </action>
  </widget>

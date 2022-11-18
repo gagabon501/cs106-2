@@ -76,3 +76,10 @@ void AdminLogin::on_actionUpload_Documents_triggered()
 
 }
 
+
+void AdminLogin::on_actionUpdate_Vaccine_Record_triggered()
+{
+    uploadvaccine = new UploadVaccineRecord(this);
+    uploadvaccine->show();
+}
+

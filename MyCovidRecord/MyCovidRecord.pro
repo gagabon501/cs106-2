@@ -16,7 +16,6 @@ SOURCES += \
     adminlogin.cpp \
     changepassword.cpp \
     dashboard.cpp \
-    gagqr.cpp \
     login.cpp \
     main.cpp \
     managedocuments.cpp \
@@ -28,6 +27,7 @@ SOURCES += \
     updateprofile.cpp \
     uploadfile.cpp \
     uploadselftest.cpp \
+    uploadvaccinerecord.cpp \
     user.cpp \
     userrecords.cpp \
     viewcovidtestresult.cpp \
@@ -39,7 +39,6 @@ HEADERS += \
     adminlogin.h \
     changepassword.h \
     dashboard.h \
-    gagqr.h \
     login.h \
     managedocuments.h \
     manageerrorlogs.h \
@@ -51,6 +50,7 @@ HEADERS += \
     updateprofile.h \
     uploadfile.h \
     uploadselftest.h \
+    uploadvaccinerecord.h \
     user.h \
     userrecords.h \
     viewcovidtestresult.h \
@@ -61,7 +61,6 @@ FORMS += \
     adminlogin.ui \
     changepassword.ui \
     dashboard.ui \
-    gagqr.ui \
     login.ui \
     managedocuments.ui \
     manageerrorlogs.ui \
@@ -72,6 +71,7 @@ FORMS += \
     updateprofile.ui \
     uploadfile.ui \
     uploadselftest.ui \
+    uploadvaccinerecord.ui \
     userrecords.ui \
     viewcovidtestresult.ui \
     viewvaccinereport.ui
