@@ -20,6 +20,8 @@ private slots:
 
     void on_updatUser_clicked();
 
+    void on_tableView_activated(const QModelIndex &index);
+
 private:
     Ui::manageDocuments *ui;
 

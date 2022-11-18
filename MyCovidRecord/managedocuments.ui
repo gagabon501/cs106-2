@@ -37,7 +37,7 @@
 background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 rgb(119, 87, 165), stop:1 rgb(55, 197, 243));</string>
     </property>
     <property name="text">
-     <string>Update</string>
+     <string>Close</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">

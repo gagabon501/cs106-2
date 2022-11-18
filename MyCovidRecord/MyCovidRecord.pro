@@ -26,6 +26,7 @@ SOURCES += \
     registration.cpp \
     reporterror.cpp \
     updateprofile.cpp \
+    uploadfile.cpp \
     uploadselftest.cpp \
     user.cpp \
     userrecords.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
     registration.h \
     reporterror.h \
     updateprofile.h \
+    uploadfile.h \
     uploadselftest.h \
     user.h \
     userrecords.h \
@@ -68,6 +70,7 @@ FORMS += \
     registration.ui \
     reporterror.ui \
     updateprofile.ui \
+    uploadfile.ui \
     uploadselftest.ui \
     userrecords.ui \
     viewcovidtestresult.ui \

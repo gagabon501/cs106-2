@@ -3,6 +3,7 @@
 #include "managedocuments.h"
 #include "manageusers.h"
 #include "manageerrorlogs.h"
+#include "uploadfile.h"
 
 #include <QMainWindow>
 
@@ -34,11 +35,14 @@ private slots:
 
 //    void on_pushButton_info_clicked();
 
+    void on_actionUpload_Documents_triggered();
+
 private:
     Ui::AdminLogin *ui;
     manageDocuments *managedocuments;
     ManageUsers *manageusers;
     ManageErrorLogs *manageerrorlogs;
+    UploadFile *uploadfile;
 };
 
 #endif // ADMINLOGIN_H
