@@ -17,11 +17,6 @@ ManageErrorLogs::ManageErrorLogs(QWidget *parent) :
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableView->resizeColumnsToContents();
 
-//    QSqlTableModel *model = new QSqlTableModel();
-//    model->setTable("error_logs");
-//    model->select();
-
-
     QSqlQuery *query = new QSqlQuery();
     QSqlQueryModel *model = new QSqlQueryModel;
 
@@ -32,8 +27,6 @@ ManageErrorLogs::ManageErrorLogs(QWidget *parent) :
     model->setQuery(std::move(*query));
 
     ui->tableView->setModel(model); //put the model into the view
-//    ui->label_date_reported->setText(ui->tableView->model()->data())
-
 
 
     ui->tableView->setColumnHidden(0,true); //hide id column

@@ -13,9 +13,16 @@ UploadVaccineRecord::UploadVaccineRecord(QWidget *parent) :
     ui(new Ui::UploadVaccineRecord)
 {
     ui->setupUi(this);
+
+    ui->frame_status->hide(); //hide the whole section at the start and show it when it finds the record of the user. Cool hack!
+
     ui->comboBox->addItem("Completed");
     ui->comboBox->addItem("Unvaccinated");
     ui->comboBox->addItem("Partial");
+
+    ui->dateEdit_dose1->setDate(QDate());
+    ui->dateEdit_dose2->setDate(QDate());
+    ui->dateEdit_dose3->setDate(QDate());
 }
 
 UploadVaccineRecord::~UploadVaccineRecord()
@@ -35,6 +42,8 @@ void UploadVaccineRecord::on_pushButton_clicked()
         int count = 0;
         while(query.next()) {
             count++;
+
+            //start collecting the data while going throught the loop. I'm sure there is only one record for each user because the email address is a PRIMARY KEY
             ui->label_name->setText("Name: "+query.value(2).toString()+" "+query.value(3).toString());
             ui->label_dob->setText("DOB: "+query.value(9).toString());
             ui->label_gender->setText("Gender: "+query.value(5).toString());
@@ -48,6 +57,8 @@ void UploadVaccineRecord::on_pushButton_clicked()
 
         if (count != 1) {
            QMessageBox::information(this,"Information","User not found in the database.");
+        } else {
+            ui->frame_status->show(); //now that you found the record - time to show the whole frame!
         }
     } else {
         QMessageBox::critical(this,"Warning","Query unsuccessful: "+query.lastError().text());
@@ -70,9 +81,12 @@ void UploadVaccineRecord::on_buttonBox_accepted()
     QString manufacturer = ui->lineEdit_manufacturer->text();
     QString status = ui->comboBox->currentText();
 
-    QSqlQuery query;
+    QSqlQuery query, msgQry;
+
+    msgQry.prepare("INSERT INTO system_logs VALUES");
 
     query.prepare("UPDATE user SET date_dose1='"+dose1+"', date_dose2='"+dose2+"', date_dose3='"+dose3+"', vaccine_name='"+vaccine_name+"', manufacturer='"+manufacturer+"', vaccine_status='"+status+"' WHERE email='"+email+"'");
+
     if(query.exec())
     {
 

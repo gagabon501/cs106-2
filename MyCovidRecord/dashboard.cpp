@@ -141,20 +141,18 @@ void Dashboard::on_actionUpload_RAT_Test_triggered()
 
 void Dashboard::on_pushButton_6_clicked()
 {
-    User user(nullptr, userEmail);
-    QString qrData = user.userEmail + "/" + user.firstname + " " + user.lastname + "/" + user.dob + "/" + user.vaccine_status;
+//    User user(nullptr, userEmail);
+//    QString qrData = user.userEmail + "/" + user.firstname + " " + user.lastname + "/" + user.dob + "/" + user.vaccine_status;
 
-    qrwidget = new QRWidget();
-    qrwidget->setQRData(qrData);
-    qrwidget->show();
+//    qrwidget = new QRWidget();
+//    qrwidget->setQRData(qrData);
+//    qrwidget->show();
+
+    viewqrcode = new ViewQrCode(this);
+    viewqrcode->onInfoPassed9(userEmail);
+    viewqrcode->show();
 
 }
-
-//void Dashboard::on_actionQR_Code_triggered()
-//{
-//    ggqr = new gagqr(this);
-//    ggqr->show();
-//}
 
 
 void Dashboard::on_pushButton_4_clicked()
@@ -162,5 +160,6 @@ void Dashboard::on_pushButton_4_clicked()
     userrecords = new UserRecords(this);
     userrecords->onInfoPassed8(userEmail);
     userrecords->show();
+
 }
 

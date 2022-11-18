@@ -2,6 +2,7 @@
 #define VIEWVACCINEREPORT_H
 
 #include <QDialog>
+#include "QRWidget.hpp"
 
 namespace Ui {
 class ViewVaccineReport;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::ViewVaccineReport *ui;
+    QRWidget *qrwidget;
 };
 
 #endif // VIEWVACCINEREPORT_H

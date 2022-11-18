@@ -1,6 +1,4 @@
 #include "user.h"
-#include <QString>
-#include <QSqlQuery>
 
 /*------------------------------------------------------------------------------------------------
  * This Class will hold the User information based on the email address passed to the constructor.
@@ -8,12 +6,14 @@
  * We will implement this model with other objects, i.e. Document and Error Log
  *-----------------------------------------------------------------------------------------------*/
 
+
 User::User(QObject *parent, QString email)
     : QObject{parent}
+
 {
     QSqlQuery query;
 
-    qDebug() << email;
+//    qDebug() << email;
 
     query.prepare("SELECT email, lastname, firstname, gender, dob, phone, nhi, vaccine_status, level FROM user WHERE email='"+email +"'");
 
@@ -35,12 +35,15 @@ User::User(QObject *parent, QString email)
 
         }
 
-
         if(count == 0) {
             qDebug() << "No record found";
+            userExists = false;
+        } else {
+            userExists = true;
         }
     } else {
          qDebug() << "Query unsuccessful!";
+         userExists = false;
     }
 }
 

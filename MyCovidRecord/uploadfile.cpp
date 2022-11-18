@@ -46,6 +46,8 @@ void UploadFile::on_buttonBox_accepted()
 
         QSqlQuery query;
 //        query.prepare("INSERT INTO user_docs (email,filename,description,date_uploaded,file_contents,uploaded_by) VALUES (:email,:fileName,:description,:dateUpload,:byteArray,uploaded_by)");
+
+        //This is a nice way to craft the query for adding a record
         query.prepare("INSERT INTO user_docs (email,filename,description,date_uploaded,file_contents,uploaded_by) VALUES (?,?,?,?,?,?)");
         query.addBindValue(email);
         query.addBindValue(fileName);
