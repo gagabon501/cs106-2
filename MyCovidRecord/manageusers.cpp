@@ -3,28 +3,22 @@
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
+#include <QScreen>
 
 ManageUsers::ManageUsers(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ManageUsers)
 {
     ui->setupUi(this);
-    QSqlTableModel *model = new QSqlTableModel();
-    model->setTable("user");
-    model->select();
 
+    move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
 
-//    QSqlQuery *query = new QSqlQuery();
-//    QSqlQueryModel *model = new QSqlQueryModel;
     this->setFixedSize(this->size());
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
-//    query->prepare("SELECT * from user");
-//    query->exec();
-
-//    //    model->setQuery(*query);
-//    model->setQuery(std::move(*query)); //to resolve the warning
-    //
+    QSqlTableModel *model = new QSqlTableModel();
+    model->setTable("user");
+    model->select();
 
     ui->tableView->setModel(model);
     ui->tableView->setColumnHidden(1,true); //hide password column

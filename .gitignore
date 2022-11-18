@@ -117,5 +117,5 @@ compile_commands.json
 *_qmlcache.qrc
 
 #do not include the executable file to avoid issues with binary conflicts
-*.db
-MyCovideRecord
+# *.db
+# MyCovideRecord
