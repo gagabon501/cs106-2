@@ -4,6 +4,7 @@
 
 #include <QSqlQuery>
 #include <QSqlQueryModel>
+#include <QMessageBox>
 
 UserRecords::UserRecords(QWidget *parent) :
     QDialog(parent),

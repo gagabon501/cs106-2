@@ -24,6 +24,7 @@ SOURCES += \
     mycovidrecord.cpp \
     registration.cpp \
     reporterror.cpp \
+    systemlog.cpp \
     updateprofile.cpp \
     uploadfile.cpp \
     uploadselftest.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
     qrencode.h \
     registration.h \
     reporterror.h \
+    systemlog.h \
     updateprofile.h \
     uploadfile.h \
     uploadselftest.h \
