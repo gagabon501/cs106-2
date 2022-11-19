@@ -16,6 +16,9 @@ public:
     explicit UploadFile(QWidget *parent = nullptr);
     ~UploadFile();
 
+public slots:
+    void onInfoPassed10(QString uemail);
+
 private slots:
     void on_buttonBox_accepted();
 

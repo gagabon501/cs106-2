@@ -13,6 +13,8 @@
 #include <QDateTimeEdit>
 #include <QSqlError>
 
+QString uploadEmail;
+
 UploadFile::UploadFile(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::UploadFile)
@@ -23,6 +25,10 @@ UploadFile::UploadFile(QWidget *parent) :
 UploadFile::~UploadFile()
 {
     delete ui;
+}
+
+void UploadFile::onInfoPassed10(QString uemail) {
+    uploadEmail = uemail;
 }
 
 void UploadFile::on_buttonBox_accepted()
@@ -36,8 +42,8 @@ void UploadFile::on_buttonBox_accepted()
         QString fileName = QFileDialog::getOpenFileName(this,"Open file");
 
         QString dateUpload = QDate::currentDate().toString();
-        QString email = "gag@gmail.com";
-        QString uploaded_by ="gil@gmail.com";
+        QString email = ui->lineEdit_email->text();
+        QString uploaded_by = uploadEmail;
         QString description = ui->lineEdit_description->text();
 
         qDebug() << fileName;

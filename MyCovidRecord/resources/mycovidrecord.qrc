@@ -33,5 +33,6 @@
         <file>images/computer.png</file>
         <file>images/document.png</file>
         <file>images/qr.png</file>
+        <file>images/log-file.png</file>
     </qresource>
 </RCC>

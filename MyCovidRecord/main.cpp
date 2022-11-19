@@ -10,6 +10,7 @@
 #include "reporterror.h"
 #include "userrecords.h"
 #include "viewqrcode.h"
+#include "uploadfile.h"
 
 #include <QApplication>
 #include <QDebug>
@@ -31,6 +32,7 @@ int main(int argc, char *argv[])
     ReportError w9;
     UserRecords w10;
     ViewQrCode w11;
+    UploadFile w12;
 
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w2,SLOT(onInfoPassed(QString)));
@@ -52,6 +54,8 @@ int main(int argc, char *argv[])
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w10,SLOT(onInfoPassed8(QString)));
 
     QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w11,SLOT(onInfoPassed9(QString)));
+
+    QObject::connect(&w1,SIGNAL(Info_Collected(QString)),&w12,SLOT(onInfoPassed10(QString)));
 
 
     MyCovidRecord w;

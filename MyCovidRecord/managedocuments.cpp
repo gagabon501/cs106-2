@@ -7,6 +7,7 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QScreen>
 
 manageDocuments::manageDocuments(QWidget *parent) :
     QMainWindow(parent),
@@ -18,6 +19,7 @@ manageDocuments::manageDocuments(QWidget *parent) :
 
     this->setFixedSize(this->size()); //don't allow resizing
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); //stretch columns to fill the whole table space
+    move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); //center the form in the main window
 
     query->prepare("SELECT * from user_docs");
     query->exec();

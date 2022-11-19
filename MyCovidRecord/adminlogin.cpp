@@ -72,6 +72,7 @@ void AdminLogin::on_actionManage_Errors_triggered()
 void AdminLogin::on_actionUpload_Documents_triggered()
 {
     uploadfile = new UploadFile(this);
+    uploadfile->onInfoPassed10(adminEmail);
     uploadfile->show();
 
 }
