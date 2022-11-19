@@ -83,3 +83,11 @@ void AdminLogin::on_actionUpdate_Vaccine_Record_triggered()
     uploadvaccine->show();
 }
 
+
+void AdminLogin::on_actionView_System_Log_2_triggered()
+{
+     viewsystemlogs = new ViewSystemLogs(this);
+     viewsystemlogs->show();
+
+}
+

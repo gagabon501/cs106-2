@@ -10,7 +10,7 @@ SystemLog::SystemLog(QObject *parent,QString email, QString source, QString mess
       logSource = source;
       logMessage = message;
 
-      query.prepare("INSERT INTO system_logs (date_log, email, log_message, log_source) VALUES (?,?,?,?)");
+      query.prepare("INSERT INTO system_logs (date_log, email, log_source, log_message) VALUES (?,?,?,?)");
 
       query.addBindValue(dateLog);
       query.addBindValue(email);

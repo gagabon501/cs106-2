@@ -1,5 +1,6 @@
 #include "uploadvaccinerecord.h"
 #include "ui_uploadvaccinerecord.h"
+#include "systemlog.h"
 
 #include <QDebug>
 #include <QDateTimeEdit>
@@ -91,6 +92,7 @@ void UploadVaccineRecord::on_buttonBox_accepted()
     {
 
         QMessageBox::information(this,"Information","Record updated successfully.");
+        SystemLog log(nullptr,email,"Upload Vaccine Record","Successfully uploaded vaccine record.");
 
     } else {
 

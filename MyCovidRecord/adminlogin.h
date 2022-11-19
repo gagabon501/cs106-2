@@ -5,6 +5,8 @@
 #include "manageerrorlogs.h"
 #include "uploadfile.h"
 #include "uploadvaccinerecord.h"
+#include "viewsystemlogs.h"
+
 #include <QMainWindow>
 
 namespace Ui {
@@ -39,6 +41,8 @@ private slots:
 
     void on_actionUpdate_Vaccine_Record_triggered();
 
+    void on_actionView_System_Log_2_triggered();
+
 private:
     Ui::AdminLogin *ui;
     manageDocuments *managedocuments;
@@ -46,6 +50,7 @@ private:
     ManageErrorLogs *manageerrorlogs;
     UploadFile *uploadfile;
     UploadVaccineRecord *uploadvaccine;
+    ViewSystemLogs *viewsystemlogs;
 };
 
 #endif // ADMINLOGIN_H

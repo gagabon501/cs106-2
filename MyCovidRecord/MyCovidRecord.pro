@@ -33,6 +33,7 @@ SOURCES += \
     userrecords.cpp \
     viewcovidtestresult.cpp \
     viewqrcode.cpp \
+    viewsystemlogs.cpp \
     viewvaccinereport.cpp \
     QRWidget.cpp
 
@@ -58,6 +59,7 @@ HEADERS += \
     userrecords.h \
     viewcovidtestresult.h \
     viewqrcode.h \
+    viewsystemlogs.h \
     viewvaccinereport.h \
     QRWidget.hpp
 
@@ -79,6 +81,7 @@ FORMS += \
     userrecords.ui \
     viewcovidtestresult.ui \
     viewqrcode.ui \
+    viewsystemlogs.ui \
     viewvaccinereport.ui
 
 # Default rules for deployment.

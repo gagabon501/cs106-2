@@ -212,7 +212,14 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
     <addaction name="actionManage_Errors"/>
     <addaction name="actionQuit_3"/>
    </widget>
+   <widget class="QMenu" name="menuUtilities">
+    <property name="title">
+     <string>Utilities</string>
+    </property>
+    <addaction name="actionView_System_Log_2"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuUtilities"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="cursor">
@@ -290,6 +297,11 @@ background-color: qlineargradient(spread:pad, x1:0.9, y1:1, x2:1, y2:0, stop:0 r
    </property>
    <property name="text">
     <string>Update Vaccine Record</string>
+   </property>
+  </action>
+  <action name="actionView_System_Log_2">
+   <property name="text">
+    <string>View System Log</string>
    </property>
   </action>
  </widget>

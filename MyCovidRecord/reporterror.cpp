@@ -1,6 +1,7 @@
 #include "reporterror.h"
 #include "ui_reporterror.h"
 #include "user.h"
+#include "systemlog.h"
 
 #include <QDebug>
 #include <QDate>
@@ -48,6 +49,9 @@ void ReportError::on_buttonBox_accepted()
     if (queryAdd.exec())
     {
         qDebug() << "Upload Error successful!";
+        //Log to system
+        SystemLog log(nullptr,rEmail,"Error Reported","User reported an error: "+logDesc);
+
     }
     else
     {

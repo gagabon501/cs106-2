@@ -1,5 +1,7 @@
 #include "uploadfile.h"
 #include "ui_uploadfile.h"
+#include "systemlog.h"
+
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QDir>
@@ -57,6 +59,10 @@ void UploadFile::on_buttonBox_accepted()
         query.addBindValue(uploaded_by);
 
         if(query.exec()) {
+
+            //Log to system
+            SystemLog log(nullptr,email,"Upload Document","Successfully uploaded document: "+fileName);
+
             qDebug() << "Record added.";
         } else {
             qDebug() << "Error adding: " << query.lastError();
