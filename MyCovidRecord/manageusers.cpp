@@ -22,6 +22,15 @@ ManageUsers::ManageUsers(QWidget *parent) :
 
     ui->tableView->setModel(model);
     ui->tableView->setColumnHidden(1,true); //hide password column
+    ui->tableView->setColumnHidden(8,true); //hide vaccine_status column
+
+    ui->tableView->setColumnHidden(10,true); //hide date_dose1 column
+    ui->tableView->setColumnHidden(11,true); //hide date_dose2 column
+    ui->tableView->setColumnHidden(12,true); //hide date_dose3 column
+    ui->tableView->setColumnHidden(13,true); //hide vaccine_name column
+    ui->tableView->setColumnHidden(14,true); //hide manufacturer column
+
+    ui->tableView->setItemDelegateForColumn(0, new NotEditableDelegate(this)); //make the email column non-editable as this is a PRIMARY KEY
 }
 
 

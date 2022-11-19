@@ -1,6 +1,7 @@
 #include "uploadfile.h"
 #include "ui_uploadfile.h"
 #include "systemlog.h"
+#include "user.h"
 
 #include <QFileDialog>
 #include <QMessageBox>
@@ -33,6 +34,13 @@ void UploadFile::onInfoPassed10(QString uemail) {
 
 void UploadFile::on_buttonBox_accepted()
 {
+    User user(nullptr,ui->lineEdit_email->text());
+
+    if(!user.userExists) {
+        QMessageBox::information(this,"Information","User not found in the database.");
+        return;
+    }
+
     if(ui->lineEdit_description->text().isEmpty()) {
         QMessageBox::information(this,"Information","Please fill-in descrioption");
         this->show();
