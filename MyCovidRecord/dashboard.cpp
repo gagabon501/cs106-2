@@ -139,14 +139,9 @@ void Dashboard::on_actionUpload_RAT_Test_triggered()
     uploadselftest->show();
 }
 
+//QR Code button
 void Dashboard::on_pushButton_6_clicked()
 {
-//    User user(nullptr, userEmail);
-//    QString qrData = user.userEmail + "/" + user.firstname + " " + user.lastname + "/" + user.dob + "/" + user.vaccine_status;
-
-//    qrwidget = new QRWidget();
-//    qrwidget->setQRData(qrData);
-//    qrwidget->show();
 
     viewqrcode = new ViewQrCode(this);
     viewqrcode->onInfoPassed9(userEmail);
@@ -154,7 +149,7 @@ void Dashboard::on_pushButton_6_clicked()
 
 }
 
-
+//My Record button
 void Dashboard::on_pushButton_4_clicked()
 {
     userrecords = new UserRecords(this);

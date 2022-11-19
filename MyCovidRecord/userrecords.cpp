@@ -24,51 +24,61 @@ void UserRecords::onInfoPassed8(QString email)
 
     User user(nullptr,email);
 
+    //Display on the vaccine record part
+    QString lastname, firstname, dob, gender, dose1, dose2, dose3, status, vaccine_name, manufacturer ;
+
     QSqlQuery *query = new QSqlQuery();
-    QSqlQueryModel *model = new QSqlQueryModel;
+    query->prepare("SELECT lastname, firstname, dob, gender, date_dose1, date_dose2, date_dose3, vaccine_status, vaccine_name, manufacturer FROM user WHERE email='"+email+"'");
 
-//    query->prepare("SELECT * from covid_test where email='"+email+"'");
-    query->prepare("SELECT date_administered, time_administered, administered_by, test_type, test_result from covid_test where email='"+email+"'");
-    query->exec();
 
-//    model->setQuery(*query);
-    model->setQuery(std::move(*query)); //to resolve the warning
-//
-    ui->label_name->setText("Records for: "+user.firstname+" "+user.lastname);
-    ui->tableView->setModel(model);
-
-    QSqlQuery qry;
-    QString date_dose1, date_dose2, date_dose3, manufacturer, vaccine_name;
-
-    qry.prepare("SELECT date_dose1, date_dose2, date_dose3, manufacturer, vaccine_name FROM vaccine WHERE email='"+email +"'");
-
-    if(qry.exec())
-    {
-        int count = 0;
-        while(qry.next()) {
-            count++;
-
-            date_dose1 = qry.value(0).toString();
-            date_dose2 = qry.value(1).toString();
-            date_dose3 = qry.value(2).toString();
-            manufacturer = qry.value(3).toString();
-            vaccine_name = qry.value(4).toString();
-
+    if (!query->exec()) QMessageBox::information(this,"Info","Error: "+query->lastError().text());
+    else {
+        int i = 0;
+        while(query->next()) {
+            i++;
+            lastname = query->value(0).toString();
+            firstname = query->value(1).toString();
+            dob = query->value(2).toString();
+            gender = query->value(3).toString();
+            dose1 = query->value(4).toString();
+            dose2 = query->value(5).toString();
+            dose3 = query->value(6).toString();
+            status = query->value(7).toString();
+            vaccine_name = query->value(8).toString();
+            manufacturer = query->value(9).toString();
         }
 
-        if(count > 0) {
-            ui->lineEdit_dose1->setText(date_dose1);
-            ui->lineEdit_dose2->setText(date_dose2);
-            ui->lineEdit_dose3->setText(date_dose3);
+        if(i == 1) {
+            ui->label_name->setText(firstname+" "+lastname);
+            ui->lineEdit_dose1->setText(dose1);
+            ui->lineEdit_dose2->setText(dose2);
+            ui->lineEdit_dose3->setText(dose3);
             ui->lineEdit_manufacturer->setText(manufacturer);
             ui->lineEdit_vaccine_name->setText(vaccine_name);
+            ui->lineEdit_status->setText(status);
+
         } else {
-            qDebug() << "No record found.";
+            QMessageBox::information(this,"Information","User not found in the database");
         }
 
+      }
+
+    //For the display of the RAT Test table
+    QSqlQuery *qry = new QSqlQuery();
+    QSqlQueryModel *model = new QSqlQueryModel;
+
+    qry->prepare("SELECT * FROM covid_test WHERE email='"+email+"'");
+
+    if(qry->exec()) {
+        qDebug() << "Query successful!";
+
+        model->setQuery(std::move(*qry)); //to resolve the warning
+        ui->tableView->setModel(model);
+        ui->tableView->setColumnHidden(0,true); //hide id column
+
     } else {
-         qDebug() << "Query unsuccessful!";
-    }
+        qDebug() << "Query error: "+qry->lastError().text();
+    };
 
 
 }
